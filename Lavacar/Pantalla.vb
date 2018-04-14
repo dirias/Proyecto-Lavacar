@@ -237,4 +237,8 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         txthora.Text() = String.Format("{0:HH:mm:ss}", DateTime.Now)
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) 
+
+    End Sub
 End Class
