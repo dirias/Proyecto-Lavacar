@@ -31,3 +31,5 @@ C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\D
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.exe
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.xml
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.pdb
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\EntityFramework.dll
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\EntityFramework.xml

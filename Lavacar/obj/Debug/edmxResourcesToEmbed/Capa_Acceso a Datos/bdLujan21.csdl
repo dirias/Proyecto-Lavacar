@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbLujan21Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblAdmi">
+    <Key>
+      <PropertyRef Name="admiUsuario" />
+    </Key>
+    <Property Name="admiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="admiNombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="admiApellidos" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="admiUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="admiPW" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="admiRights" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblCliente">
+    <Key>
+      <PropertyRef Name="clienId" />
+    </Key>
+    <Property Name="clienId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clienPlacaVehiculo" Type="Int32" />
+    <Property Name="clienNombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clienApellidos" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="clienTelefono" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblLavados" Relationship="Self.Fk_Lavado_Cliente" FromRole="tblCliente" ToRole="tblLavados" />
+    <NavigationProperty Name="tblVehiculo" Relationship="Self.Fk_Vehiculo_Cliente" FromRole="tblCliente" ToRole="tblVehiculo" />
+  </EntityType>
+  <EntityType Name="tblExtras">
+    <Key>
+      <PropertyRef Name="extId" />
+    </Key>
+    <Property Name="extId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="extNombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="extCosto" Type="Decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="tblLavados">
+    <Key>
+      <PropertyRef Name="lavConsecutivo" />
+    </Key>
+    <Property Name="lavConsecutivo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lavFecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="lavIdCliente" Type="Int32" Nullable="false" />
+    <Property Name="lavIdVehiculo" Type="Int32" Nullable="false" />
+    <Property Name="lavIdPaquete" Type="Int32" Nullable="false" />
+    <Property Name="lavExtras" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lavLavador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lavMonto" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lavFechaPago" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="lavPagadoA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblCliente" Relationship="Self.Fk_Lavado_Cliente" FromRole="tblLavados" ToRole="tblCliente" />
+    <NavigationProperty Name="tblPaquetes" Relationship="Self.Fk_Lavado_Paquete" FromRole="tblLavados" ToRole="tblPaquetes" />
+    <NavigationProperty Name="tblVehiculo" Relationship="Self.Fk_Lavado_Vehiculo" FromRole="tblLavados" ToRole="tblVehiculo" />
+  </EntityType>
+  <EntityType Name="tblPaquetes">
+    <Key>
+      <PropertyRef Name="paqId" />
+    </Key>
+    <Property Name="paqId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="paqNombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="paqTipo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="paqDescripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="paqCosto" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <NavigationProperty Name="tblLavados" Relationship="Self.Fk_Lavado_Paquete" FromRole="tblPaquetes" ToRole="tblLavados" />
+  </EntityType>
+  <EntityType Name="tblVehiculo">
+    <Key>
+      <PropertyRef Name="vehPlaca" />
+    </Key>
+    <Property Name="vehPlaca" Type="Int32" Nullable="false" />
+    <Property Name="vehClienteId" Type="Int32" Nullable="false" />
+    <Property Name="vehMarca" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="vehSize" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblCliente" Relationship="Self.Fk_Vehiculo_Cliente" FromRole="tblVehiculo" ToRole="tblCliente" />
+    <NavigationProperty Name="tblLavados" Relationship="Self.Fk_Lavado_Vehiculo" FromRole="tblVehiculo" ToRole="tblLavados" />
+  </EntityType>
+  <Association Name="Fk_Lavado_Cliente">
+    <End Role="tblCliente" Type="Self.tblCliente" Multiplicity="1" />
+    <End Role="tblLavados" Type="Self.tblLavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCliente">
+        <PropertyRef Name="clienId" />
+      </Principal>
+      <Dependent Role="tblLavados">
+        <PropertyRef Name="lavIdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Vehiculo_Cliente">
+    <End Role="tblCliente" Type="Self.tblCliente" Multiplicity="1" />
+    <End Role="tblVehiculo" Type="Self.tblVehiculo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblCliente">
+        <PropertyRef Name="clienId" />
+      </Principal>
+      <Dependent Role="tblVehiculo">
+        <PropertyRef Name="vehPlaca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Lavado_Paquete">
+    <End Role="tblPaquetes" Type="Self.tblPaquetes" Multiplicity="1" />
+    <End Role="tblLavados" Type="Self.tblLavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPaquetes">
+        <PropertyRef Name="paqId" />
+      </Principal>
+      <Dependent Role="tblLavados">
+        <PropertyRef Name="lavIdPaquete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Lavado_Vehiculo">
+    <End Role="tblVehiculo" Type="Self.tblVehiculo" Multiplicity="1" />
+    <End Role="tblLavados" Type="Self.tblLavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVehiculo">
+        <PropertyRef Name="vehPlaca" />
+      </Principal>
+      <Dependent Role="tblLavados">
+        <PropertyRef Name="lavIdVehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbLujan21Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tblAdmi" EntityType="Self.tblAdmi" />
+    <EntitySet Name="tblCliente" EntityType="Self.tblCliente" />
+    <EntitySet Name="tblExtras" EntityType="Self.tblExtras" />
+    <EntitySet Name="tblLavados" EntityType="Self.tblLavados" />
+    <EntitySet Name="tblPaquetes" EntityType="Self.tblPaquetes" />
+    <EntitySet Name="tblVehiculo" EntityType="Self.tblVehiculo" />
+    <AssociationSet Name="Fk_Lavado_Cliente" Association="Self.Fk_Lavado_Cliente">
+      <End Role="tblCliente" EntitySet="tblCliente" />
+      <End Role="tblLavados" EntitySet="tblLavados" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Vehiculo_Cliente" Association="Self.Fk_Vehiculo_Cliente">
+      <End Role="tblCliente" EntitySet="tblCliente" />
+      <End Role="tblVehiculo" EntitySet="tblVehiculo" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Lavado_Paquete" Association="Self.Fk_Lavado_Paquete">
+      <End Role="tblPaquetes" EntitySet="tblPaquetes" />
+      <End Role="tblLavados" EntitySet="tblLavados" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Lavado_Vehiculo" Association="Self.Fk_Lavado_Vehiculo">
+      <End Role="tblVehiculo" EntitySet="tblVehiculo" />
+      <End Role="tblLavados" EntitySet="tblLavados" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -35,42 +35,47 @@ Partial Class Inicio
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(168, 29)
+        Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(168, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.Size = New System.Drawing.Size(67, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Usuario"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(168, 74)
+        Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(168, 77)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(91, 21)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Contraseña"
         '
         'txt1
         '
-        Me.txt1.Location = New System.Drawing.Point(282, 26)
+        Me.txt1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt1.Location = New System.Drawing.Point(266, 30)
         Me.txt1.Name = "txt1"
-        Me.txt1.Size = New System.Drawing.Size(100, 20)
+        Me.txt1.Size = New System.Drawing.Size(120, 24)
         Me.txt1.TabIndex = 2
         '
         'txt2
         '
-        Me.txt2.Location = New System.Drawing.Point(282, 71)
+        Me.txt2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt2.Location = New System.Drawing.Point(266, 75)
         Me.txt2.Name = "txt2"
         Me.txt2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt2.Size = New System.Drawing.Size(100, 20)
+        Me.txt2.Size = New System.Drawing.Size(120, 24)
         Me.txt2.TabIndex = 3
         '
         'Button1
         '
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(241, 125)
+        Me.Button1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Location = New System.Drawing.Point(266, 111)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(120, 40)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Ingreso"
         Me.Button1.UseVisualStyleBackColor = True
@@ -78,7 +83,7 @@ Partial Class Inicio
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Lavacar.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 26)
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 26)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(150, 106)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -90,7 +95,7 @@ Partial Class Inicio
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(418, 163)
+        Me.ClientSize = New System.Drawing.Size(400, 163)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txt2)

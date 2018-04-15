@@ -202,11 +202,11 @@
         Agenda.Show()
     End Sub
 
-    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Clientes.Show()
     End Sub
 
-    Private Sub CambiarUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambiarUsuarioToolStripMenuItem.Click
+    Private Sub CambiarUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Close()
         Inicio.Show()
     End Sub
@@ -227,7 +227,7 @@
         Precios.Show()
     End Sub
 
-    Private Sub SalirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem1.Click
+    Private Sub SalirToolStripMenuItem1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 

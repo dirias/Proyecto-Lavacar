@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbLujan21Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tblAdmi">
+    <Key>
+      <PropertyRef Name="admiUsuario" />
+    </Key>
+    <Property Name="admiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="admiNombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="admiApellidos" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="admiUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="admiPW" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="admiRights" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tblCliente">
+    <Key>
+      <PropertyRef Name="clienId" />
+    </Key>
+    <Property Name="clienId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clienPlacaVehiculo" Type="int" />
+    <Property Name="clienNombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="clienApellidos" Type="varchar" MaxLength="30" />
+    <Property Name="clienTelefono" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="tblExtras">
+    <Key>
+      <PropertyRef Name="extId" />
+    </Key>
+    <Property Name="extId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="extNombre" Type="varchar" MaxLength="30" />
+    <Property Name="extCosto" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="tblLavados">
+    <Key>
+      <PropertyRef Name="lavConsecutivo" />
+    </Key>
+    <Property Name="lavConsecutivo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lavFecha" Type="date" Nullable="false" />
+    <Property Name="lavIdCliente" Type="int" Nullable="false" />
+    <Property Name="lavIdVehiculo" Type="int" Nullable="false" />
+    <Property Name="lavIdPaquete" Type="int" Nullable="false" />
+    <Property Name="lavExtras" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="lavLavador" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="lavMonto" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lavFechaPago" Type="date" Nullable="false" />
+    <Property Name="lavPagadoA" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPaquetes">
+    <Key>
+      <PropertyRef Name="paqId" />
+    </Key>
+    <Property Name="paqId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="paqNombre" Type="varchar" MaxLength="30" />
+    <Property Name="paqTipo" Type="varchar" MaxLength="30" />
+    <Property Name="paqDescripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="paqCosto" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblVehiculo">
+    <Key>
+      <PropertyRef Name="vehPlaca" />
+    </Key>
+    <Property Name="vehPlaca" Type="int" Nullable="false" />
+    <Property Name="vehClienteId" Type="int" Nullable="false" />
+    <Property Name="vehMarca" Type="varchar" MaxLength="15" />
+    <Property Name="vehSize" Type="varchar" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <Association Name="Fk_Lavado_Cliente">
+    <End Role="tblCliente" Type="Self.tblCliente" Multiplicity="1" />
+    <End Role="tblLavados" Type="Self.tblLavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCliente">
+        <PropertyRef Name="clienId" />
+      </Principal>
+      <Dependent Role="tblLavados">
+        <PropertyRef Name="lavIdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Lavado_Paquete">
+    <End Role="tblPaquetes" Type="Self.tblPaquetes" Multiplicity="1" />
+    <End Role="tblLavados" Type="Self.tblLavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPaquetes">
+        <PropertyRef Name="paqId" />
+      </Principal>
+      <Dependent Role="tblLavados">
+        <PropertyRef Name="lavIdPaquete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Lavado_Vehiculo">
+    <End Role="tblVehiculo" Type="Self.tblVehiculo" Multiplicity="1" />
+    <End Role="tblLavados" Type="Self.tblLavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVehiculo">
+        <PropertyRef Name="vehPlaca" />
+      </Principal>
+      <Dependent Role="tblLavados">
+        <PropertyRef Name="lavIdVehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Vehiculo_Cliente">
+    <End Role="tblCliente" Type="Self.tblCliente" Multiplicity="1" />
+    <End Role="tblVehiculo" Type="Self.tblVehiculo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblCliente">
+        <PropertyRef Name="clienId" />
+      </Principal>
+      <Dependent Role="tblVehiculo">
+        <PropertyRef Name="vehPlaca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbLujan21ModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAdmi" EntityType="Self.tblAdmi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCliente" EntityType="Self.tblCliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblExtras" EntityType="Self.tblExtras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLavados" EntityType="Self.tblLavados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPaquetes" EntityType="Self.tblPaquetes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVehiculo" EntityType="Self.tblVehiculo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Fk_Lavado_Cliente" Association="Self.Fk_Lavado_Cliente">
+      <End Role="tblCliente" EntitySet="tblCliente" />
+      <End Role="tblLavados" EntitySet="tblLavados" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Lavado_Paquete" Association="Self.Fk_Lavado_Paquete">
+      <End Role="tblPaquetes" EntitySet="tblPaquetes" />
+      <End Role="tblLavados" EntitySet="tblLavados" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Lavado_Vehiculo" Association="Self.Fk_Lavado_Vehiculo">
+      <End Role="tblVehiculo" EntitySet="tblVehiculo" />
+      <End Role="tblLavados" EntitySet="tblLavados" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Vehiculo_Cliente" Association="Self.Fk_Vehiculo_Cliente">
+      <End Role="tblCliente" EntitySet="tblCliente" />
+      <End Role="tblVehiculo" EntitySet="tblVehiculo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
