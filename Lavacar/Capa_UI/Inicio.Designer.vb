@@ -27,8 +27,8 @@ Partial Class Inicio
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt1 = New System.Windows.Forms.TextBox()
         Me.txt2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,17 +69,6 @@ Partial Class Inicio
         Me.txt2.Size = New System.Drawing.Size(120, 24)
         Me.txt2.TabIndex = 3
         '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(266, 111)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 40)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Ingreso"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Lavacar.My.Resources.Resources.logo
@@ -89,6 +78,21 @@ Partial Class Inicio
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Image = Global.Lavacar.My.Resources.Resources.if_Login_73221
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(266, 111)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(120, 40)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Ingreso    "
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Inicio
         '

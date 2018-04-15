@@ -20,12 +20,10 @@ C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\D
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\Lavacar.xml
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.vbprojResolveAssemblyReference.cache
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Agenda.resources
-C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Clientes.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Inicio.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Resources.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Pantalla.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Precios.resources
-C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Registros.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Usuarios.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.vbproj.GenerateResource.Cache
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.exe
@@ -33,3 +31,4 @@ C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\D
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.pdb
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\EntityFramework.dll
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\EntityFramework.xml
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Paquetes.resources

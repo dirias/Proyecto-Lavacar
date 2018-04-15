@@ -1,9 +1,5 @@
 ﻿Public Class Pantalla
 
-    Private Sub ReportesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem.Click
-        Registros.Show()
-    End Sub
-
     Private Sub Pantalla_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         rbpequeno.Visible = True
 
@@ -202,9 +198,6 @@
         Agenda.Show()
     End Sub
 
-    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Clientes.Show()
-    End Sub
 
     Private Sub CambiarUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Close()
@@ -220,7 +213,7 @@
     End Sub
 
     Private Sub CombosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CombosToolStripMenuItem.Click
-
+        Paquetes.Show()
     End Sub
 
     Private Sub PreciosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreciosToolStripMenuItem.Click
@@ -239,6 +232,10 @@
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) 
+
+    End Sub
+
+    Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles GroupBox4.Enter
 
     End Sub
 End Class

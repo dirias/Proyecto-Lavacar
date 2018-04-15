@@ -120,17 +120,17 @@
     <Compile Include="Capa_UI\Agenda.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa_UI\Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Capa_UI\Clientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Capa_UI\Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Capa_UI\Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa_UI\Paquetes.Designer.vb">
+      <DependentUpon>Paquetes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Capa_UI\Paquetes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -160,12 +160,6 @@
     <Compile Include="Capa_UI\Precios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa_UI\Registros.Designer.vb">
-      <DependentUpon>Registros.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Capa_UI\Registros.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Capa_UI\Usuarios.Designer.vb">
       <DependentUpon>Usuarios.vb</DependentUpon>
     </Compile>
@@ -177,11 +171,11 @@
     <EmbeddedResource Include="Capa_UI\Agenda.resx">
       <DependentUpon>Agenda.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capa_UI\Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Capa_UI\Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa_UI\Paquetes.resx">
+      <DependentUpon>Paquetes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -194,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Capa_UI\Precios.resx">
       <DependentUpon>Precios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Capa_UI\Registros.resx">
-      <DependentUpon>Registros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa_UI\Usuarios.resx">
       <DependentUpon>Usuarios.vb</DependentUpon>
@@ -239,6 +230,23 @@
       <DependentUpon>bdLujan21.edmx</DependentUpon>
       <LastGenOutput>bdLujan21.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\if_add-on_3018515.png" />
+    <None Include="Resources\if_package_18168.png" />
+    <None Include="Resources\if_onebit_17_12591.png" />
+    <None Include="Resources\if_Statistics_67373.png" />
+    <None Include="Resources\if_door_out_35979.png" />
+    <None Include="Resources\if_schedule_3755.png" />
+    <None Include="Resources\if_user-avatar-human-admin-login_2203549.png" />
+    <None Include="Resources\if_admin_60298.png" />
+    <None Include="Resources\if_file-zip-alt_285690.png" />
+    <None Include="Resources\if_ic_local_car_wash_48px_352495.png" />
+    <None Include="Resources\if_Login_73221.png" />
+    <None Include="Resources\if_print_54346.png" />
+    <None Include="Resources\if_icon-45-note-list_3148841.png" />
+    <None Include="Resources\if_icon-45-note-list_314884.png" />
+    <None Include="Resources\if_1_2058800.png" />
+    <None Include="Resources\if_note_edit_66829.png" />
+    <None Include="Resources\if_AddThis-Social-Network-communicate-page-curl_437908.png" />
     <None Include="Resources\16 %28Ok%29.ico" />
   </ItemGroup>
   <ItemGroup>

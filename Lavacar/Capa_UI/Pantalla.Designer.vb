@@ -32,14 +32,6 @@ Partial Class Pantalla
         Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.txtnumero = New System.Windows.Forms.TextBox()
         Me.txtplaca = New System.Windows.Forms.TextBox()
-        Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CombosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PreciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -69,38 +61,48 @@ Partial Class Pantalla
         Me.txthora = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CombosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtprecio
         '
         Me.txtprecio.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txtprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txtprecio.Location = New System.Drawing.Point(136, 152)
         Me.txtprecio.Name = "txtprecio"
         Me.txtprecio.ReadOnly = True
-        Me.txtprecio.Size = New System.Drawing.Size(100, 20)
+        Me.txtprecio.Size = New System.Drawing.Size(100, 24)
         Me.txtprecio.TabIndex = 26
         '
         'Label4
@@ -145,77 +147,27 @@ Partial Class Pantalla
         '
         'txtnombre
         '
-        Me.txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txtnombre.Location = New System.Drawing.Point(136, 47)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(100, 20)
+        Me.txtnombre.Size = New System.Drawing.Size(100, 24)
         Me.txtnombre.TabIndex = 31
         '
         'txtnumero
         '
-        Me.txtnumero.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txtnumero.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txtnumero.Location = New System.Drawing.Point(18, 101)
         Me.txtnumero.Name = "txtnumero"
-        Me.txtnumero.Size = New System.Drawing.Size(100, 20)
+        Me.txtnumero.Size = New System.Drawing.Size(100, 24)
         Me.txtnumero.TabIndex = 32
         '
         'txtplaca
         '
-        Me.txtplaca.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txtplaca.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txtplaca.Location = New System.Drawing.Point(136, 101)
         Me.txtplaca.Name = "txtplaca"
-        Me.txtplaca.Size = New System.Drawing.Size(100, 20)
+        Me.txtplaca.Size = New System.Drawing.Size(100, 24)
         Me.txtplaca.TabIndex = 33
-        '
-        'ArchivoToolStripMenuItem
-        '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgendaToolStripMenuItem, Me.SalirToolStripMenuItem})
-        Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ArchivoToolStripMenuItem.Text = "Archivo"
-        '
-        'AgendaToolStripMenuItem
-        '
-        Me.AgendaToolStripMenuItem.Name = "AgendaToolStripMenuItem"
-        Me.AgendaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AgendaToolStripMenuItem.Text = "Agenda"
-        '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'AdminToolStripMenuItem
-        '
-        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.CombosToolStripMenuItem, Me.PreciosToolStripMenuItem})
-        Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
-        Me.AdminToolStripMenuItem.Text = "Admin"
-        '
-        'ReportesToolStripMenuItem
-        '
-        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ReportesToolStripMenuItem.Text = "Reportes"
-        '
-        'UsuariosToolStripMenuItem
-        '
-        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
-        '
-        'CombosToolStripMenuItem
-        '
-        Me.CombosToolStripMenuItem.Name = "CombosToolStripMenuItem"
-        Me.CombosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CombosToolStripMenuItem.Text = "Combos"
-        '
-        'PreciosToolStripMenuItem
-        '
-        Me.PreciosToolStripMenuItem.Name = "PreciosToolStripMenuItem"
-        Me.PreciosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PreciosToolStripMenuItem.Text = "Precios"
         '
         'MenuStrip1
         '
@@ -235,7 +187,7 @@ Partial Class Pantalla
         Me.txtdescripcion.Multiline = True
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.ReadOnly = True
-        Me.txtdescripcion.Size = New System.Drawing.Size(385, 124)
+        Me.txtdescripcion.Size = New System.Drawing.Size(385, 128)
         Me.txtdescripcion.TabIndex = 40
         '
         'Label11
@@ -254,7 +206,7 @@ Partial Class Pantalla
         Me.rbpequeno.Checked = True
         Me.rbpequeno.Location = New System.Drawing.Point(6, 19)
         Me.rbpequeno.Name = "rbpequeno"
-        Me.rbpequeno.Size = New System.Drawing.Size(68, 17)
+        Me.rbpequeno.Size = New System.Drawing.Size(85, 22)
         Me.rbpequeno.TabIndex = 46
         Me.rbpequeno.TabStop = True
         Me.rbpequeno.Text = "Pequeño"
@@ -265,7 +217,7 @@ Partial Class Pantalla
         Me.rbmediano.AutoSize = True
         Me.rbmediano.Location = New System.Drawing.Point(6, 43)
         Me.rbmediano.Name = "rbmediano"
-        Me.rbmediano.Size = New System.Drawing.Size(66, 17)
+        Me.rbmediano.Size = New System.Drawing.Size(83, 22)
         Me.rbmediano.TabIndex = 47
         Me.rbmediano.Text = "Mediano"
         Me.rbmediano.UseVisualStyleBackColor = True
@@ -275,7 +227,7 @@ Partial Class Pantalla
         Me.rbgrande.AutoSize = True
         Me.rbgrande.Location = New System.Drawing.Point(6, 68)
         Me.rbgrande.Name = "rbgrande"
-        Me.rbgrande.Size = New System.Drawing.Size(60, 17)
+        Me.rbgrande.Size = New System.Drawing.Size(75, 22)
         Me.rbgrande.TabIndex = 48
         Me.rbgrande.Text = "Grande"
         Me.rbgrande.UseVisualStyleBackColor = True
@@ -285,10 +237,10 @@ Partial Class Pantalla
         Me.GroupBox1.Controls.Add(Me.rbpequeno)
         Me.GroupBox1.Controls.Add(Me.rbgrande)
         Me.GroupBox1.Controls.Add(Me.rbmediano)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.GroupBox1.Location = New System.Drawing.Point(215, 42)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.GroupBox1.Location = New System.Drawing.Point(223, 42)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(112, 100)
+        Me.GroupBox1.Size = New System.Drawing.Size(123, 100)
         Me.GroupBox1.TabIndex = 49
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Tamaño"
@@ -299,10 +251,10 @@ Partial Class Pantalla
         Me.GroupBox2.Controls.Add(Me.rbfull)
         Me.GroupBox2.Controls.Add(Me.rbmedio)
         Me.GroupBox2.Controls.Add(Me.rbbasico)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.GroupBox2.Location = New System.Drawing.Point(215, 158)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.GroupBox2.Location = New System.Drawing.Point(223, 148)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(112, 101)
+        Me.GroupBox2.Size = New System.Drawing.Size(123, 111)
         Me.GroupBox2.TabIndex = 50
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tipo"
@@ -310,9 +262,9 @@ Partial Class Pantalla
         'rbmoto
         '
         Me.rbmoto.AutoSize = True
-        Me.rbmoto.Location = New System.Drawing.Point(7, 72)
+        Me.rbmoto.Location = New System.Drawing.Point(7, 80)
         Me.rbmoto.Name = "rbmoto"
-        Me.rbmoto.Size = New System.Drawing.Size(80, 17)
+        Me.rbmoto.Size = New System.Drawing.Size(103, 22)
         Me.rbmoto.TabIndex = 3
         Me.rbmoto.TabStop = True
         Me.rbmoto.Text = "Motocicleta"
@@ -321,9 +273,9 @@ Partial Class Pantalla
         'rbfull
         '
         Me.rbfull.AutoSize = True
-        Me.rbfull.Location = New System.Drawing.Point(7, 51)
+        Me.rbfull.Location = New System.Drawing.Point(7, 59)
         Me.rbfull.Name = "rbfull"
-        Me.rbfull.Size = New System.Drawing.Size(41, 17)
+        Me.rbfull.Size = New System.Drawing.Size(49, 22)
         Me.rbfull.TabIndex = 2
         Me.rbfull.TabStop = True
         Me.rbfull.Text = "Full"
@@ -332,9 +284,9 @@ Partial Class Pantalla
         'rbmedio
         '
         Me.rbmedio.AutoSize = True
-        Me.rbmedio.Location = New System.Drawing.Point(7, 31)
+        Me.rbmedio.Location = New System.Drawing.Point(7, 39)
         Me.rbmedio.Name = "rbmedio"
-        Me.rbmedio.Size = New System.Drawing.Size(54, 17)
+        Me.rbmedio.Size = New System.Drawing.Size(67, 22)
         Me.rbmedio.TabIndex = 1
         Me.rbmedio.TabStop = True
         Me.rbmedio.Text = "Medio"
@@ -344,9 +296,9 @@ Partial Class Pantalla
         '
         Me.rbbasico.AutoSize = True
         Me.rbbasico.Checked = True
-        Me.rbbasico.Location = New System.Drawing.Point(7, 12)
+        Me.rbbasico.Location = New System.Drawing.Point(7, 20)
         Me.rbbasico.Name = "rbbasico"
-        Me.rbbasico.Size = New System.Drawing.Size(57, 17)
+        Me.rbbasico.Size = New System.Drawing.Size(72, 22)
         Me.rbbasico.TabIndex = 0
         Me.rbbasico.TabStop = True
         Me.rbbasico.Text = "Básico"
@@ -355,10 +307,10 @@ Partial Class Pantalla
         'ChBoxChasis
         '
         Me.ChBoxChasis.AutoSize = True
-        Me.ChBoxChasis.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ChBoxChasis.Location = New System.Drawing.Point(13, 19)
+        Me.ChBoxChasis.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ChBoxChasis.Location = New System.Drawing.Point(13, 16)
         Me.ChBoxChasis.Name = "ChBoxChasis"
-        Me.ChBoxChasis.Size = New System.Drawing.Size(57, 17)
+        Me.ChBoxChasis.Size = New System.Drawing.Size(73, 22)
         Me.ChBoxChasis.TabIndex = 53
         Me.ChBoxChasis.Text = "Chasis"
         Me.ChBoxChasis.UseVisualStyleBackColor = True
@@ -366,10 +318,10 @@ Partial Class Pantalla
         'ChBoxMotor
         '
         Me.ChBoxMotor.AutoSize = True
-        Me.ChBoxMotor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ChBoxMotor.Location = New System.Drawing.Point(13, 38)
+        Me.ChBoxMotor.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ChBoxMotor.Location = New System.Drawing.Point(13, 35)
         Me.ChBoxMotor.Name = "ChBoxMotor"
-        Me.ChBoxMotor.Size = New System.Drawing.Size(53, 17)
+        Me.ChBoxMotor.Size = New System.Drawing.Size(67, 22)
         Me.ChBoxMotor.TabIndex = 54
         Me.ChBoxMotor.Text = "Motor"
         Me.ChBoxMotor.UseVisualStyleBackColor = True
@@ -377,10 +329,10 @@ Partial Class Pantalla
         'ChBox3
         '
         Me.ChBox3.AutoSize = True
-        Me.ChBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ChBox3.Location = New System.Drawing.Point(13, 54)
+        Me.ChBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ChBox3.Location = New System.Drawing.Point(13, 53)
         Me.ChBox3.Name = "ChBox3"
-        Me.ChBox3.Size = New System.Drawing.Size(72, 17)
+        Me.ChBox3.Size = New System.Drawing.Size(94, 22)
         Me.ChBox3.TabIndex = 55
         Me.ChBox3.Text = "Alfombras"
         Me.ChBox3.UseVisualStyleBackColor = True
@@ -388,10 +340,10 @@ Partial Class Pantalla
         'ChBox4
         '
         Me.ChBox4.AutoSize = True
-        Me.ChBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ChBox4.Location = New System.Drawing.Point(13, 70)
+        Me.ChBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ChBox4.Location = New System.Drawing.Point(13, 71)
         Me.ChBox4.Name = "ChBox4"
-        Me.ChBox4.Size = New System.Drawing.Size(60, 17)
+        Me.ChBox4.Size = New System.Drawing.Size(74, 22)
         Me.ChBox4.TabIndex = 56
         Me.ChBox4.Text = "Llantas"
         Me.ChBox4.UseVisualStyleBackColor = True
@@ -399,10 +351,10 @@ Partial Class Pantalla
         'ChBox5
         '
         Me.ChBox5.AutoSize = True
-        Me.ChBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ChBox5.Location = New System.Drawing.Point(13, 86)
+        Me.ChBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ChBox5.Location = New System.Drawing.Point(13, 89)
         Me.ChBox5.Name = "ChBox5"
-        Me.ChBox5.Size = New System.Drawing.Size(75, 17)
+        Me.ChBox5.Size = New System.Drawing.Size(98, 22)
         Me.ChBox5.TabIndex = 57
         Me.ChBox5.Text = "Parabrisas"
         Me.ChBox5.UseVisualStyleBackColor = True
@@ -410,10 +362,10 @@ Partial Class Pantalla
         'ChBox6
         '
         Me.ChBox6.AutoSize = True
-        Me.ChBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ChBox6.Location = New System.Drawing.Point(13, 102)
+        Me.ChBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ChBox6.Location = New System.Drawing.Point(13, 106)
         Me.ChBox6.Name = "ChBox6"
-        Me.ChBox6.Size = New System.Drawing.Size(47, 17)
+        Me.ChBox6.Size = New System.Drawing.Size(58, 22)
         Me.ChBox6.TabIndex = 58
         Me.ChBox6.Text = "Aros"
         Me.ChBox6.UseVisualStyleBackColor = True
@@ -421,10 +373,10 @@ Partial Class Pantalla
         'Button4
         '
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button4.Location = New System.Drawing.Point(273, 150)
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Button4.Location = New System.Drawing.Point(257, 152)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.Size = New System.Drawing.Size(104, 26)
         Me.Button4.TabIndex = 59
         Me.Button4.Text = "Comprobar"
         Me.Button4.UseVisualStyleBackColor = True
@@ -432,11 +384,11 @@ Partial Class Pantalla
         'txtfecha
         '
         Me.txtfecha.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txtfecha.Location = New System.Drawing.Point(261, 48)
+        Me.txtfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.txtfecha.Location = New System.Drawing.Point(257, 48)
         Me.txtfecha.Name = "txtfecha"
         Me.txtfecha.ReadOnly = True
-        Me.txtfecha.Size = New System.Drawing.Size(100, 20)
+        Me.txtfecha.Size = New System.Drawing.Size(104, 24)
         Me.txtfecha.TabIndex = 61
         '
         'Label9
@@ -461,10 +413,10 @@ Partial Class Pantalla
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.TextBox1.Location = New System.Drawing.Point(17, 151)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(100, 24)
         Me.TextBox1.TabIndex = 63
         '
         'Label12
@@ -480,11 +432,11 @@ Partial Class Pantalla
         'TextBox2
         '
         Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.TextBox2.Location = New System.Drawing.Point(19, 48)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(100, 24)
         Me.TextBox2.TabIndex = 65
         '
         'Timer1
@@ -493,11 +445,11 @@ Partial Class Pantalla
         'txthora
         '
         Me.txthora.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txthora.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txthora.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txthora.Location = New System.Drawing.Point(257, 101)
         Me.txthora.Name = "txthora"
         Me.txthora.ReadOnly = True
-        Me.txthora.Size = New System.Drawing.Size(100, 20)
+        Me.txthora.Size = New System.Drawing.Size(104, 24)
         Me.txthora.TabIndex = 68
         '
         'Label13
@@ -515,9 +467,11 @@ Partial Class Pantalla
         Me.GroupBox4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox4.Controls.Add(Me.PictureBox1)
+        Me.GroupBox4.Controls.Add(Me.Button2)
+        Me.GroupBox4.Controls.Add(Me.Button1)
         Me.GroupBox4.Controls.Add(Me.GroupBox7)
         Me.GroupBox4.Controls.Add(Me.GroupBox5)
-        Me.GroupBox4.Controls.Add(Me.PictureBox1)
         Me.GroupBox4.Controls.Add(Me.GroupBox6)
         Me.GroupBox4.Controls.Add(Me.GroupBox3)
         Me.GroupBox4.Controls.Add(Me.Label11)
@@ -533,36 +487,101 @@ Partial Class Pantalla
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Lavados"
         '
-        'GroupBox3
+        'GroupBox7
         '
-        Me.GroupBox3.Controls.Add(Me.ChBoxChasis)
-        Me.GroupBox3.Controls.Add(Me.ChBoxMotor)
-        Me.GroupBox3.Controls.Add(Me.ChBox3)
-        Me.GroupBox3.Controls.Add(Me.ChBox4)
-        Me.GroupBox3.Controls.Add(Me.ChBox6)
-        Me.GroupBox3.Controls.Add(Me.ChBox5)
-        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.GroupBox3.Location = New System.Drawing.Point(215, 289)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(112, 129)
-        Me.GroupBox3.TabIndex = 70
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Extras"
+        Me.GroupBox7.Controls.Add(Me.Label2)
+        Me.GroupBox7.Controls.Add(Me.ComboBox2)
+        Me.GroupBox7.Controls.Add(Me.Label1)
+        Me.GroupBox7.Controls.Add(Me.ComboBox1)
+        Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.GroupBox7.Location = New System.Drawing.Point(29, 42)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(180, 100)
+        Me.GroupBox7.TabIndex = 75
+        Me.GroupBox7.TabStop = False
         '
-        'Button3
+        'Label2
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Image = Global.Lavacar.My.Resources.Resources._16__Ok_
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(359, 434)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(150, 40)
-        Me.Button3.TabIndex = 25
-        Me.Button3.Text = "Imprimir tiquete"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(33, 8)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(112, 21)
+        Me.Label2.TabIndex = 63
+        Me.Label2.Text = "Tipo de cliente"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Con cita", "Sin cita"})
+        Me.ComboBox2.Location = New System.Drawing.Point(11, 29)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(156, 21)
+        Me.ComboBox2.TabIndex = 62
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(27, 49)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(121, 21)
+        Me.Label1.TabIndex = 61
+        Me.Label1.Text = "Tipo de paquete"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Estandar", "Temporada"})
+        Me.ComboBox1.Location = New System.Drawing.Point(10, 72)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(156, 21)
+        Me.ComboBox1.TabIndex = 0
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox5.Controls.Add(Me.RadioButton4)
+        Me.GroupBox5.Controls.Add(Me.RadioButton3)
+        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.GroupBox5.Location = New System.Drawing.Point(29, 148)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(180, 108)
+        Me.GroupBox5.TabIndex = 74
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Fecha de pago"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(10, 64)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(164, 24)
+        Me.DateTimePicker1.TabIndex = 2
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(99, 30)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(79, 22)
+        Me.RadioButton4.TabIndex = 1
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "Otro día"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(10, 29)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(88, 22)
+        Me.RadioButton3.TabIndex = 0
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Paga hoy"
+        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'GroupBox6
         '
@@ -589,111 +608,136 @@ Partial Class Pantalla
         Me.GroupBox6.TabIndex = 71
         Me.GroupBox6.TabStop = False
         '
-        'GroupBox7
+        'GroupBox3
         '
-        Me.GroupBox7.Controls.Add(Me.Label2)
-        Me.GroupBox7.Controls.Add(Me.ComboBox2)
-        Me.GroupBox7.Controls.Add(Me.Label1)
-        Me.GroupBox7.Controls.Add(Me.ComboBox1)
-        Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.GroupBox7.Location = New System.Drawing.Point(29, 42)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(161, 120)
-        Me.GroupBox7.TabIndex = 75
-        Me.GroupBox7.TabStop = False
+        Me.GroupBox3.Controls.Add(Me.ChBoxChasis)
+        Me.GroupBox3.Controls.Add(Me.ChBoxMotor)
+        Me.GroupBox3.Controls.Add(Me.ChBox3)
+        Me.GroupBox3.Controls.Add(Me.ChBox4)
+        Me.GroupBox3.Controls.Add(Me.ChBox6)
+        Me.GroupBox3.Controls.Add(Me.ChBox5)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.GroupBox3.Location = New System.Drawing.Point(223, 289)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(123, 134)
+        Me.GroupBox3.TabIndex = 70
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Extras"
         '
-        'Label1
+        'Button1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 64)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 21)
-        Me.Label1.TabIndex = 61
-        Me.Label1.Text = "Tipo de paquete"
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Image = Global.Lavacar.My.Resources.Resources.if_ic_local_car_wash_48px_352495
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(594, 434)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(150, 40)
+        Me.Button1.TabIndex = 76
+        Me.Button1.Text = "Ver lavados     "
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'Button3
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Estandar", "Temporada"})
-        Me.ComboBox1.Location = New System.Drawing.Point(17, 88)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Button3.ForeColor = System.Drawing.Color.Black
+        Me.Button3.Image = Global.Lavacar.My.Resources.Resources.if_print_54346
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(229, 434)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(150, 40)
+        Me.Button3.TabIndex = 25
+        Me.Button3.Text = "Imprimir tiquete"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.UseVisualStyleBackColor = False
         '
-        'GroupBox5
+        'ArchivoToolStripMenuItem
         '
-        Me.GroupBox5.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox5.Controls.Add(Me.RadioButton4)
-        Me.GroupBox5.Controls.Add(Me.RadioButton3)
-        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.GroupBox5.Location = New System.Drawing.Point(29, 176)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(161, 80)
-        Me.GroupBox5.TabIndex = 74
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Fecha de pago"
+        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgendaToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.ArchivoToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_file_zip_alt_285690
+        Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
+        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.ArchivoToolStripMenuItem.Text = "Archivo"
         '
-        'DateTimePicker1
+        'AgendaToolStripMenuItem
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(10, 49)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(142, 20)
-        Me.DateTimePicker1.TabIndex = 2
+        Me.AgendaToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_schedule_3755
+        Me.AgendaToolStripMenuItem.Name = "AgendaToolStripMenuItem"
+        Me.AgendaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AgendaToolStripMenuItem.Text = "Agenda"
         '
-        'RadioButton4
+        'SalirToolStripMenuItem
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(88, 23)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(64, 17)
-        Me.RadioButton4.TabIndex = 1
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Otro día"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.SalirToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_door_out_35979
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalirToolStripMenuItem.Text = "Salir"
         '
-        'RadioButton3
+        'AdminToolStripMenuItem
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(12, 23)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(70, 17)
-        Me.RadioButton3.TabIndex = 0
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Paga hoy"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.CombosToolStripMenuItem, Me.PreciosToolStripMenuItem})
+        Me.AdminToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_user_avatar_human_admin_login_2203549
+        Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
+        Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.AdminToolStripMenuItem.Text = "Admin"
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_Statistics_67373
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
+        'UsuariosToolStripMenuItem
+        '
+        Me.UsuariosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_onebit_17_12591
+        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
+        '
+        'CombosToolStripMenuItem
+        '
+        Me.CombosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_package_18168
+        Me.CombosToolStripMenuItem.Name = "CombosToolStripMenuItem"
+        Me.CombosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CombosToolStripMenuItem.Text = "Paquetes"
+        '
+        'PreciosToolStripMenuItem
+        '
+        Me.PreciosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_add_on_3018515
+        Me.PreciosToolStripMenuItem.Name = "PreciosToolStripMenuItem"
+        Me.PreciosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PreciosToolStripMenuItem.Text = "Extras"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Button2.Image = Global.Lavacar.My.Resources.Resources.if_1_2058800
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(412, 434)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(150, 40)
+        Me.Button2.TabIndex = 77
+        Me.Button2.Text = "Limpiar pantalla"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Lavacar.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(29, 292)
+        Me.PictureBox1.Location = New System.Drawing.Point(29, 295)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(161, 124)
+        Me.PictureBox1.Size = New System.Drawing.Size(180, 128)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 73
+        Me.PictureBox1.TabIndex = 78
         Me.PictureBox1.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(21, 13)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 21)
-        Me.Label2.TabIndex = 63
-        Me.Label2.Text = "Tipo de cliente"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Con cita", "Sin cita"})
-        Me.ComboBox2.Location = New System.Drawing.Point(18, 38)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 62
         '
         'Pantalla
         '
@@ -717,14 +761,14 @@ Partial Class Pantalla
         Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -784,8 +828,10 @@ Partial Class Pantalla
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents RadioButton4 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button2 As Button
 End Class

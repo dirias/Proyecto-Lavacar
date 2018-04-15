@@ -128,3 +128,5 @@ go
 alter table tblVehiculo add constraint
 Fk_Vehiculo_Cliente foreign key (vehPlaca) references tblCliente(clienId)
 go
+
+select @@servername
