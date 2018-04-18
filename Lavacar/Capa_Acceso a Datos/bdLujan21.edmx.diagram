@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0b95ac1a89d6441ab7174ff5dfcdb3f3" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="dbLujan21Model.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbLujan21Model.tblAdmi" Width="1.5" PointX="7.75" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="dbLujan21Model.tblCliente" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="dbLujan21Model.tblExtras" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />

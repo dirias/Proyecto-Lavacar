@@ -22,7 +22,6 @@ Partial Public Class dbLujan21Entities
         Throw New UnintentionalCodeFirstException()
     End Sub
 
-    Public Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Property tblAdmi() As DbSet(Of tblAdmi)
     Public Property tblCliente() As DbSet(Of tblCliente)
     Public Property tblExtras() As DbSet(Of tblExtras)
