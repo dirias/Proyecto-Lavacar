@@ -133,6 +133,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property if_Gnome_Edit_Clear_64_55586() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("if_Gnome-Edit-Clear-64_55586", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property if_ic_local_car_wash_48px_352495() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("if_ic_local_car_wash_48px_352495", resourceCulture)
@@ -226,6 +236,16 @@ Namespace My.Resources
         Friend ReadOnly Property if_Statistics_67373() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("if_Statistics_67373", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property if_trashcan_delete2_44451() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("if_trashcan-delete2_44451", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

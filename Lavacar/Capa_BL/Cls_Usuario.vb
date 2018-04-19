@@ -35,6 +35,7 @@ Public Class Cls_Usuario
 
         Catch ex As Exception
             ''Mensaje de error
+            MsgBox("Error al borrar los datos" & vbCrLf & ex.Message)
             Return False
         End Try
     End Function
@@ -43,21 +44,20 @@ Public Class Cls_Usuario
         Try
             usuario = (From temp In DB.tblAdmi
                        Where temp.admiUsuario = pUser
-                       Select temp).First()
+                       Select temp).First
 
             usuario.admiNombre = pNombre
             usuario.admiApellidos = pApellidos
-            usuario.admiUsuario = pUser
             usuario.admiPW = pPw
             usuario.admiRights = pRights
 
-            DB.tblAdmi.Add(usuario)
             DB.SaveChanges()
 
             Return True
 
         Catch ex As Exception
             ''Mensaje de error
+            MsgBox("Error al modificar los datos" & vbCrLf & ex.Message)
             Return False
         End Try
     End Function

@@ -57,6 +57,11 @@ Lavacar
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Lavacar.My.Resources.Resources.if_Gnome_Edit_Clear_64_55586">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Lavacar.My.Resources.Resources.if_ic_local_car_wash_48px_352495">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -103,6 +108,11 @@ Lavacar
 </summary>
 </member>
 <member name="P:Lavacar.My.Resources.Resources.if_Statistics_67373">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Lavacar.My.Resources.Resources.if_trashcan_delete2_44451">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
