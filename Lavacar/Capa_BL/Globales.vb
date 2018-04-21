@@ -7,4 +7,7 @@
     Public paquete As New tblPaquetes
     Public clsPaquetes As New Cls_Paquetes
 
+    Public lavado As New tblLavados
+    Public clsLavado As New Cls_Lavados
+
 End Module

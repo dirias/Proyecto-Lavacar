@@ -62,6 +62,9 @@ Partial Class Paquetes
         Me.DbLujan21DataSet1 = New Lavacar.dbLujan21DataSet1()
         Me.TblPaquetesTableAdapter = New Lavacar.dbLujan21DataSet1TableAdapters.tblPaquetesTableAdapter()
         Me.TblPaquetesTableAdapter1 = New Lavacar.dbLujan21DataSet2TableAdapters.tblPaquetesTableAdapter()
+        Me.rbMotor = New System.Windows.Forms.RadioButton()
+        Me.rbMotocicleta = New System.Windows.Forms.RadioButton()
+        Me.rbChasis = New System.Windows.Forms.RadioButton()
         Me.tbControlPaquetes.SuspendLayout()
         Me.tbPaquetes.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -92,8 +95,8 @@ Partial Class Paquetes
         Me.tbPaquetes.Controls.Add(Me.GroupBox2)
         Me.tbPaquetes.Controls.Add(Me.CbxTipo)
         Me.tbPaquetes.Controls.Add(Me.Label1)
-        Me.tbPaquetes.Controls.Add(Me.GroupTemporada)
         Me.tbPaquetes.Controls.Add(Me.GroupEstandar)
+        Me.tbPaquetes.Controls.Add(Me.GroupTemporada)
         Me.tbPaquetes.Location = New System.Drawing.Point(4, 22)
         Me.tbPaquetes.Name = "tbPaquetes"
         Me.tbPaquetes.Padding = New System.Windows.Forms.Padding(3)
@@ -280,6 +283,9 @@ Partial Class Paquetes
         '
         'GroupEstandar
         '
+        Me.GroupEstandar.Controls.Add(Me.rbMotor)
+        Me.GroupEstandar.Controls.Add(Me.rbMotocicleta)
+        Me.GroupEstandar.Controls.Add(Me.rbChasis)
         Me.GroupEstandar.Controls.Add(Me.Label2)
         Me.GroupEstandar.Controls.Add(Me.txtPrecioE)
         Me.GroupEstandar.Controls.Add(Me.Label4)
@@ -299,7 +305,7 @@ Partial Class Paquetes
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 71)
+        Me.Label2.Location = New System.Drawing.Point(18, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 21)
         Me.Label2.TabIndex = 56
@@ -308,7 +314,7 @@ Partial Class Paquetes
         'txtPrecioE
         '
         Me.txtPrecioE.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.txtPrecioE.Location = New System.Drawing.Point(359, 37)
+        Me.txtPrecioE.Location = New System.Drawing.Point(359, 61)
         Me.txtPrecioE.Name = "txtPrecioE"
         Me.txtPrecioE.Size = New System.Drawing.Size(126, 24)
         Me.txtPrecioE.TabIndex = 55
@@ -317,17 +323,17 @@ Partial Class Paquetes
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(301, 39)
+        Me.Label4.Location = New System.Drawing.Point(394, 31)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(57, 21)
+        Me.Label4.Size = New System.Drawing.Size(53, 21)
         Me.Label4.TabIndex = 54
-        Me.Label4.Text = "Precio:"
+        Me.Label4.Text = "Precio"
         '
         'rtbDescripE
         '
-        Me.rtbDescripE.Location = New System.Drawing.Point(20, 93)
+        Me.rtbDescripE.Location = New System.Drawing.Point(20, 113)
         Me.rtbDescripE.Name = "rtbDescripE"
-        Me.rtbDescripE.Size = New System.Drawing.Size(465, 110)
+        Me.rtbDescripE.Size = New System.Drawing.Size(465, 90)
         Me.rtbDescripE.TabIndex = 53
         Me.rtbDescripE.Text = ""
         '
@@ -335,18 +341,17 @@ Partial Class Paquetes
         '
         Me.rbBásicoE.AutoSize = True
         Me.rbBásicoE.Checked = True
-        Me.rbBásicoE.Location = New System.Drawing.Point(22, 37)
+        Me.rbBásicoE.Location = New System.Drawing.Point(22, 31)
         Me.rbBásicoE.Name = "rbBásicoE"
         Me.rbBásicoE.Size = New System.Drawing.Size(72, 22)
         Me.rbBásicoE.TabIndex = 50
-        Me.rbBásicoE.TabStop = True
         Me.rbBásicoE.Text = "Básico"
         Me.rbBásicoE.UseVisualStyleBackColor = True
         '
         'rbFullE
         '
         Me.rbFullE.AutoSize = True
-        Me.rbFullE.Location = New System.Drawing.Point(202, 37)
+        Me.rbFullE.Location = New System.Drawing.Point(202, 31)
         Me.rbFullE.Name = "rbFullE"
         Me.rbFullE.Size = New System.Drawing.Size(49, 22)
         Me.rbFullE.TabIndex = 52
@@ -356,7 +361,7 @@ Partial Class Paquetes
         'rbMedioE
         '
         Me.rbMedioE.AutoSize = True
-        Me.rbMedioE.Location = New System.Drawing.Point(113, 37)
+        Me.rbMedioE.Location = New System.Drawing.Point(113, 31)
         Me.rbMedioE.Name = "rbMedioE"
         Me.rbMedioE.Size = New System.Drawing.Size(67, 22)
         Me.rbMedioE.TabIndex = 51
@@ -460,6 +465,36 @@ Partial Class Paquetes
         '
         Me.TblPaquetesTableAdapter1.ClearBeforeFill = True
         '
+        'rbMotor
+        '
+        Me.rbMotor.AutoSize = True
+        Me.rbMotor.Location = New System.Drawing.Point(22, 61)
+        Me.rbMotor.Name = "rbMotor"
+        Me.rbMotor.Size = New System.Drawing.Size(66, 22)
+        Me.rbMotor.TabIndex = 57
+        Me.rbMotor.Text = "Motor"
+        Me.rbMotor.UseVisualStyleBackColor = True
+        '
+        'rbMotocicleta
+        '
+        Me.rbMotocicleta.AutoSize = True
+        Me.rbMotocicleta.Location = New System.Drawing.Point(202, 61)
+        Me.rbMotocicleta.Name = "rbMotocicleta"
+        Me.rbMotocicleta.Size = New System.Drawing.Size(103, 22)
+        Me.rbMotocicleta.TabIndex = 59
+        Me.rbMotocicleta.Text = "Motocicleta"
+        Me.rbMotocicleta.UseVisualStyleBackColor = True
+        '
+        'rbChasis
+        '
+        Me.rbChasis.AutoSize = True
+        Me.rbChasis.Location = New System.Drawing.Point(113, 61)
+        Me.rbChasis.Name = "rbChasis"
+        Me.rbChasis.Size = New System.Drawing.Size(72, 22)
+        Me.rbChasis.TabIndex = 58
+        Me.rbChasis.Text = "Chasis"
+        Me.rbChasis.UseVisualStyleBackColor = True
+        '
         'Paquetes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -529,4 +564,7 @@ Partial Class Paquetes
     Friend WithEvents DbLujan21DataSet2 As dbLujan21DataSet2
     Friend WithEvents TblPaquetesBindingSource1 As BindingSource
     Friend WithEvents TblPaquetesTableAdapter1 As dbLujan21DataSet2TableAdapters.tblPaquetesTableAdapter
+    Friend WithEvents rbMotor As RadioButton
+    Friend WithEvents rbMotocicleta As RadioButton
+    Friend WithEvents rbChasis As RadioButton
 End Class

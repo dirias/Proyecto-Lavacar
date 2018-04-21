@@ -139,3 +139,11 @@ insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
 values('Medio','Estandar','Básico + cera + protector de llantas + abrillantador molduras + protección dash',4900)
 insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
 values('Full','Estandar','MEDIO + antiempañado de parabrisas trasero y delantero+lavado alfombras + protector de aros.',5500)
+insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
+values('Motor','Estandar','Lavado de motor.',4000)
+insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
+values('Chasis','Estandar','Lavado de chasis.',3500)
+insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
+values('Motocicleta','Estandar','Lavado de motocicleta.',3000)
+
+select * from tblPaquetes

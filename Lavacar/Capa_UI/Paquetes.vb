@@ -56,8 +56,14 @@
 
                 ElseIf rbMedioE.Checked = True Then
                     resultado = clsPaquetes.modificarPaqueteEstandar(rbMedioE.Text, rtbDescripE.Text, txtPrecioE.Text)
-                Else
+                ElseIf rbFullE.Checked = True Then
                     resultado = clsPaquetes.modificarPaqueteEstandar(rbFullE.Text, rtbDescripE.Text, txtPrecioE.Text)
+                ElseIf rbMotor.Checked = True Then
+                    resultado = clsPaquetes.modificarPaqueteEstandar(rbMotor.Text, rtbDescripE.Text, txtPrecioE.Text)
+                ElseIf rbChasis.Checked = True Then
+                    resultado = clsPaquetes.modificarPaqueteEstandar(rbChasis.Text, rtbDescripE.Text, txtPrecioE.Text)
+                ElseIf rbMotocicleta.Checked = True Then
+                    resultado = clsPaquetes.modificarPaqueteEstandar(rbMotocicleta.Text, rtbDescripE.Text, txtPrecioE.Text)
                 End If
                 If resultado Then
                     MessageBox.Show("Datos modificados con exito", "Paquete modificado",
@@ -142,6 +148,18 @@
                 lista = clsPaquetes.buscarPaqueteEstandar(rbFullE.Text)
                 rtbDescripE.Text = lista(2)
                 txtPrecioE.Text = lista(3)
+            ElseIf rbMotor.Checked = True Then
+                lista = clsPaquetes.buscarPaqueteEstandar(rbMotor.Text)
+                rtbDescripE.Text = lista(2)
+                txtPrecioE.Text = lista(3)
+            ElseIf rbChasis.Checked = True Then
+                lista = clsPaquetes.buscarPaqueteEstandar(rbChasis.Text)
+                rtbDescripE.Text = lista(2)
+                txtPrecioE.Text = lista(3)
+            ElseIf rbMotocicleta.Checked = True Then
+                lista = clsPaquetes.buscarPaqueteEstandar(rbMotocicleta.Text)
+                rtbDescripE.Text = lista(2)
+                txtPrecioE.Text = lista(3)
             Else
                 btnLimpiar.Enabled = True
             End If
@@ -178,10 +196,28 @@
             ElseIf rbMedioE.Checked = True Then
                 rtbDescripE.Text = dtgPaquetesTodos.Item(3, i).Value()
                 txtPrecioE.Text = dtgPaquetesTodos.Item(4, i).Value()
-            Else
+            ElseIf rbMotor.Checked = True Then
+                rtbDescripE.Text = dtgPaquetesTodos.Item(3, i).Value()
+                txtPrecioE.Text = dtgPaquetesTodos.Item(4, i).Value()
+            ElseIf rbChasis.Checked = True Then
+                rtbDescripE.Text = dtgPaquetesTodos.Item(3, i).Value()
+                txtPrecioE.Text = dtgPaquetesTodos.Item(4, i).Value()
+            ElseIf rbMotocicleta.Checked = True Then
                 rtbDescripE.Text = dtgPaquetesTodos.Item(3, i).Value()
                 txtPrecioE.Text = dtgPaquetesTodos.Item(4, i).Value()
             End If
         End If
+    End Sub
+
+    Private Sub rbMotor_CheckedChanged(sender As Object, e As EventArgs) Handles rbMotor.CheckedChanged
+        ExtraerDatosEstandar()
+    End Sub
+
+    Private Sub rbChasis_CheckedChanged(sender As Object, e As EventArgs) Handles rbChasis.CheckedChanged
+        ExtraerDatosEstandar()
+    End Sub
+
+    Private Sub rbMotocicleta_CheckedChanged(sender As Object, e As EventArgs) Handles rbMotocicleta.CheckedChanged
+        ExtraerDatosEstandar()
     End Sub
 End Class

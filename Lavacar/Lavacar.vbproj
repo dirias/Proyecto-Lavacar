@@ -111,6 +111,7 @@
     <Compile Include="Capa_Acceso a Datos\tblVehiculo.vb">
       <DependentUpon>bdLujan21.tt</DependentUpon>
     </Compile>
+    <Compile Include="Capa_BL\Cls_Lavados.vb" />
     <Compile Include="Capa_BL\Cls_Paquetes.vb" />
     <Compile Include="Capa_BL\Cls_Usuario.vb" />
     <Compile Include="Capa_BL\Globales.vb" />

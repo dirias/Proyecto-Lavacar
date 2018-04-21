@@ -12,8 +12,6 @@ Public Class Pantalla
         cbxTipoPaquete.SelectedIndex = 0
         rbPagaHoy.Checked = True
         dtpFechaPago.Enabled = False
-        monto = 4000
-        txtprecio.Text = monto
         txtUser.Text = ConfigurationSettings.AppSettings("usuarioActual")
     End Sub
 
@@ -159,126 +157,225 @@ Public Class Pantalla
         End Try
     End Sub
     Public Sub rbSize()
+        Dim lista As New Collection
         If rbpequeno.Checked Then
             rbpequeno.Enabled = True
             rbmoto.Checked = False
             rbmoto.Enabled = False
             If rbbasico.Checked Then
-                monto = 4000
+                lista = clsPaquetes.buscarPaqueteEstandar("Básico")
+                monto = lista(3)
                 txtprecio.Text = monto
-                txtdescripcion.Text = "Lavado exterior con champú + secado + aspirado interior"
+                txtdescripcion.Text = lista(2)
             ElseIf rbmedio.Checked Then
-                monto = 4900
+                lista = clsPaquetes.buscarPaqueteEstandar("Medio")
+                monto = lista(3)
                 txtprecio.Text = monto
-                txtdescripcion.Text = "Básico + cera + protector de llantas + abrillantador molduras + protección dash"
+                txtdescripcion.Text = lista(2)
             ElseIf rbfull.Checked Then
-                monto = 5500
+                lista = clsPaquetes.buscarPaqueteEstandar("Full")
+                monto = lista(3)
                 txtprecio.Text = monto
-                txtdescripcion.Text = "MEDIO + antiempañado de parabrisas trasero y delantero+lavado alfombras+protector de aros."
-
+                txtdescripcion.Text = lista(2)
+            ElseIf rdMotor.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Motor")
+                monto = lista(3)
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
+            ElseIf rbChasis.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Chasis")
+                monto = lista(3)
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
             End If
         ElseIf rbmediano.Checked Then
             rbpequeno.Enabled = True
             rbmoto.Enabled = True
             If rbbasico.Checked Then
-                monto = 5000
-                txtprecio.Text = monto
-                txtdescripcion.Text = "Lavado exterior con champú + secado + aspirado interior"
+                lista = clsPaquetes.buscarPaqueteEstandar("Básico")
+                txtprecio.Text = lista(3) + 1000
+                txtdescripcion.Text = lista(2)
             ElseIf rbmedio.Checked Then
-                monto = 6000
+                lista = clsPaquetes.buscarPaqueteEstandar("Medio")
+                monto = lista(3) + 1100
                 txtprecio.Text = monto
-                txtdescripcion.Text = "Básico + cera + protector de llantas + abrillantador molduras + protección dash"
+                txtdescripcion.Text = lista(2)
             ElseIf rbfull.Checked Then
-                monto = 6500
+                lista = clsPaquetes.buscarPaqueteEstandar("Full")
+                monto = lista(3) + 1000
                 txtprecio.Text = monto
-                txtdescripcion.Text = "MEDIO + antiempañado de parabrisas trasero y delantero+lavado alfombras+protector de aros."
+                txtdescripcion.Text = lista(2)
             ElseIf rbmoto.Checked Then
-                monto = 3000
+                lista = clsPaquetes.buscarPaqueteEstandar("Motocicleta")
+                monto = lista(3)
                 txtprecio.Text = monto
-                txtdescripcion.Text = "Lavado de moto"
+                txtdescripcion.Text = lista(2)
+            ElseIf rdMotor.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Motor")
+                monto = lista(3) + 1000
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
+            ElseIf rbChasis.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Chasis")
+                monto = lista(3)
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
+            End If
+        ElseIf rbgrande.Checked Then
+            rbpequeno.Enabled = True
+            rbmoto.Enabled = True
+            If rbbasico.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Básico")
+                monto = lista(3) + 2000
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
+            ElseIf rbmedio.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Medio")
+                monto = lista(3) + 2400
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
+            ElseIf rbfull.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Full")
+                monto = lista(3) + 2200
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
+            ElseIf rbmoto.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Motocicleta")
+                monto = lista(3) + 1500
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
+            ElseIf rdMotor.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Motor")
+                monto = lista(3)
+                txtprecio.Text = monto + 2000
+                txtdescripcion.Text = lista(2)
+            ElseIf rbChasis.Checked Then
+                lista = clsPaquetes.buscarPaqueteEstandar("Chasis")
+                monto = lista(3) + 1000
+                txtprecio.Text = monto
+                txtdescripcion.Text = lista(2)
             End If
 
         End If
     End Sub
     Private Sub rbpequeno_CheckedChanged(sender As Object, e As EventArgs) Handles rbpequeno.CheckedChanged
-
+        rbSize()
     End Sub
 
     Private Sub rbmediano_CheckedChanged(sender As Object, e As EventArgs) Handles rbmediano.CheckedChanged
-
+        rbSize()
     End Sub
 
     Private Sub rbgrande_CheckedChanged(sender As Object, e As EventArgs) Handles rbgrande.CheckedChanged
-
+        rbSize()
     End Sub
-
-    Private Sub rbbasico_CheckedChanged(sender As Object, e As EventArgs) Handles rbbasico.CheckedChanged
+    Public Sub rbTipo()
+        Dim lista As New Collection
         If rbbasico.Checked = True Then
+            lista = clsPaquetes.buscarPaqueteEstandar("Básico")
+            txtdescripcion.Text = lista(2)
             rbpequeno.Enabled = True
             If rbpequeno.Checked Then
-                monto = 4000
+                monto = lista(3)
                 txtprecio.Text = monto
             ElseIf rbmediano.Checked Then
-                monto = 5000
+                monto = lista(3) + 1000
                 txtprecio.Text = monto
             ElseIf rbgrande.Checked Then
-                monto = 6000
+                monto = lista(3) + 2000
                 txtprecio.Text = monto
             End If
-            txtdescripcion.Text = "Lavado exterior con champú + secado + aspirado interior"
+        ElseIf rbmedio.Checked = True Then
+            lista = clsPaquetes.buscarPaqueteEstandar("Medio")
+            txtdescripcion.Text = lista(2)
+            rbpequeno.Enabled = True
+            If rbpequeno.Checked Then
+                monto = lista(3)
+                txtprecio.Text = monto
+            ElseIf rbmediano.Checked Then
+                monto = lista(3) + 1100
+                txtprecio.Text = monto
+            ElseIf rbgrande.Checked Then
+                monto = lista(3) + 2400
+                txtprecio.Text = monto
+            End If
+        ElseIf rbfull.Checked = True Then
+            lista = clsPaquetes.buscarPaqueteEstandar("Full")
+            txtdescripcion.Text = lista(2)
+            rbpequeno.Enabled = True
+            If rbpequeno.Checked Then
+                monto = lista(3)
+                txtprecio.Text = monto
+            ElseIf rbmediano.Checked Then
+                monto = lista(3) + 1000
+                txtprecio.Text = monto
+            ElseIf rbgrande.Checked Then
+                monto = lista(3) + 2200
+                txtprecio.Text = monto
+            End If
+        ElseIf rdMotor.Checked = True Then
+            lista = clsPaquetes.buscarPaqueteEstandar("Motor")
+            txtdescripcion.Text = lista(2)
+            rbpequeno.Enabled = True
+            If rbpequeno.Checked Then
+                monto = lista(3)
+                txtprecio.Text = monto
+            ElseIf rbmediano.Checked Then
+                monto = lista(3) + 1000
+                txtprecio.Text = monto
+            ElseIf rbgrande.Checked Then
+                monto = lista(3) + 2000
+                txtprecio.Text = monto
+            End If
+        ElseIf rbChasis.Checked = True Then
+            lista = clsPaquetes.buscarPaqueteEstandar("Chasis")
+            txtdescripcion.Text = lista(2)
+            rbpequeno.Enabled = True
+            If rbpequeno.Checked Then
+                monto = lista(3)
+                txtprecio.Text = monto
+            ElseIf rbmediano.Checked Then
+                monto = lista(3)
+                txtprecio.Text = monto
+            ElseIf rbgrande.Checked Then
+                monto = lista(3) + 1000
+                txtprecio.Text = monto
+            End If
+        ElseIf rbmoto.Checked = True Then
+            lista = clsPaquetes.buscarPaqueteEstandar("Motocicleta")
+            txtdescripcion.Text = lista(2)
+            rbpequeno.Enabled = True
+            If rbmediano.Checked Then
+                monto = lista(3)
+                txtprecio.Text = monto
+            ElseIf rbgrande.Checked Then
+                monto = lista(3) + 1500
+                txtprecio.Text = monto
+            End If
+
         End If
+    End Sub
+    Private Sub rbbasico_CheckedChanged(sender As Object, e As EventArgs) Handles rbbasico.CheckedChanged
+        rbTipo()
     End Sub
 
     Private Sub rbmedio_CheckedChanged(sender As Object, e As EventArgs) Handles rbmedio.CheckedChanged
-        If rbmedio.Checked = True Then
-            rbpequeno.Enabled = True
-            If rbpequeno.Checked Then
-                monto = 4900
-                txtprecio.Text = monto
-            ElseIf rbmediano.Checked Then
-                monto = 6000
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = 7300
-                txtprecio.Text = monto
-            End If
-            txtdescripcion.Text = "Básico + cera + protector de llantas + abrillantador molduras + protección dash"
-        End If
+        rbTipo()
     End Sub
 
     Private Sub rbfull_CheckedChanged(sender As Object, e As EventArgs) Handles rbfull.CheckedChanged
-        If rbfull.Checked = True Then
-            rbpequeno.Enabled = True
-            If rbpequeno.Checked Then
-                monto = 5500
-                txtprecio.Text = monto
-            ElseIf rbmediano.Checked Then
-                monto = 6500
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = 7700
-                txtprecio.Text = monto
-            End If
-            txtdescripcion.Text = "MEDIO + antiempañado de parabrisas trasero y delantero+lavado alfombras + protector de aros."
-        End If
+        rbTipo()
     End Sub
 
     Private Sub rbmoto_CheckedChanged(sender As Object, e As EventArgs) Handles rbmoto.CheckedChanged
-        If rbmoto.Checked = True Then
-            rbmoto.Enabled = True
-            rbpequeno.Enabled = False
-            If rbmediano.Checked = True Then
-                monto = 3000
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked = True Then
-                monto = 4500
-                txtprecio.Text = monto
-            ElseIf rbpequeno.Checked = True Then
-                rbmediano.Checked = True
-                monto = 3000
-                txtprecio.Text = monto
-            End If
-            txtdescripcion.Text = "Lavado de moto"
-        End If
+        rbTipo()
+    End Sub
+
+    Private Sub rdMotor_CheckedChanged(sender As Object, e As EventArgs) Handles rdMotor.CheckedChanged
+        rbTipo()
+    End Sub
+
+    Private Sub rbChasis_CheckedChanged(sender As Object, e As EventArgs) Handles rbChasis.CheckedChanged
+        rbTipo()
     End Sub
 End Class

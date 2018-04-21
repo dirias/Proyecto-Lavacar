@@ -83,6 +83,8 @@ Partial Class Pantalla
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.rbChasis = New System.Windows.Forms.RadioButton()
+        Me.rdMotor = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1.SuspendLayout()
         Me.gbSize.SuspendLayout()
         Me.gbPaquete.SuspendLayout()
@@ -241,7 +243,7 @@ Partial Class Pantalla
         Me.txtdescripcion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtdescripcion.Location = New System.Drawing.Point(359, 295)
+        Me.txtdescripcion.Location = New System.Drawing.Point(364, 295)
         Me.txtdescripcion.Multiline = True
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.ReadOnly = True
@@ -252,7 +254,7 @@ Partial Class Pantalla
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(363, 268)
+        Me.Label11.Location = New System.Drawing.Point(368, 268)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(94, 21)
         Me.Label11.TabIndex = 41
@@ -296,7 +298,7 @@ Partial Class Pantalla
         Me.gbSize.Controls.Add(Me.rbgrande)
         Me.gbSize.Controls.Add(Me.rbmediano)
         Me.gbSize.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.gbSize.Location = New System.Drawing.Point(223, 27)
+        Me.gbSize.Location = New System.Drawing.Point(228, 148)
         Me.gbSize.Name = "gbSize"
         Me.gbSize.Size = New System.Drawing.Size(123, 115)
         Me.gbSize.TabIndex = 49
@@ -305,14 +307,16 @@ Partial Class Pantalla
         '
         'gbPaquete
         '
+        Me.gbPaquete.Controls.Add(Me.rbChasis)
+        Me.gbPaquete.Controls.Add(Me.rdMotor)
         Me.gbPaquete.Controls.Add(Me.rbmoto)
         Me.gbPaquete.Controls.Add(Me.rbfull)
         Me.gbPaquete.Controls.Add(Me.rbmedio)
         Me.gbPaquete.Controls.Add(Me.rbbasico)
         Me.gbPaquete.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.gbPaquete.Location = New System.Drawing.Point(223, 148)
+        Me.gbPaquete.Location = New System.Drawing.Point(26, 148)
         Me.gbPaquete.Name = "gbPaquete"
-        Me.gbPaquete.Size = New System.Drawing.Size(123, 108)
+        Me.gbPaquete.Size = New System.Drawing.Size(188, 115)
         Me.gbPaquete.TabIndex = 50
         Me.gbPaquete.TabStop = False
         Me.gbPaquete.Text = "Paquete"
@@ -320,33 +324,30 @@ Partial Class Pantalla
         'rbmoto
         '
         Me.rbmoto.AutoSize = True
-        Me.rbmoto.Location = New System.Drawing.Point(15, 77)
+        Me.rbmoto.Location = New System.Drawing.Point(84, 76)
         Me.rbmoto.Name = "rbmoto"
         Me.rbmoto.Size = New System.Drawing.Size(103, 22)
         Me.rbmoto.TabIndex = 3
-        Me.rbmoto.TabStop = True
         Me.rbmoto.Text = "Motocicleta"
         Me.rbmoto.UseVisualStyleBackColor = True
         '
         'rbfull
         '
         Me.rbfull.AutoSize = True
-        Me.rbfull.Location = New System.Drawing.Point(15, 56)
+        Me.rbfull.Location = New System.Drawing.Point(13, 76)
         Me.rbfull.Name = "rbfull"
         Me.rbfull.Size = New System.Drawing.Size(49, 22)
         Me.rbfull.TabIndex = 2
-        Me.rbfull.TabStop = True
         Me.rbfull.Text = "Full"
         Me.rbfull.UseVisualStyleBackColor = True
         '
         'rbmedio
         '
         Me.rbmedio.AutoSize = True
-        Me.rbmedio.Location = New System.Drawing.Point(15, 36)
+        Me.rbmedio.Location = New System.Drawing.Point(13, 51)
         Me.rbmedio.Name = "rbmedio"
         Me.rbmedio.Size = New System.Drawing.Size(67, 22)
         Me.rbmedio.TabIndex = 1
-        Me.rbmedio.TabStop = True
         Me.rbmedio.Text = "Medio"
         Me.rbmedio.UseVisualStyleBackColor = True
         '
@@ -354,7 +355,7 @@ Partial Class Pantalla
         '
         Me.rbbasico.AutoSize = True
         Me.rbbasico.Checked = True
-        Me.rbbasico.Location = New System.Drawing.Point(15, 17)
+        Me.rbbasico.Location = New System.Drawing.Point(13, 27)
         Me.rbbasico.Name = "rbbasico"
         Me.rbbasico.Size = New System.Drawing.Size(72, 22)
         Me.rbbasico.TabIndex = 0
@@ -540,9 +541,9 @@ Partial Class Pantalla
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Lavacar.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(29, 295)
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 295)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(180, 128)
+        Me.PictureBox1.Size = New System.Drawing.Size(188, 134)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 78
         Me.PictureBox1.TabStop = False
@@ -554,7 +555,7 @@ Partial Class Pantalla
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.Button2.Image = Global.Lavacar.My.Resources.Resources.if_1_2058800
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(412, 434)
+        Me.Button2.Location = New System.Drawing.Point(417, 434)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(150, 40)
         Me.Button2.TabIndex = 77
@@ -570,7 +571,7 @@ Partial Class Pantalla
         Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Image = Global.Lavacar.My.Resources.Resources.if_ic_local_car_wash_48px_352495
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(594, 434)
+        Me.Button1.Location = New System.Drawing.Point(599, 434)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(150, 40)
         Me.Button1.TabIndex = 76
@@ -585,9 +586,9 @@ Partial Class Pantalla
         Me.GroupBox7.Controls.Add(Me.Label1)
         Me.GroupBox7.Controls.Add(Me.cbxTipoPaquete)
         Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.GroupBox7.Location = New System.Drawing.Point(29, 27)
+        Me.GroupBox7.Location = New System.Drawing.Point(26, 27)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(180, 115)
+        Me.GroupBox7.Size = New System.Drawing.Size(188, 115)
         Me.GroupBox7.TabIndex = 75
         Me.GroupBox7.TabStop = False
         '
@@ -639,9 +640,9 @@ Partial Class Pantalla
         Me.GroupBox5.Controls.Add(Me.rbOtroDia)
         Me.GroupBox5.Controls.Add(Me.rbPagaHoy)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.GroupBox5.Location = New System.Drawing.Point(29, 148)
+        Me.GroupBox5.Location = New System.Drawing.Point(228, 27)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(180, 108)
+        Me.GroupBox5.Size = New System.Drawing.Size(123, 115)
         Me.GroupBox5.TabIndex = 74
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Fecha de pago"
@@ -649,15 +650,15 @@ Partial Class Pantalla
         'dtpFechaPago
         '
         Me.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaPago.Location = New System.Drawing.Point(10, 64)
+        Me.dtpFechaPago.Location = New System.Drawing.Point(9, 79)
         Me.dtpFechaPago.Name = "dtpFechaPago"
-        Me.dtpFechaPago.Size = New System.Drawing.Size(164, 24)
+        Me.dtpFechaPago.Size = New System.Drawing.Size(107, 24)
         Me.dtpFechaPago.TabIndex = 2
         '
         'rbOtroDia
         '
         Me.rbOtroDia.AutoSize = True
-        Me.rbOtroDia.Location = New System.Drawing.Point(99, 30)
+        Me.rbOtroDia.Location = New System.Drawing.Point(9, 50)
         Me.rbOtroDia.Name = "rbOtroDia"
         Me.rbOtroDia.Size = New System.Drawing.Size(79, 22)
         Me.rbOtroDia.TabIndex = 1
@@ -668,7 +669,7 @@ Partial Class Pantalla
         'rbPagaHoy
         '
         Me.rbPagaHoy.AutoSize = True
-        Me.rbPagaHoy.Location = New System.Drawing.Point(10, 29)
+        Me.rbPagaHoy.Location = New System.Drawing.Point(9, 26)
         Me.rbPagaHoy.Name = "rbPagaHoy"
         Me.rbPagaHoy.Size = New System.Drawing.Size(88, 22)
         Me.rbPagaHoy.TabIndex = 0
@@ -694,7 +695,7 @@ Partial Class Pantalla
         Me.GroupBox6.Controls.Add(Me.Label12)
         Me.GroupBox6.Controls.Add(Me.Label6)
         Me.GroupBox6.Controls.Add(Me.txtUser)
-        Me.GroupBox6.Location = New System.Drawing.Point(359, 27)
+        Me.GroupBox6.Location = New System.Drawing.Point(364, 27)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(390, 232)
         Me.GroupBox6.TabIndex = 71
@@ -709,7 +710,7 @@ Partial Class Pantalla
         Me.GroupBox3.Controls.Add(Me.ChBox6)
         Me.GroupBox3.Controls.Add(Me.ChBox5)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.GroupBox3.Location = New System.Drawing.Point(223, 289)
+        Me.GroupBox3.Location = New System.Drawing.Point(228, 289)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(123, 134)
         Me.GroupBox3.TabIndex = 70
@@ -724,13 +725,33 @@ Partial Class Pantalla
         Me.Button3.ForeColor = System.Drawing.Color.Black
         Me.Button3.Image = Global.Lavacar.My.Resources.Resources.if_print_54346
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(229, 434)
+        Me.Button3.Location = New System.Drawing.Point(234, 434)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(150, 40)
         Me.Button3.TabIndex = 25
         Me.Button3.Text = "Imprimir tiquete"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button3.UseVisualStyleBackColor = False
+        '
+        'rbChasis
+        '
+        Me.rbChasis.AutoSize = True
+        Me.rbChasis.Location = New System.Drawing.Point(84, 51)
+        Me.rbChasis.Name = "rbChasis"
+        Me.rbChasis.Size = New System.Drawing.Size(72, 22)
+        Me.rbChasis.TabIndex = 5
+        Me.rbChasis.Text = "Chasis"
+        Me.rbChasis.UseVisualStyleBackColor = True
+        '
+        'rdMotor
+        '
+        Me.rdMotor.AutoSize = True
+        Me.rdMotor.Location = New System.Drawing.Point(84, 27)
+        Me.rdMotor.Name = "rdMotor"
+        Me.rdMotor.Size = New System.Drawing.Size(66, 22)
+        Me.rdMotor.TabIndex = 4
+        Me.rdMotor.Text = "Motor"
+        Me.rdMotor.UseVisualStyleBackColor = True
         '
         'Pantalla
         '
@@ -827,4 +848,6 @@ Partial Class Pantalla
     Private WithEvents txtUser As TextBox
     Private WithEvents txthora As TextBox
     Private WithEvents dtpFechaPago As DateTimePicker
+    Friend WithEvents rbChasis As RadioButton
+    Friend WithEvents rdMotor As RadioButton
 End Class
