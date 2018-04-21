@@ -20,12 +20,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("dbLujan21DataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("dbLujan21DataSet2"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class dbLujan21DataSet
+Partial Public Class dbLujan21DataSet2
     Inherits Global.System.Data.DataSet
     
-    Private tabletblAdmi As tblAdmiDataTable
+    Private tabletblPaquetes As tblPaquetesDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class dbLujan21DataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("tblAdmi")) Is Nothing) Then
-                MyBase.Tables.Add(New tblAdmiDataTable(ds.Tables("tblAdmi")))
+            If (Not (ds.Tables("tblPaquetes")) Is Nothing) Then
+                MyBase.Tables.Add(New tblPaquetesDataTable(ds.Tables("tblPaquetes")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class dbLujan21DataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property tblAdmi() As tblAdmiDataTable
+    Public ReadOnly Property tblPaquetes() As tblPaquetesDataTable
         Get
-            Return Me.tabletblAdmi
+            Return Me.tabletblPaquetes
         End Get
     End Property
     
@@ -128,7 +128,7 @@ Partial Public Class dbLujan21DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As dbLujan21DataSet = CType(MyBase.Clone,dbLujan21DataSet)
+        Dim cln As dbLujan21DataSet2 = CType(MyBase.Clone,dbLujan21DataSet2)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -153,8 +153,8 @@ Partial Public Class dbLujan21DataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("tblAdmi")) Is Nothing) Then
-                MyBase.Tables.Add(New tblAdmiDataTable(ds.Tables("tblAdmi")))
+            If (Not (ds.Tables("tblPaquetes")) Is Nothing) Then
+                MyBase.Tables.Add(New tblPaquetesDataTable(ds.Tables("tblPaquetes")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class dbLujan21DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tabletblAdmi = CType(MyBase.Tables("tblAdmi"),tblAdmiDataTable)
+        Me.tabletblPaquetes = CType(MyBase.Tables("tblPaquetes"),tblPaquetesDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabletblAdmi) Is Nothing) Then
-                Me.tabletblAdmi.InitVars
+            If (Not (Me.tabletblPaquetes) Is Nothing) Then
+                Me.tabletblPaquetes.InitVars
             End If
         End If
     End Sub
@@ -199,18 +199,18 @@ Partial Public Class dbLujan21DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "dbLujan21DataSet"
+        Me.DataSetName = "dbLujan21DataSet2"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/dbLujan21DataSet.xsd"
+        Me.Namespace = "http://tempuri.org/dbLujan21DataSet2.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tabletblAdmi = New tblAdmiDataTable()
-        MyBase.Tables.Add(Me.tabletblAdmi)
+        Me.tabletblPaquetes = New tblPaquetesDataTable()
+        MyBase.Tables.Add(Me.tabletblPaquetes)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializetblAdmi() As Boolean
+    Private Function ShouldSerializetblPaquetes() As Boolean
         Return false
     End Function
     
@@ -225,7 +225,7 @@ Partial Public Class dbLujan21DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As dbLujan21DataSet = New dbLujan21DataSet()
+        Dim ds As dbLujan21DataSet2 = New dbLujan21DataSet2()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -273,33 +273,31 @@ Partial Public Class dbLujan21DataSet
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub tblAdmiRowChangeEventHandler(ByVal sender As Object, ByVal e As tblAdmiRowChangeEvent)
+    Public Delegate Sub tblPaquetesRowChangeEventHandler(ByVal sender As Object, ByVal e As tblPaquetesRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class tblAdmiDataTable
-        Inherits Global.System.Data.TypedTableBase(Of tblAdmiRow)
+    Partial Public Class tblPaquetesDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tblPaquetesRow)
         
-        Private columnadmiId As Global.System.Data.DataColumn
+        Private columnpaqId As Global.System.Data.DataColumn
         
-        Private columnadmiNombre As Global.System.Data.DataColumn
+        Private columnpaqNombre As Global.System.Data.DataColumn
         
-        Private columnadmiApellidos As Global.System.Data.DataColumn
+        Private columnpaqTipo As Global.System.Data.DataColumn
         
-        Private columnadmiUsuario As Global.System.Data.DataColumn
+        Private columnpaqDescripcion As Global.System.Data.DataColumn
         
-        Private columnadmiPW As Global.System.Data.DataColumn
-        
-        Private columnadmiRights As Global.System.Data.DataColumn
+        Private columnpaqCosto As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "tblAdmi"
+            Me.TableName = "tblPaquetes"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -332,49 +330,41 @@ Partial Public Class dbLujan21DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property admiIdColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property paqIdColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnadmiId
+                Return Me.columnpaqId
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property admiNombreColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property paqNombreColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnadmiNombre
+                Return Me.columnpaqNombre
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property admiApellidosColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property paqTipoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnadmiApellidos
+                Return Me.columnpaqTipo
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property admiUsuarioColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property paqDescripcionColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnadmiUsuario
+                Return Me.columnpaqDescripcion
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property admiPWColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property paqCostoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnadmiPW
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property admiRightsColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnadmiRights
+                Return Me.columnpaqCosto
             End Get
         End Property
         
@@ -389,50 +379,50 @@ Partial Public Class dbLujan21DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As tblAdmiRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tblPaquetesRow
             Get
-                Return CType(Me.Rows(index),tblAdmiRow)
+                Return CType(Me.Rows(index),tblPaquetesRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event tblAdmiRowChanging As tblAdmiRowChangeEventHandler
+        Public Event tblPaquetesRowChanging As tblPaquetesRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event tblAdmiRowChanged As tblAdmiRowChangeEventHandler
+        Public Event tblPaquetesRowChanged As tblPaquetesRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event tblAdmiRowDeleting As tblAdmiRowChangeEventHandler
+        Public Event tblPaquetesRowDeleting As tblPaquetesRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event tblAdmiRowDeleted As tblAdmiRowChangeEventHandler
+        Public Event tblPaquetesRowDeleted As tblPaquetesRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddtblAdmiRow(ByVal row As tblAdmiRow)
+        Public Overloads Sub AddtblPaquetesRow(ByVal row As tblPaquetesRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddtblAdmiRow(ByVal admiNombre As String, ByVal admiApellidos As String, ByVal admiUsuario As String, ByVal admiPW As String, ByVal admiRights As String) As tblAdmiRow
-            Dim rowtblAdmiRow As tblAdmiRow = CType(Me.NewRow,tblAdmiRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, admiNombre, admiApellidos, admiUsuario, admiPW, admiRights}
-            rowtblAdmiRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowtblAdmiRow)
-            Return rowtblAdmiRow
+        Public Overloads Function AddtblPaquetesRow(ByVal paqNombre As String, ByVal paqTipo As String, ByVal paqDescripcion As String, ByVal paqCosto As Decimal) As tblPaquetesRow
+            Dim rowtblPaquetesRow As tblPaquetesRow = CType(Me.NewRow,tblPaquetesRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, paqNombre, paqTipo, paqDescripcion, paqCosto}
+            rowtblPaquetesRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtblPaquetesRow)
+            Return rowtblPaquetesRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByadmiId(ByVal admiId As Integer) As tblAdmiRow
-            Return CType(Me.Rows.Find(New Object() {admiId}),tblAdmiRow)
+        Public Function FindBypaqId(ByVal paqId As Integer) As tblPaquetesRow
+            Return CType(Me.Rows.Find(New Object() {paqId}),tblPaquetesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As tblAdmiDataTable = CType(MyBase.Clone,tblAdmiDataTable)
+            Dim cln As tblPaquetesDataTable = CType(MyBase.Clone,tblPaquetesDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -440,77 +430,70 @@ Partial Public Class dbLujan21DataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New tblAdmiDataTable()
+            Return New tblPaquetesDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnadmiId = MyBase.Columns("admiId")
-            Me.columnadmiNombre = MyBase.Columns("admiNombre")
-            Me.columnadmiApellidos = MyBase.Columns("admiApellidos")
-            Me.columnadmiUsuario = MyBase.Columns("admiUsuario")
-            Me.columnadmiPW = MyBase.Columns("admiPW")
-            Me.columnadmiRights = MyBase.Columns("admiRights")
+            Me.columnpaqId = MyBase.Columns("paqId")
+            Me.columnpaqNombre = MyBase.Columns("paqNombre")
+            Me.columnpaqTipo = MyBase.Columns("paqTipo")
+            Me.columnpaqDescripcion = MyBase.Columns("paqDescripcion")
+            Me.columnpaqCosto = MyBase.Columns("paqCosto")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnadmiId = New Global.System.Data.DataColumn("admiId", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnadmiId)
-            Me.columnadmiNombre = New Global.System.Data.DataColumn("admiNombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnadmiNombre)
-            Me.columnadmiApellidos = New Global.System.Data.DataColumn("admiApellidos", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnadmiApellidos)
-            Me.columnadmiUsuario = New Global.System.Data.DataColumn("admiUsuario", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnadmiUsuario)
-            Me.columnadmiPW = New Global.System.Data.DataColumn("admiPW", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnadmiPW)
-            Me.columnadmiRights = New Global.System.Data.DataColumn("admiRights", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnadmiRights)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnadmiId}, true))
-            Me.columnadmiId.AutoIncrement = true
-            Me.columnadmiId.AutoIncrementSeed = -1
-            Me.columnadmiId.AutoIncrementStep = -1
-            Me.columnadmiId.AllowDBNull = false
-            Me.columnadmiId.ReadOnly = true
-            Me.columnadmiId.Unique = true
-            Me.columnadmiNombre.AllowDBNull = false
-            Me.columnadmiNombre.MaxLength = 30
-            Me.columnadmiApellidos.AllowDBNull = false
-            Me.columnadmiApellidos.MaxLength = 30
-            Me.columnadmiUsuario.AllowDBNull = false
-            Me.columnadmiUsuario.MaxLength = 20
-            Me.columnadmiPW.AllowDBNull = false
-            Me.columnadmiPW.MaxLength = 15
-            Me.columnadmiRights.MaxLength = 20
+            Me.columnpaqId = New Global.System.Data.DataColumn("paqId", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpaqId)
+            Me.columnpaqNombre = New Global.System.Data.DataColumn("paqNombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpaqNombre)
+            Me.columnpaqTipo = New Global.System.Data.DataColumn("paqTipo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpaqTipo)
+            Me.columnpaqDescripcion = New Global.System.Data.DataColumn("paqDescripcion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpaqDescripcion)
+            Me.columnpaqCosto = New Global.System.Data.DataColumn("paqCosto", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpaqCosto)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnpaqId}, true))
+            Me.columnpaqId.AutoIncrement = true
+            Me.columnpaqId.AutoIncrementSeed = -1
+            Me.columnpaqId.AutoIncrementStep = -1
+            Me.columnpaqId.AllowDBNull = false
+            Me.columnpaqId.ReadOnly = true
+            Me.columnpaqId.Unique = true
+            Me.columnpaqNombre.MaxLength = 30
+            Me.columnpaqTipo.MaxLength = 30
+            Me.columnpaqDescripcion.AllowDBNull = false
+            Me.columnpaqDescripcion.MaxLength = 2147483647
+            Me.columnpaqCosto.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewtblAdmiRow() As tblAdmiRow
-            Return CType(Me.NewRow,tblAdmiRow)
+        Public Function NewtblPaquetesRow() As tblPaquetesRow
+            Return CType(Me.NewRow,tblPaquetesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New tblAdmiRow(builder)
+            Return New tblPaquetesRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(tblAdmiRow)
+            Return GetType(tblPaquetesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.tblAdmiRowChangedEvent) Is Nothing) Then
-                RaiseEvent tblAdmiRowChanged(Me, New tblAdmiRowChangeEvent(CType(e.Row,tblAdmiRow), e.Action))
+            If (Not (Me.tblPaquetesRowChangedEvent) Is Nothing) Then
+                RaiseEvent tblPaquetesRowChanged(Me, New tblPaquetesRowChangeEvent(CType(e.Row,tblPaquetesRow), e.Action))
             End If
         End Sub
         
@@ -518,8 +501,8 @@ Partial Public Class dbLujan21DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.tblAdmiRowChangingEvent) Is Nothing) Then
-                RaiseEvent tblAdmiRowChanging(Me, New tblAdmiRowChangeEvent(CType(e.Row,tblAdmiRow), e.Action))
+            If (Not (Me.tblPaquetesRowChangingEvent) Is Nothing) Then
+                RaiseEvent tblPaquetesRowChanging(Me, New tblPaquetesRowChangeEvent(CType(e.Row,tblPaquetesRow), e.Action))
             End If
         End Sub
         
@@ -527,8 +510,8 @@ Partial Public Class dbLujan21DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.tblAdmiRowDeletedEvent) Is Nothing) Then
-                RaiseEvent tblAdmiRowDeleted(Me, New tblAdmiRowChangeEvent(CType(e.Row,tblAdmiRow), e.Action))
+            If (Not (Me.tblPaquetesRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tblPaquetesRowDeleted(Me, New tblPaquetesRowChangeEvent(CType(e.Row,tblPaquetesRow), e.Action))
             End If
         End Sub
         
@@ -536,14 +519,14 @@ Partial Public Class dbLujan21DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.tblAdmiRowDeletingEvent) Is Nothing) Then
-                RaiseEvent tblAdmiRowDeleting(Me, New tblAdmiRowChangeEvent(CType(e.Row,tblAdmiRow), e.Action))
+            If (Not (Me.tblPaquetesRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tblPaquetesRowDeleting(Me, New tblPaquetesRowChangeEvent(CType(e.Row,tblPaquetesRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemovetblAdmiRow(ByVal row As tblAdmiRow)
+        Public Sub RemovetblPaquetesRow(ByVal row As tblPaquetesRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -552,7 +535,7 @@ Partial Public Class dbLujan21DataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As dbLujan21DataSet = New dbLujan21DataSet()
+            Dim ds As dbLujan21DataSet2 = New dbLujan21DataSet2()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -570,7 +553,7 @@ Partial Public Class dbLujan21DataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "tblAdmiDataTable"
+            attribute2.FixedValue = "tblPaquetesDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -617,98 +600,103 @@ Partial Public Class dbLujan21DataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class tblAdmiRow
+    Partial Public Class tblPaquetesRow
         Inherits Global.System.Data.DataRow
         
-        Private tabletblAdmi As tblAdmiDataTable
+        Private tabletblPaquetes As tblPaquetesDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabletblAdmi = CType(Me.Table,tblAdmiDataTable)
+            Me.tabletblPaquetes = CType(Me.Table,tblPaquetesDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property admiId() As Integer
+        Public Property paqId() As Integer
             Get
-                Return CType(Me(Me.tabletblAdmi.admiIdColumn),Integer)
+                Return CType(Me(Me.tabletblPaquetes.paqIdColumn),Integer)
             End Get
             Set
-                Me(Me.tabletblAdmi.admiIdColumn) = value
+                Me(Me.tabletblPaquetes.paqIdColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property admiNombre() As String
-            Get
-                Return CType(Me(Me.tabletblAdmi.admiNombreColumn),String)
-            End Get
-            Set
-                Me(Me.tabletblAdmi.admiNombreColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property admiApellidos() As String
-            Get
-                Return CType(Me(Me.tabletblAdmi.admiApellidosColumn),String)
-            End Get
-            Set
-                Me(Me.tabletblAdmi.admiApellidosColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property admiUsuario() As String
-            Get
-                Return CType(Me(Me.tabletblAdmi.admiUsuarioColumn),String)
-            End Get
-            Set
-                Me(Me.tabletblAdmi.admiUsuarioColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property admiPW() As String
-            Get
-                Return CType(Me(Me.tabletblAdmi.admiPWColumn),String)
-            End Get
-            Set
-                Me(Me.tabletblAdmi.admiPWColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property admiRights() As String
+        Public Property paqNombre() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletblAdmi.admiRightsColumn),String)
+                    Return CType(Me(Me.tabletblPaquetes.paqNombreColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'admiRights' in table 'tblAdmi' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'paqNombre' in table 'tblPaquetes' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletblAdmi.admiRightsColumn) = value
+                Me(Me.tabletblPaquetes.paqNombreColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsadmiRightsNull() As Boolean
-            Return Me.IsNull(Me.tabletblAdmi.admiRightsColumn)
+        Public Property paqTipo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletblPaquetes.paqTipoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'paqTipo' in table 'tblPaquetes' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletblPaquetes.paqTipoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property paqDescripcion() As String
+            Get
+                Return CType(Me(Me.tabletblPaquetes.paqDescripcionColumn),String)
+            End Get
+            Set
+                Me(Me.tabletblPaquetes.paqDescripcionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property paqCosto() As Decimal
+            Get
+                Return CType(Me(Me.tabletblPaquetes.paqCostoColumn),Decimal)
+            End Get
+            Set
+                Me(Me.tabletblPaquetes.paqCostoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspaqNombreNull() As Boolean
+            Return Me.IsNull(Me.tabletblPaquetes.paqNombreColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetadmiRightsNull()
-            Me(Me.tabletblAdmi.admiRightsColumn) = Global.System.Convert.DBNull
+        Public Sub SetpaqNombreNull()
+            Me(Me.tabletblPaquetes.paqNombreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspaqTipoNull() As Boolean
+            Return Me.IsNull(Me.tabletblPaquetes.paqTipoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetpaqTipoNull()
+            Me(Me.tabletblPaquetes.paqTipoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -716,16 +704,16 @@ Partial Public Class dbLujan21DataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class tblAdmiRowChangeEvent
+    Public Class tblPaquetesRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As tblAdmiRow
+        Private eventRow As tblPaquetesRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As tblAdmiRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As tblPaquetesRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -733,7 +721,7 @@ Partial Public Class dbLujan21DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As tblAdmiRow
+        Public ReadOnly Property Row() As tblPaquetesRow
             Get
                 Return Me.eventRow
             End Get
@@ -749,7 +737,7 @@ Partial Public Class dbLujan21DataSet
     End Class
 End Class
 
-Namespace dbLujan21DataSetTableAdapters
+Namespace dbLujan21DataSet2TableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -760,7 +748,7 @@ Namespace dbLujan21DataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class tblAdmiTableAdapter
+    Partial Public Class tblPaquetesTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -877,65 +865,58 @@ Namespace dbLujan21DataSetTableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "tblAdmi"
-            tableMapping.ColumnMappings.Add("admiId", "admiId")
-            tableMapping.ColumnMappings.Add("admiNombre", "admiNombre")
-            tableMapping.ColumnMappings.Add("admiApellidos", "admiApellidos")
-            tableMapping.ColumnMappings.Add("admiUsuario", "admiUsuario")
-            tableMapping.ColumnMappings.Add("admiPW", "admiPW")
-            tableMapping.ColumnMappings.Add("admiRights", "admiRights")
+            tableMapping.DataSetTable = "tblPaquetes"
+            tableMapping.ColumnMappings.Add("paqId", "paqId")
+            tableMapping.ColumnMappings.Add("paqNombre", "paqNombre")
+            tableMapping.ColumnMappings.Add("paqTipo", "paqTipo")
+            tableMapping.ColumnMappings.Add("paqDescripcion", "paqDescripcion")
+            tableMapping.ColumnMappings.Add("paqCosto", "paqCosto")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblAdmi] WHERE (([admiId] = @Original_admiId) AND ([admiNombre"& _ 
-                "] = @Original_admiNombre) AND ([admiApellidos] = @Original_admiApellidos) AND (["& _ 
-                "admiUsuario] = @Original_admiUsuario) AND ([admiPW] = @Original_admiPW) AND ((@I"& _ 
-                "sNull_admiRights = 1 AND [admiRights] IS NULL) OR ([admiRights] = @Original_admi"& _ 
-                "Rights)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblPaquetes] WHERE (([paqId] = @Original_paqId) AND ((@IsNull_"& _ 
+                "paqNombre = 1 AND [paqNombre] IS NULL) OR ([paqNombre] = @Original_paqNombre)) A"& _ 
+                "ND ((@IsNull_paqTipo = 1 AND [paqTipo] IS NULL) OR ([paqTipo] = @Original_paqTip"& _ 
+                "o)) AND ([paqCosto] = @Original_paqCosto))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiId", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiNombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiNombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiApellidos", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiApellidos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiUsuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiPW", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiPW", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_admiRights", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiRights", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiRights", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiRights", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_paqId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqId", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_paqNombre", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqNombre", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_paqNombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqNombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_paqTipo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqTipo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_paqTipo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqTipo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_paqCosto", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 10, 2, "paqCosto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblAdmi] ([admiNombre], [admiApellidos], [admiUsuario], [admiP"& _ 
-                "W], [admiRights]) VALUES (@admiNombre, @admiApellidos, @admiUsuario, @admiPW, @a"& _ 
-                "dmiRights);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT admiId, admiNombre, admiApellidos, admiUsuario, admiPW, admi"& _ 
-                "Rights FROM tblAdmi WHERE (admiId = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblPaquetes] ([paqNombre], [paqTipo], [paqDescripcion], [paqCo"& _ 
+                "sto]) VALUES (@paqNombre, @paqTipo, @paqDescripcion, @paqCosto);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT paqId, "& _ 
+                "paqNombre, paqTipo, paqDescripcion, paqCosto FROM tblPaquetes WHERE (paqId = SCO"& _ 
+                "PE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiNombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiNombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiApellidos", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiApellidos", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiUsuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiPW", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiPW", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiRights", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiRights", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqNombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqNombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqTipo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqTipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqDescripcion", Global.System.Data.SqlDbType.Text, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqDescripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqCosto", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 10, 2, "paqCosto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblAdmi] SET [admiNombre] = @admiNombre, [admiApellidos] = @admiApe"& _ 
-                "llidos, [admiUsuario] = @admiUsuario, [admiPW] = @admiPW, [admiRights] = @admiRi"& _ 
-                "ghts WHERE (([admiId] = @Original_admiId) AND ([admiNombre] = @Original_admiNomb"& _ 
-                "re) AND ([admiApellidos] = @Original_admiApellidos) AND ([admiUsuario] = @Origin"& _ 
-                "al_admiUsuario) AND ([admiPW] = @Original_admiPW) AND ((@IsNull_admiRights = 1 A"& _ 
-                "ND [admiRights] IS NULL) OR ([admiRights] = @Original_admiRights)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT adm"& _ 
-                "iId, admiNombre, admiApellidos, admiUsuario, admiPW, admiRights FROM tblAdmi WHE"& _ 
-                "RE (admiId = @admiId)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblPaquetes] SET [paqNombre] = @paqNombre, [paqTipo] = @paqTipo, [p"& _ 
+                "aqDescripcion] = @paqDescripcion, [paqCosto] = @paqCosto WHERE (([paqId] = @Orig"& _ 
+                "inal_paqId) AND ((@IsNull_paqNombre = 1 AND [paqNombre] IS NULL) OR ([paqNombre]"& _ 
+                " = @Original_paqNombre)) AND ((@IsNull_paqTipo = 1 AND [paqTipo] IS NULL) OR ([p"& _ 
+                "aqTipo] = @Original_paqTipo)) AND ([paqCosto] = @Original_paqCosto));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT pa"& _ 
+                "qId, paqNombre, paqTipo, paqDescripcion, paqCosto FROM tblPaquetes WHERE (paqId "& _ 
+                "= @paqId)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiNombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiNombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiApellidos", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiApellidos", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiUsuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiPW", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiPW", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiRights", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiRights", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiId", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiNombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiNombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiApellidos", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiApellidos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiUsuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiPW", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiPW", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_admiRights", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiRights", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_admiRights", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "admiRights", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@admiId", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "admiId", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqNombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqNombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqTipo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqTipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqDescripcion", Global.System.Data.SqlDbType.Text, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqDescripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqCosto", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 10, 2, "paqCosto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_paqId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqId", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_paqNombre", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqNombre", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_paqNombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqNombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_paqTipo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqTipo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_paqTipo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "paqTipo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_paqCosto", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 10, 2, "paqCosto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@paqId", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "paqId", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -951,8 +932,7 @@ Namespace dbLujan21DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT admiId, admiNombre, admiApellidos, admiUsuario, admiPW, admiRights FROM db"& _ 
-                "o.tblAdmi"
+            Me._commandCollection(0).CommandText = "SELECT paqId, paqNombre, paqTipo, paqDescripcion, paqCosto FROM dbo.tblPaquetes"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -960,7 +940,7 @@ Namespace dbLujan21DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As dbLujan21DataSet.tblAdmiDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As dbLujan21DataSet2.tblPaquetesDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -973,9 +953,9 @@ Namespace dbLujan21DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As dbLujan21DataSet.tblAdmiDataTable
+        Public Overloads Overridable Function GetData() As dbLujan21DataSet2.tblPaquetesDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As dbLujan21DataSet.tblAdmiDataTable = New dbLujan21DataSet.tblAdmiDataTable()
+            Dim dataTable As dbLujan21DataSet2.tblPaquetesDataTable = New dbLujan21DataSet2.tblPaquetesDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -983,15 +963,15 @@ Namespace dbLujan21DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As dbLujan21DataSet.tblAdmiDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As dbLujan21DataSet2.tblPaquetesDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As dbLujan21DataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "tblAdmi")
+        Public Overloads Overridable Function Update(ByVal dataSet As dbLujan21DataSet2) As Integer
+            Return Me.Adapter.Update(dataSet, "tblPaquetes")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1012,35 +992,23 @@ Namespace dbLujan21DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_admiId As Integer, ByVal Original_admiNombre As String, ByVal Original_admiApellidos As String, ByVal Original_admiUsuario As String, ByVal Original_admiPW As String, ByVal Original_admiRights As String) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_admiId,Integer)
-            If (Original_admiNombre Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_admiNombre")
+        Public Overloads Overridable Function Delete(ByVal Original_paqId As Integer, ByVal Original_paqNombre As String, ByVal Original_paqTipo As String, ByVal Original_paqCosto As Decimal) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_paqId,Integer)
+            If (Original_paqNombre Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_admiNombre,String)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_paqNombre,String)
             End If
-            If (Original_admiApellidos Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_admiApellidos")
+            If (Original_paqTipo Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_admiApellidos,String)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_paqTipo,String)
             End If
-            If (Original_admiUsuario Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_admiUsuario")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_admiUsuario,String)
-            End If
-            If (Original_admiPW Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_admiPW")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_admiPW,String)
-            End If
-            If (Original_admiRights Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_admiRights,String)
-            End If
+            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_paqCosto,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1060,32 +1028,23 @@ Namespace dbLujan21DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal admiNombre As String, ByVal admiApellidos As String, ByVal admiUsuario As String, ByVal admiPW As String, ByVal admiRights As String) As Integer
-            If (admiNombre Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("admiNombre")
+        Public Overloads Overridable Function Insert(ByVal paqNombre As String, ByVal paqTipo As String, ByVal paqDescripcion As String, ByVal paqCosto As Decimal) As Integer
+            If (paqNombre Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(admiNombre,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(paqNombre,String)
             End If
-            If (admiApellidos Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("admiApellidos")
+            If (paqTipo Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(admiApellidos,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(paqTipo,String)
             End If
-            If (admiUsuario Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("admiUsuario")
+            If (paqDescripcion Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("paqDescripcion")
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(admiUsuario,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(paqDescripcion,String)
             End If
-            If (admiPW Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("admiPW")
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(admiPW,String)
-            End If
-            If (admiRights Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(admiRights,String)
-            End If
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(paqCosto,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1105,61 +1064,40 @@ Namespace dbLujan21DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal admiNombre As String, ByVal admiApellidos As String, ByVal admiUsuario As String, ByVal admiPW As String, ByVal admiRights As String, ByVal Original_admiId As Integer, ByVal Original_admiNombre As String, ByVal Original_admiApellidos As String, ByVal Original_admiUsuario As String, ByVal Original_admiPW As String, ByVal Original_admiRights As String, ByVal admiId As Integer) As Integer
-            If (admiNombre Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("admiNombre")
+        Public Overloads Overridable Function Update(ByVal paqNombre As String, ByVal paqTipo As String, ByVal paqDescripcion As String, ByVal paqCosto As Decimal, ByVal Original_paqId As Integer, ByVal Original_paqNombre As String, ByVal Original_paqTipo As String, ByVal Original_paqCosto As Decimal, ByVal paqId As Integer) As Integer
+            If (paqNombre Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(admiNombre,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(paqNombre,String)
             End If
-            If (admiApellidos Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("admiApellidos")
+            If (paqTipo Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(admiApellidos,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(paqTipo,String)
             End If
-            If (admiUsuario Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("admiUsuario")
+            If (paqDescripcion Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("paqDescripcion")
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(admiUsuario,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(paqDescripcion,String)
             End If
-            If (admiPW Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("admiPW")
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(paqCosto,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_paqId,Integer)
+            If (Original_paqNombre Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(admiPW,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_paqNombre,String)
             End If
-            If (admiRights Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            If (Original_paqTipo Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(admiRights,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_paqTipo,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_admiId,Integer)
-            If (Original_admiNombre Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_admiNombre")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_admiNombre,String)
-            End If
-            If (Original_admiApellidos Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_admiApellidos")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_admiApellidos,String)
-            End If
-            If (Original_admiUsuario Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_admiUsuario")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_admiUsuario,String)
-            End If
-            If (Original_admiPW Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_admiPW")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_admiPW,String)
-            End If
-            If (Original_admiRights Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_admiRights,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(admiId,Integer)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_paqCosto,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(paqId,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1179,8 +1117,8 @@ Namespace dbLujan21DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal admiNombre As String, ByVal admiApellidos As String, ByVal admiUsuario As String, ByVal admiPW As String, ByVal admiRights As String, ByVal Original_admiId As Integer, ByVal Original_admiNombre As String, ByVal Original_admiApellidos As String, ByVal Original_admiUsuario As String, ByVal Original_admiPW As String, ByVal Original_admiRights As String) As Integer
-            Return Me.Update(admiNombre, admiApellidos, admiUsuario, admiPW, admiRights, Original_admiId, Original_admiNombre, Original_admiApellidos, Original_admiUsuario, Original_admiPW, Original_admiRights, Original_admiId)
+        Public Overloads Overridable Function Update(ByVal paqNombre As String, ByVal paqTipo As String, ByVal paqDescripcion As String, ByVal paqCosto As Decimal, ByVal Original_paqId As Integer, ByVal Original_paqNombre As String, ByVal Original_paqTipo As String, ByVal Original_paqCosto As Decimal) As Integer
+            Return Me.Update(paqNombre, paqTipo, paqDescripcion, paqCosto, Original_paqId, Original_paqNombre, Original_paqTipo, Original_paqCosto, Original_paqId)
         End Function
     End Class
     
@@ -1197,7 +1135,7 @@ Namespace dbLujan21DataSetTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _tblAdmiTableAdapter As tblAdmiTableAdapter
+        Private _tblPaquetesTableAdapter As tblPaquetesTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1219,12 +1157,12 @@ Namespace dbLujan21DataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property tblAdmiTableAdapter() As tblAdmiTableAdapter
+        Public Property tblPaquetesTableAdapter() As tblPaquetesTableAdapter
             Get
-                Return Me._tblAdmiTableAdapter
+                Return Me._tblPaquetesTableAdapter
             End Get
             Set
-                Me._tblAdmiTableAdapter = value
+                Me._tblPaquetesTableAdapter = value
             End Set
         End Property
         
@@ -1247,9 +1185,9 @@ Namespace dbLujan21DataSetTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._tblAdmiTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._tblAdmiTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._tblAdmiTableAdapter.Connection
+                If ((Not (Me._tblPaquetesTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tblPaquetesTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tblPaquetesTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1264,7 +1202,7 @@ Namespace dbLujan21DataSetTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._tblAdmiTableAdapter) Is Nothing) Then
+                If (Not (Me._tblPaquetesTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1276,14 +1214,14 @@ Namespace dbLujan21DataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As dbLujan21DataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As dbLujan21DataSet2, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._tblAdmiTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tblAdmi.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._tblPaquetesTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tblPaquetes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._tblAdmiTableAdapter.Update(updatedRows))
+                    result = (result + Me._tblPaquetesTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1295,13 +1233,13 @@ Namespace dbLujan21DataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As dbLujan21DataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As dbLujan21DataSet2, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._tblAdmiTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.tblAdmi.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._tblPaquetesTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.tblPaquetes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._tblAdmiTableAdapter.Update(addedRows))
+                    result = (result + Me._tblPaquetesTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1313,13 +1251,13 @@ Namespace dbLujan21DataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As dbLujan21DataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As dbLujan21DataSet2, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._tblAdmiTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tblAdmi.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._tblPaquetesTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tblPaquetes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._tblAdmiTableAdapter.Update(deletedRows))
+                    result = (result + Me._tblPaquetesTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1357,15 +1295,15 @@ Namespace dbLujan21DataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As dbLujan21DataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As dbLujan21DataSet2) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._tblAdmiTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._tblAdmiTableAdapter.Connection) = false)) Then
+            If ((Not (Me._tblPaquetesTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tblPaquetesTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -1401,13 +1339,13 @@ Namespace dbLujan21DataSetTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._tblAdmiTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._tblAdmiTableAdapter, Me._tblAdmiTableAdapter.Connection)
-                    Me._tblAdmiTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._tblAdmiTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._tblAdmiTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._tblAdmiTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tblAdmiTableAdapter.Adapter)
+                If (Not (Me._tblPaquetesTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tblPaquetesTableAdapter, Me._tblPaquetesTableAdapter.Connection)
+                    Me._tblPaquetesTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._tblPaquetesTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._tblPaquetesTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tblPaquetesTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tblPaquetesTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1470,9 +1408,9 @@ Namespace dbLujan21DataSetTableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._tblAdmiTableAdapter) Is Nothing) Then
-                    Me._tblAdmiTableAdapter.Connection = CType(revertConnections(Me._tblAdmiTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._tblAdmiTableAdapter.Transaction = Nothing
+                If (Not (Me._tblPaquetesTableAdapter) Is Nothing) Then
+                    Me._tblPaquetesTableAdapter.Connection = CType(revertConnections(Me._tblPaquetesTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._tblPaquetesTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

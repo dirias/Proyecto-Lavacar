@@ -19,6 +19,7 @@ Public Class Cls_Usuario
         Catch ex As Exception
             ''Mensaje de error
             MsgBox("Error al registrar los datos" & vbCrLf & ex.Message)
+            Return False
         End Try
     End Function
 
@@ -58,6 +59,20 @@ Public Class Cls_Usuario
         Catch ex As Exception
             ''Mensaje de error
             MsgBox("Error al modificar los datos" & vbCrLf & ex.Message)
+            Return False
+        End Try
+    End Function
+
+    Public Function inicioSesión(pUser As String, pPW As String)
+        Try
+            usuario = (From temp In DB.tblAdmi
+                       Where temp.admiUsuario = pUser
+                       Select temp).First
+            If usuario.admiUsuario = pUser And usuario.admiPW = pPW Then
+                Return True
+            End If
+        Catch ex As Exception
+            MsgBox("Error al inicial sesión, verifique los datos." & vbCrLf & ex.Message)
             Return False
         End Try
     End Function

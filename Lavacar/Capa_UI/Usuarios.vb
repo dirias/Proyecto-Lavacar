@@ -5,6 +5,8 @@ Public Class Usuarios
     Private Sub Usuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DbLujan21DataSet.tblAdmi' table. You can move, or remove it, as needed.
         Me.TblAdmiTableAdapter.Fill(Me.DbLujan21DataSet.tblAdmi)
+
+
         LimpiarInterfaz()
     End Sub
 
@@ -47,11 +49,11 @@ Public Class Usuarios
 
         i = dtgUsuarios.CurrentRow.Index
 
-        txtNombre.Text = dtgUsuarios.Item(0, i).Value()
-        txtApellidos.Text = dtgUsuarios.Item(1, i).Value()
-        txtUsuario.Text = dtgUsuarios.Item(2, i).Value()
-        txtPW.Text = dtgUsuarios.Item(3, i).Value()
-        cbxRights.Text = dtgUsuarios.Item(4, i).Value()
+        txtNombre.Text = dtgUsuarios.Item(1, i).Value()
+        txtApellidos.Text = dtgUsuarios.Item(2, i).Value()
+        txtUsuario.Text = dtgUsuarios.Item(3, i).Value()
+        txtPW.Text = dtgUsuarios.Item(4, i).Value()
+        cbxRights.Text = dtgUsuarios.Item(5, i).Value()
 
         tbControlUsuarios.SelectedIndex = 0
     End Sub

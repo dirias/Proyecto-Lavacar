@@ -1,4 +1,6 @@
-﻿Public Class Pantalla
+﻿Imports System.Configuration
+
+Public Class Pantalla
     Dim monto As Integer
     Private Sub Pantalla_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         rbpequeno.Visible = True
@@ -12,6 +14,7 @@
         dtpFechaPago.Enabled = False
         monto = 4000
         txtprecio.Text = monto
+        txtUser.Text = ConfigurationSettings.AppSettings("usuarioActual")
     End Sub
 
     Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles txtdescripcion.TextChanged
@@ -38,106 +41,6 @@
 
     Private Sub CheckedListBox1_SelectedIndexChanged_1(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim monto As Integer = 0
-
-
-
-        '-----------------------------------
-
-        '-----------------------------------
-
-        '-----------------------------------
-        If rbmoto.Checked Then
-            If rbmediano.Checked Then
-                monto = monto + 3000
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = monto + 4500
-                txtprecio.Text = monto
-            End If
-        End If
-        If ChBox3.Checked Then
-            monto = monto + 400
-            txtprecio.Text = monto
-        End If
-        If ChBox4.Checked Then
-            monto = monto + 400
-            txtprecio.Text = monto
-        End If
-        If ChBox5.Checked Then
-            monto = monto + 400
-            txtprecio.Text = monto
-        End If
-        If ChBox6.Checked Then
-            monto = monto + 400
-            txtprecio.Text = monto
-        End If
-        '-----------------------------------
-        If ChBoxChasis.Checked And ChBoxMotor.Checked Then
-            If rbpequeno.Checked Then
-                monto = monto + 7500
-                monto = monto - (monto * 0.13)
-                txtprecio.Text = monto
-            ElseIf rbmediano.Checked Then
-                monto = monto + 8500
-                monto = monto - (monto * 0.13)
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = monto + 10500
-                monto = monto - (monto * 0.13)
-                txtprecio.Text = monto
-            End If
-        Else
-            If ChBoxChasis.Checked Then
-                If rbpequeno.Checked Then
-                    monto = monto + 3500
-                    txtprecio.Text = monto
-                ElseIf rbmediano.Checked Then
-                    monto = monto + 3500
-                    txtprecio.Text = monto
-                ElseIf rbgrande.Checked Then
-                    monto = monto + 4500
-                    txtprecio.Text = monto
-                End If
-                If rbbasico.Checked Then
-                    monto = monto - (monto * 0.13)
-                    txtprecio.Text = monto
-                ElseIf rbmedio.Checked Then
-                    monto = monto - (monto * 0.13)
-                    txtprecio.Text = monto
-                ElseIf rbfull.Checked Then
-                    monto = monto - (monto * 0.13)
-                    txtprecio.Text = monto
-                End If
-            End If
-            '-----------------------------------
-            If ChBoxMotor.Checked Then
-                If rbpequeno.Checked Then
-                    monto = monto + 4000
-                    txtprecio.Text = monto
-                ElseIf rbmediano.Checked Then
-                    monto = monto + 5000
-                    txtprecio.Text = monto
-                ElseIf rbgrande.Checked Then
-                    monto = monto + 6000
-                    txtprecio.Text = monto
-                End If
-                If rbbasico.Checked Then
-                    monto = monto - (monto * 0.13)
-                    txtprecio.Text = monto
-                ElseIf rbmedio.Checked Then
-                    monto = monto - (monto * 0.13)
-                    txtprecio.Text = monto
-                ElseIf rbfull.Checked Then
-                    monto = monto - (monto * 0.13)
-                    txtprecio.Text = monto
-                End If
-            End If
-        End If
-        '-----------------------------------
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ChBoxChasis.CheckedChanged
@@ -255,8 +158,7 @@
             MsgBox("Problemas al borrar")
         End Try
     End Sub
-
-    Private Sub rbpequeno_CheckedChanged(sender As Object, e As EventArgs) Handles rbpequeno.CheckedChanged
+    Public Sub rbSize()
         If rbpequeno.Checked Then
             rbpequeno.Enabled = True
             rbmoto.Checked = False
@@ -275,11 +177,7 @@
                 txtdescripcion.Text = "MEDIO + antiempañado de parabrisas trasero y delantero+lavado alfombras+protector de aros."
 
             End If
-        End If
-    End Sub
-
-    Private Sub rbmediano_CheckedChanged(sender As Object, e As EventArgs) Handles rbmediano.CheckedChanged
-        If rbmediano.Checked Then
+        ElseIf rbmediano.Checked Then
             rbpequeno.Enabled = True
             rbmoto.Enabled = True
             If rbbasico.Checked Then
@@ -299,31 +197,19 @@
                 txtprecio.Text = monto
                 txtdescripcion.Text = "Lavado de moto"
             End If
+
         End If
+    End Sub
+    Private Sub rbpequeno_CheckedChanged(sender As Object, e As EventArgs) Handles rbpequeno.CheckedChanged
+
+    End Sub
+
+    Private Sub rbmediano_CheckedChanged(sender As Object, e As EventArgs) Handles rbmediano.CheckedChanged
+
     End Sub
 
     Private Sub rbgrande_CheckedChanged(sender As Object, e As EventArgs) Handles rbgrande.CheckedChanged
-        If rbgrande.Checked Then
-            rbpequeno.Enabled = True
-            rbmoto.Enabled = True
-            If rbbasico.Checked Then
-                monto = 6000
-                txtprecio.Text = monto
-                txtdescripcion.Text = "Lavado exterior con champú + secado + aspirado interior"
-            ElseIf rbmedio.Checked Then
-                monto = 7300
-                txtprecio.Text = monto
-                txtdescripcion.Text = "Básico + cera + protector de llantas + abrillantador molduras + protección dash"
-            ElseIf rbfull.Checked Then
-                monto = 7700
-                txtprecio.Text = monto
-                txtdescripcion.Text = "MEDIO + antiempañado de parabrisas trasero y delantero+lavado alfombras+protector de aros."
-            ElseIf rbmoto.Checked Then
-                monto = 4500
-                txtprecio.Text = monto
-                txtdescripcion.Text = "Lavado de moto"
-            End If
-        End If
+
     End Sub
 
     Private Sub rbbasico_CheckedChanged(sender As Object, e As EventArgs) Handles rbbasico.CheckedChanged

@@ -1,18 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="dbLujan21ModelStoreContainer" CdmEntityContainer="dbLujan21Entities">
-    <EntitySetMapping Name="tblAdmi">
-      <EntityTypeMapping TypeName="dbLujan21Model.tblAdmi">
-        <MappingFragment StoreEntitySet="tblAdmi">
-          <ScalarProperty Name="admiId" ColumnName="admiId" />
-          <ScalarProperty Name="admiNombre" ColumnName="admiNombre" />
-          <ScalarProperty Name="admiApellidos" ColumnName="admiApellidos" />
-          <ScalarProperty Name="admiUsuario" ColumnName="admiUsuario" />
-          <ScalarProperty Name="admiPW" ColumnName="admiPW" />
-          <ScalarProperty Name="admiRights" ColumnName="admiRights" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tblCliente">
       <EntityTypeMapping TypeName="dbLujan21Model.tblCliente">
         <MappingFragment StoreEntitySet="tblCliente">
@@ -49,17 +37,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tblPaquetes">
-      <EntityTypeMapping TypeName="dbLujan21Model.tblPaquetes">
-        <MappingFragment StoreEntitySet="tblPaquetes">
-          <ScalarProperty Name="paqId" ColumnName="paqId" />
-          <ScalarProperty Name="paqNombre" ColumnName="paqNombre" />
-          <ScalarProperty Name="paqTipo" ColumnName="paqTipo" />
-          <ScalarProperty Name="paqDescripcion" ColumnName="paqDescripcion" />
-          <ScalarProperty Name="paqCosto" ColumnName="paqCosto" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tblVehiculo">
       <EntityTypeMapping TypeName="dbLujan21Model.tblVehiculo">
         <MappingFragment StoreEntitySet="tblVehiculo">
@@ -67,6 +44,29 @@
           <ScalarProperty Name="vehClienteId" ColumnName="vehClienteId" />
           <ScalarProperty Name="vehMarca" ColumnName="vehMarca" />
           <ScalarProperty Name="vehSize" ColumnName="vehSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAdmi">
+      <EntityTypeMapping TypeName="dbLujan21Model.tblAdmi">
+        <MappingFragment StoreEntitySet="tblAdmi">
+          <ScalarProperty Name="admiRights" ColumnName="admiRights" />
+          <ScalarProperty Name="admiPW" ColumnName="admiPW" />
+          <ScalarProperty Name="admiUsuario" ColumnName="admiUsuario" />
+          <ScalarProperty Name="admiApellidos" ColumnName="admiApellidos" />
+          <ScalarProperty Name="admiNombre" ColumnName="admiNombre" />
+          <ScalarProperty Name="admiId" ColumnName="admiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPaquetes">
+      <EntityTypeMapping TypeName="dbLujan21Model.tblPaquetes">
+        <MappingFragment StoreEntitySet="tblPaquetes">
+          <ScalarProperty Name="paqCosto" ColumnName="paqCosto" />
+          <ScalarProperty Name="paqDescripcion" ColumnName="paqDescripcion" />
+          <ScalarProperty Name="paqTipo" ColumnName="paqTipo" />
+          <ScalarProperty Name="paqNombre" ColumnName="paqNombre" />
+          <ScalarProperty Name="paqId" ColumnName="paqId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

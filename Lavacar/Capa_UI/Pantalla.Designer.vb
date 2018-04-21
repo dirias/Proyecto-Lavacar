@@ -58,7 +58,6 @@ Partial Class Pantalla
         Me.ChBox4 = New System.Windows.Forms.CheckBox()
         Me.ChBox5 = New System.Windows.Forms.CheckBox()
         Me.ChBox6 = New System.Windows.Forms.CheckBox()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.txtfecha = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -98,6 +97,7 @@ Partial Class Pantalla
         'txtprecio
         '
         Me.txtprecio.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txtprecio.Enabled = False
         Me.txtprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txtprecio.Location = New System.Drawing.Point(136, 162)
         Me.txtprecio.Name = "txtprecio"
@@ -428,20 +428,10 @@ Partial Class Pantalla
         Me.ChBox6.Text = "Aros"
         Me.ChBox6.UseVisualStyleBackColor = True
         '
-        'Button4
-        '
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.Button4.Location = New System.Drawing.Point(257, 162)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(104, 26)
-        Me.Button4.TabIndex = 59
-        Me.Button4.Text = "Comprobar"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'txtfecha
         '
         Me.txtfecha.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txtfecha.Enabled = False
         Me.txtfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txtfecha.Location = New System.Drawing.Point(257, 58)
         Me.txtfecha.Name = "txtfecha"
@@ -490,6 +480,7 @@ Partial Class Pantalla
         'txtUser
         '
         Me.txtUser.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txtUser.Enabled = False
         Me.txtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txtUser.Location = New System.Drawing.Point(19, 58)
         Me.txtUser.Name = "txtUser"
@@ -503,6 +494,7 @@ Partial Class Pantalla
         'txthora
         '
         Me.txthora.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txthora.Enabled = False
         Me.txthora.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.txthora.Location = New System.Drawing.Point(257, 111)
         Me.txthora.Name = "txthora"
@@ -695,7 +687,6 @@ Partial Class Pantalla
         Me.GroupBox6.Controls.Add(Me.txthora)
         Me.GroupBox6.Controls.Add(Me.txtcliente)
         Me.GroupBox6.Controls.Add(Me.txtprecio)
-        Me.GroupBox6.Controls.Add(Me.Button4)
         Me.GroupBox6.Controls.Add(Me.txtmarca)
         Me.GroupBox6.Controls.Add(Me.Label13)
         Me.GroupBox6.Controls.Add(Me.Label7)
@@ -811,7 +802,6 @@ Partial Class Pantalla
     Friend WithEvents ChBox4 As System.Windows.Forms.CheckBox
     Friend WithEvents ChBox5 As System.Windows.Forms.CheckBox
     Friend WithEvents ChBox6 As System.Windows.Forms.CheckBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtmarca As System.Windows.Forms.TextBox

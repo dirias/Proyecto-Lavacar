@@ -23,7 +23,7 @@ Partial Public Class tblLavados
     Public Property lavPagadoA As String
 
     Public Overridable Property tblCliente As tblCliente
-    Public Overridable Property tblPaquetes As tblPaquetes
     Public Overridable Property tblVehiculo As tblVehiculo
+    Public Overridable Property tblPaquetes As tblPaquetes
 
 End Class

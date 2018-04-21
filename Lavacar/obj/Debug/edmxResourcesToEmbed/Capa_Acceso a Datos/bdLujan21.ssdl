@@ -2,14 +2,14 @@
 <Schema Namespace="dbLujan21Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="tblAdmi">
     <Key>
-      <PropertyRef Name="admiUsuario" />
+      <PropertyRef Name="admiId" />
     </Key>
     <Property Name="admiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="admiNombre" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="admiApellidos" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="admiUsuario" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="admiPW" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="admiRights" Type="varchar" MaxLength="10" />
+    <Property Name="admiRights" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="tblCliente">
     <Key>
@@ -51,8 +51,8 @@
     <Property Name="paqId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="paqNombre" Type="varchar" MaxLength="30" />
     <Property Name="paqTipo" Type="varchar" MaxLength="30" />
-    <Property Name="paqDescripcion" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="paqCosto" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="paqDescripcion" Type="text" Nullable="false" />
+    <Property Name="paqCosto" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="tblVehiculo">
     <Key>

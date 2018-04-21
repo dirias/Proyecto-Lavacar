@@ -20,12 +20,12 @@ admiNombre varchar(30) not null,
 admiApellidos varchar(30) not null,
 admiUsuario varchar(20) not null,
 admiPW varchar(15) not null,
-admiRights varchar(10) default 'empleado'
+admiRights varchar(20) default 'Administrador'
 ) on[primary]
 go
 --creo la llave primaria
 alter table tblAdmi add constraint 
-Pk_admiUser primary key (admiUsuario)
+Pk_admiId primary key (admiId)
 go
 -------------------------Se crea la tabla de lavados ---------------------------
 if exists (select name from dbo.sysobjects where name = 'tblLavados')
@@ -87,8 +87,8 @@ create table tblPaquetes(
 paqId int identity,
 paqNombre varchar(30),
 paqTipo varchar (30) default 'Estandar',
-paqDescripcion varchar (50) not null,
-paqCosto decimal (5,2) not null
+paqDescripcion text not null,
+paqCosto decimal (10,2) not null
 ) on[primary]
 go
 alter table tblPaquetes add constraint 
@@ -130,3 +130,12 @@ Fk_Vehiculo_Cliente foreign key (vehPlaca) references tblCliente(clienId)
 go
 
 select @@servername
+
+
+------------------Guardar los tipos de lavados existentes
+insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
+values('Básico','Estandar','Lavado exterior con champú + secado + aspirado interior',4000)
+insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
+values('Medio','Estandar','Básico + cera + protector de llantas + abrillantador molduras + protección dash',4900)
+insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
+values('Full','Estandar','MEDIO + antiempañado de parabrisas trasero y delantero+lavado alfombras + protector de aros.',5500)

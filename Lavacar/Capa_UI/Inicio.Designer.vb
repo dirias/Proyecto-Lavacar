@@ -25,10 +25,10 @@ Partial Class Inicio
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txt1 = New System.Windows.Forms.TextBox()
-        Me.txt2 = New System.Windows.Forms.TextBox()
+        Me.txtUser = New System.Windows.Forms.TextBox()
+        Me.txtPW = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnIngresar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,22 +52,22 @@ Partial Class Inicio
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Contraseña"
         '
-        'txt1
+        'txtUser
         '
-        Me.txt1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt1.Location = New System.Drawing.Point(266, 30)
-        Me.txt1.Name = "txt1"
-        Me.txt1.Size = New System.Drawing.Size(120, 24)
-        Me.txt1.TabIndex = 2
+        Me.txtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUser.Location = New System.Drawing.Point(266, 30)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(120, 24)
+        Me.txtUser.TabIndex = 2
         '
-        'txt2
+        'txtPW
         '
-        Me.txt2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt2.Location = New System.Drawing.Point(266, 75)
-        Me.txt2.Name = "txt2"
-        Me.txt2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt2.Size = New System.Drawing.Size(120, 24)
-        Me.txt2.TabIndex = 3
+        Me.txtPW.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPW.Location = New System.Drawing.Point(266, 75)
+        Me.txtPW.Name = "txtPW"
+        Me.txtPW.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPW.Size = New System.Drawing.Size(120, 24)
+        Me.txtPW.TabIndex = 3
         '
         'PictureBox1
         '
@@ -79,20 +79,20 @@ Partial Class Inicio
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'btnIngresar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Image = Global.Lavacar.My.Resources.Resources.if_Login_73221
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(266, 111)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 40)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Ingreso    "
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnIngresar.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.btnIngresar.Image = Global.Lavacar.My.Resources.Resources.if_Login_73221
+        Me.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnIngresar.Location = New System.Drawing.Point(266, 111)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(120, 40)
+        Me.btnIngresar.TabIndex = 4
+        Me.btnIngresar.Text = "Ingreso    "
+        Me.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnIngresar.UseVisualStyleBackColor = False
         '
         'Inicio
         '
@@ -101,9 +101,9 @@ Partial Class Inicio
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(400, 163)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.txt2)
-        Me.Controls.Add(Me.txt1)
+        Me.Controls.Add(Me.btnIngresar)
+        Me.Controls.Add(Me.txtPW)
+        Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -119,9 +119,9 @@ Partial Class Inicio
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txt1 As System.Windows.Forms.TextBox
-    Friend WithEvents txt2 As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents txtUser As System.Windows.Forms.TextBox
+    Friend WithEvents txtPW As System.Windows.Forms.TextBox
+    Friend WithEvents btnIngresar As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

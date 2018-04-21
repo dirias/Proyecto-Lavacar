@@ -46,11 +46,12 @@ Partial Class Usuarios
         Me.txtPW = New System.Windows.Forms.TextBox()
         Me.tbTodos = New System.Windows.Forms.TabPage()
         Me.dtgUsuarios = New System.Windows.Forms.DataGridView()
-        Me.AdmiNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AdmiApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AdmiUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AdmiPWDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AdmiRightsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblAdmiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DbLujan21DataSet = New Lavacar.dbLujan21DataSet()
         Me.TblAdmiTableAdapter = New Lavacar.dbLujan21DataSetTableAdapters.tblAdmiTableAdapter()
@@ -316,49 +317,55 @@ Partial Class Usuarios
         Me.dtgUsuarios.AllowUserToResizeRows = False
         Me.dtgUsuarios.AutoGenerateColumns = False
         Me.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.AdmiNombreDataGridViewTextBoxColumn, Me.AdmiApellidosDataGridViewTextBoxColumn, Me.AdmiUsuarioDataGridViewTextBoxColumn, Me.AdmiPWDataGridViewTextBoxColumn, Me.AdmiRightsDataGridViewTextBoxColumn})
+        Me.dtgUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.dtgUsuarios.DataSource = Me.TblAdmiBindingSource
-        Me.dtgUsuarios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgUsuarios.Location = New System.Drawing.Point(3, 3)
         Me.dtgUsuarios.Name = "dtgUsuarios"
         Me.dtgUsuarios.ReadOnly = True
         Me.dtgUsuarios.Size = New System.Drawing.Size(518, 294)
         Me.dtgUsuarios.TabIndex = 0
         '
-        'AdmiNombreDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn1
         '
-        Me.AdmiNombreDataGridViewTextBoxColumn.DataPropertyName = "admiNombre"
-        Me.AdmiNombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.AdmiNombreDataGridViewTextBoxColumn.Name = "AdmiNombreDataGridViewTextBoxColumn"
-        Me.AdmiNombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "admiId"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "admiId"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
-        'AdmiApellidosDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn2
         '
-        Me.AdmiApellidosDataGridViewTextBoxColumn.DataPropertyName = "admiApellidos"
-        Me.AdmiApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.AdmiApellidosDataGridViewTextBoxColumn.Name = "AdmiApellidosDataGridViewTextBoxColumn"
-        Me.AdmiApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "admiNombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "admiNombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
-        'AdmiUsuarioDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn3
         '
-        Me.AdmiUsuarioDataGridViewTextBoxColumn.DataPropertyName = "admiUsuario"
-        Me.AdmiUsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario"
-        Me.AdmiUsuarioDataGridViewTextBoxColumn.Name = "AdmiUsuarioDataGridViewTextBoxColumn"
-        Me.AdmiUsuarioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "admiApellidos"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "admiApellidos"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
-        'AdmiPWDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn4
         '
-        Me.AdmiPWDataGridViewTextBoxColumn.DataPropertyName = "admiPW"
-        Me.AdmiPWDataGridViewTextBoxColumn.HeaderText = "Clave"
-        Me.AdmiPWDataGridViewTextBoxColumn.Name = "AdmiPWDataGridViewTextBoxColumn"
-        Me.AdmiPWDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "admiUsuario"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "admiUsuario"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
-        'AdmiRightsDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn5
         '
-        Me.AdmiRightsDataGridViewTextBoxColumn.DataPropertyName = "admiRights"
-        Me.AdmiRightsDataGridViewTextBoxColumn.HeaderText = "Tipo de usuario"
-        Me.AdmiRightsDataGridViewTextBoxColumn.Name = "AdmiRightsDataGridViewTextBoxColumn"
-        Me.AdmiRightsDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "admiPW"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "admiPW"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "admiRights"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "admiRights"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'TblAdmiBindingSource
         '
@@ -420,13 +427,20 @@ Partial Class Usuarios
     Friend WithEvents txtPW As TextBox
     Friend WithEvents tbTodos As TabPage
     Friend WithEvents dtgUsuarios As DataGridView
-    Friend WithEvents DbLujan21DataSet As dbLujan21DataSet
-    Friend WithEvents TblAdmiBindingSource As BindingSource
-    Friend WithEvents TblAdmiTableAdapter As dbLujan21DataSetTableAdapters.tblAdmiTableAdapter
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents AdmiIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AdmiNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AdmiApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AdmiUsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AdmiPWDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AdmiRightsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents DbLujan21DataSet As dbLujan21DataSet
+    Friend WithEvents TblAdmiBindingSource As BindingSource
+    Friend WithEvents TblAdmiTableAdapter As dbLujan21DataSetTableAdapters.tblAdmiTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
 End Class

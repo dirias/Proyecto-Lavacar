@@ -111,6 +111,7 @@
     <Compile Include="Capa_Acceso a Datos\tblVehiculo.vb">
       <DependentUpon>bdLujan21.tt</DependentUpon>
     </Compile>
+    <Compile Include="Capa_BL\Cls_Paquetes.vb" />
     <Compile Include="Capa_BL\Cls_Usuario.vb" />
     <Compile Include="Capa_BL\Globales.vb" />
     <Compile Include="Capa_UI\Agenda.Designer.vb">
@@ -136,6 +137,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbLujan21DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbLujan21DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLujan21DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbLujan21DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLujan21DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -215,6 +226,28 @@
     </None>
     <None Include="dbLujan21DataSet.xss">
       <DependentUpon>dbLujan21DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbLujan21DataSet1.xsc">
+      <DependentUpon>dbLujan21DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbLujan21DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLujan21DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLujan21DataSet1.xss">
+      <DependentUpon>dbLujan21DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbLujan21DataSet2.xsc">
+      <DependentUpon>dbLujan21DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbLujan21DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLujan21DataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLujan21DataSet2.xss">
+      <DependentUpon>dbLujan21DataSet2.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
