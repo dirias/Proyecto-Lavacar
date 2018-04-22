@@ -10,13 +10,15 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class tblCliente
-    Public Property clienId As Integer
-    Public Property clienPlacaVehiculo As Nullable(Of Integer)
-    Public Property clienNombre As String
-    Public Property clienApellidos As String
-    Public Property clienTelefono As String
-
-    Public Overridable Property tblLavados As ICollection(Of tblLavados) = New HashSet(Of tblLavados)
+Partial Public Class tblCitas
+    Public Property citId As Integer
+    Public Property citNombre As String
+    Public Property citApellidos As String
+    Public Property citPlaca As String
+    Public Property citMarca As String
+    Public Property citFecha As Date
+    Public Property citHora As String
+    Public Property citTelefono As String
+    Public Property citDescrip As String
 
 End Class

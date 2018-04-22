@@ -22,11 +22,12 @@ Partial Public Class dbLujan21Entities
         Throw New UnintentionalCodeFirstException()
     End Sub
 
+    Public Property tblAdmi() As DbSet(Of tblAdmi)
+    Public Property tblCitas() As DbSet(Of tblCitas)
     Public Property tblCliente() As DbSet(Of tblCliente)
     Public Property tblExtras() As DbSet(Of tblExtras)
     Public Property tblLavados() As DbSet(Of tblLavados)
-    Public Property tblVehiculo() As DbSet(Of tblVehiculo)
-    Public Property tblAdmi() As DbSet(Of tblAdmi)
     Public Property tblPaquetes() As DbSet(Of tblPaquetes)
+    Public Property tblVehiculo() As DbSet(Of tblVehiculo)
 
 End Class

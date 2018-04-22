@@ -35,7 +35,7 @@ create table tblLavados(
 lavConsecutivo int identity not null,
 lavFecha date not null,
 lavIdCliente int not null,
-lavIdVehiculo int not null,
+lavIdVehiculo varchar(15) not null,
 lavIdPaquete int not null,
 lavExtras varchar(15) not null,
 lavLavador varchar(30) not null,
@@ -70,7 +70,7 @@ if exists (select name from dbo.sysobjects where name = 'tblVehiculo')
 drop table tblVehiculo
 go
 create table tblVehiculo(
-vehPlaca int not null,
+vehPlaca varchar(15) not null,
 vehClienteId int not null,
 vehMarca varchar(15),
 vehSize varchar(8) not null
@@ -107,7 +107,25 @@ go
 alter table tblExtras add constraint 
 Pk_extraId primary key (extId)
 go
-----------------------------tbl tiquete
+----------------------------tbl citas
+if exists (select name from dbo.sysobjects where name = 'tblCitas')
+drop table tblCitas
+go
+create table tblCitas(
+citId int identity,
+citNombre varchar(30) not null,
+citApellidos varchar(30) not null,
+citPlaca varchar(15),
+citMarca varchar(15),
+citFecha date not null,
+citHora varchar(10) not null,
+citTelefono varchar(15),
+citDescrip text
+) on[primary]
+go
+alter table tblCitas add constraint 
+Pk_citaId primary key (citId)
+go
 
 
 

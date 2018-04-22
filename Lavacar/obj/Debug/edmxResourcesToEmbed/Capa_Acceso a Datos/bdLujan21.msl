@@ -1,52 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="dbLujan21ModelStoreContainer" CdmEntityContainer="dbLujan21Entities">
-    <EntitySetMapping Name="tblCliente">
-      <EntityTypeMapping TypeName="dbLujan21Model.tblCliente">
-        <MappingFragment StoreEntitySet="tblCliente">
-          <ScalarProperty Name="clienId" ColumnName="clienId" />
-          <ScalarProperty Name="clienPlacaVehiculo" ColumnName="clienPlacaVehiculo" />
-          <ScalarProperty Name="clienNombre" ColumnName="clienNombre" />
-          <ScalarProperty Name="clienApellidos" ColumnName="clienApellidos" />
-          <ScalarProperty Name="clienTelefono" ColumnName="clienTelefono" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tblExtras">
-      <EntityTypeMapping TypeName="dbLujan21Model.tblExtras">
-        <MappingFragment StoreEntitySet="tblExtras">
-          <ScalarProperty Name="extId" ColumnName="extId" />
-          <ScalarProperty Name="extNombre" ColumnName="extNombre" />
-          <ScalarProperty Name="extCosto" ColumnName="extCosto" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tblLavados">
-      <EntityTypeMapping TypeName="dbLujan21Model.tblLavados">
-        <MappingFragment StoreEntitySet="tblLavados">
-          <ScalarProperty Name="lavConsecutivo" ColumnName="lavConsecutivo" />
-          <ScalarProperty Name="lavFecha" ColumnName="lavFecha" />
-          <ScalarProperty Name="lavIdCliente" ColumnName="lavIdCliente" />
-          <ScalarProperty Name="lavIdVehiculo" ColumnName="lavIdVehiculo" />
-          <ScalarProperty Name="lavIdPaquete" ColumnName="lavIdPaquete" />
-          <ScalarProperty Name="lavExtras" ColumnName="lavExtras" />
-          <ScalarProperty Name="lavLavador" ColumnName="lavLavador" />
-          <ScalarProperty Name="lavMonto" ColumnName="lavMonto" />
-          <ScalarProperty Name="lavFechaPago" ColumnName="lavFechaPago" />
-          <ScalarProperty Name="lavPagadoA" ColumnName="lavPagadoA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tblVehiculo">
-      <EntityTypeMapping TypeName="dbLujan21Model.tblVehiculo">
-        <MappingFragment StoreEntitySet="tblVehiculo">
-          <ScalarProperty Name="vehPlaca" ColumnName="vehPlaca" />
-          <ScalarProperty Name="vehClienteId" ColumnName="vehClienteId" />
-          <ScalarProperty Name="vehMarca" ColumnName="vehMarca" />
-          <ScalarProperty Name="vehSize" ColumnName="vehSize" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tblAdmi">
       <EntityTypeMapping TypeName="dbLujan21Model.tblAdmi">
         <MappingFragment StoreEntitySet="tblAdmi">
@@ -59,6 +13,57 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tblCitas">
+      <EntityTypeMapping TypeName="dbLujan21Model.tblCitas">
+        <MappingFragment StoreEntitySet="tblCitas">
+          <ScalarProperty Name="citDescrip" ColumnName="citDescrip" />
+          <ScalarProperty Name="citTelefono" ColumnName="citTelefono" />
+          <ScalarProperty Name="citHora" ColumnName="citHora" />
+          <ScalarProperty Name="citFecha" ColumnName="citFecha" />
+          <ScalarProperty Name="citMarca" ColumnName="citMarca" />
+          <ScalarProperty Name="citPlaca" ColumnName="citPlaca" />
+          <ScalarProperty Name="citApellidos" ColumnName="citApellidos" />
+          <ScalarProperty Name="citNombre" ColumnName="citNombre" />
+          <ScalarProperty Name="citId" ColumnName="citId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCliente">
+      <EntityTypeMapping TypeName="dbLujan21Model.tblCliente">
+        <MappingFragment StoreEntitySet="tblCliente">
+          <ScalarProperty Name="clienTelefono" ColumnName="clienTelefono" />
+          <ScalarProperty Name="clienApellidos" ColumnName="clienApellidos" />
+          <ScalarProperty Name="clienNombre" ColumnName="clienNombre" />
+          <ScalarProperty Name="clienPlacaVehiculo" ColumnName="clienPlacaVehiculo" />
+          <ScalarProperty Name="clienId" ColumnName="clienId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblExtras">
+      <EntityTypeMapping TypeName="dbLujan21Model.tblExtras">
+        <MappingFragment StoreEntitySet="tblExtras">
+          <ScalarProperty Name="extCosto" ColumnName="extCosto" />
+          <ScalarProperty Name="extNombre" ColumnName="extNombre" />
+          <ScalarProperty Name="extId" ColumnName="extId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLavados">
+      <EntityTypeMapping TypeName="dbLujan21Model.tblLavados">
+        <MappingFragment StoreEntitySet="tblLavados">
+          <ScalarProperty Name="lavPagadoA" ColumnName="lavPagadoA" />
+          <ScalarProperty Name="lavFechaPago" ColumnName="lavFechaPago" />
+          <ScalarProperty Name="lavMonto" ColumnName="lavMonto" />
+          <ScalarProperty Name="lavLavador" ColumnName="lavLavador" />
+          <ScalarProperty Name="lavExtras" ColumnName="lavExtras" />
+          <ScalarProperty Name="lavIdPaquete" ColumnName="lavIdPaquete" />
+          <ScalarProperty Name="lavIdVehiculo" ColumnName="lavIdVehiculo" />
+          <ScalarProperty Name="lavIdCliente" ColumnName="lavIdCliente" />
+          <ScalarProperty Name="lavFecha" ColumnName="lavFecha" />
+          <ScalarProperty Name="lavConsecutivo" ColumnName="lavConsecutivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tblPaquetes">
       <EntityTypeMapping TypeName="dbLujan21Model.tblPaquetes">
         <MappingFragment StoreEntitySet="tblPaquetes">
@@ -67,6 +72,16 @@
           <ScalarProperty Name="paqTipo" ColumnName="paqTipo" />
           <ScalarProperty Name="paqNombre" ColumnName="paqNombre" />
           <ScalarProperty Name="paqId" ColumnName="paqId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVehiculo">
+      <EntityTypeMapping TypeName="dbLujan21Model.tblVehiculo">
+        <MappingFragment StoreEntitySet="tblVehiculo">
+          <ScalarProperty Name="vehSize" ColumnName="vehSize" />
+          <ScalarProperty Name="vehMarca" ColumnName="vehMarca" />
+          <ScalarProperty Name="vehClienteId" ColumnName="vehClienteId" />
+          <ScalarProperty Name="vehPlaca" ColumnName="vehPlaca" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

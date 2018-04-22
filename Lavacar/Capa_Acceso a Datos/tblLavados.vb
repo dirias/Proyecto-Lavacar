@@ -14,7 +14,7 @@ Partial Public Class tblLavados
     Public Property lavConsecutivo As Integer
     Public Property lavFecha As Date
     Public Property lavIdCliente As Integer
-    Public Property lavIdVehiculo As Integer
+    Public Property lavIdVehiculo As String
     Public Property lavIdPaquete As Integer
     Public Property lavExtras As String
     Public Property lavLavador As String
@@ -23,7 +23,6 @@ Partial Public Class tblLavados
     Public Property lavPagadoA As String
 
     Public Overridable Property tblCliente As tblCliente
-    Public Overridable Property tblVehiculo As tblVehiculo
     Public Overridable Property tblPaquetes As tblPaquetes
 
 End Class

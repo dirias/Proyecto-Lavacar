@@ -10,4 +10,7 @@
     Public lavado As New tblLavados
     Public clsLavado As New Cls_Lavados
 
+    Public citas As New tblCitas
+    Public clsCitas As New Cls_Citas
+
 End Module

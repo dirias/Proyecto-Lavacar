@@ -11,6 +11,20 @@
     <Property Name="admiPW" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="admiRights" Type="varchar" MaxLength="20" />
   </EntityType>
+  <EntityType Name="tblCitas">
+    <Key>
+      <PropertyRef Name="citId" />
+    </Key>
+    <Property Name="citId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="citNombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="citApellidos" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="citPlaca" Type="varchar" MaxLength="15" />
+    <Property Name="citMarca" Type="varchar" MaxLength="15" />
+    <Property Name="citFecha" Type="date" Nullable="false" />
+    <Property Name="citHora" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="citTelefono" Type="varchar" MaxLength="15" />
+    <Property Name="citDescrip" Type="text" />
+  </EntityType>
   <EntityType Name="tblCliente">
     <Key>
       <PropertyRef Name="clienId" />
@@ -36,7 +50,7 @@
     <Property Name="lavConsecutivo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="lavFecha" Type="date" Nullable="false" />
     <Property Name="lavIdCliente" Type="int" Nullable="false" />
-    <Property Name="lavIdVehiculo" Type="int" Nullable="false" />
+    <Property Name="lavIdVehiculo" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="lavIdPaquete" Type="int" Nullable="false" />
     <Property Name="lavExtras" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="lavLavador" Type="varchar" MaxLength="30" Nullable="false" />
@@ -58,7 +72,7 @@
     <Key>
       <PropertyRef Name="vehPlaca" />
     </Key>
-    <Property Name="vehPlaca" Type="int" Nullable="false" />
+    <Property Name="vehPlaca" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="vehClienteId" Type="int" Nullable="false" />
     <Property Name="vehMarca" Type="varchar" MaxLength="15" />
     <Property Name="vehSize" Type="varchar" MaxLength="8" Nullable="false" />
@@ -87,32 +101,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Fk_Lavado_Vehiculo">
-    <End Role="tblVehiculo" Type="Self.tblVehiculo" Multiplicity="1" />
-    <End Role="tblLavados" Type="Self.tblLavados" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblVehiculo">
-        <PropertyRef Name="vehPlaca" />
-      </Principal>
-      <Dependent Role="tblLavados">
-        <PropertyRef Name="lavIdVehiculo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Fk_Vehiculo_Cliente">
-    <End Role="tblCliente" Type="Self.tblCliente" Multiplicity="1" />
-    <End Role="tblVehiculo" Type="Self.tblVehiculo" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="tblCliente">
-        <PropertyRef Name="clienId" />
-      </Principal>
-      <Dependent Role="tblVehiculo">
-        <PropertyRef Name="vehPlaca" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="dbLujan21ModelStoreContainer">
     <EntitySet Name="tblAdmi" EntityType="Self.tblAdmi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCitas" EntityType="Self.tblCitas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblCliente" EntityType="Self.tblCliente" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblExtras" EntityType="Self.tblExtras" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblLavados" EntityType="Self.tblLavados" Schema="dbo" store:Type="Tables" />
@@ -125,14 +116,6 @@
     <AssociationSet Name="Fk_Lavado_Paquete" Association="Self.Fk_Lavado_Paquete">
       <End Role="tblPaquetes" EntitySet="tblPaquetes" />
       <End Role="tblLavados" EntitySet="tblLavados" />
-    </AssociationSet>
-    <AssociationSet Name="Fk_Lavado_Vehiculo" Association="Self.Fk_Lavado_Vehiculo">
-      <End Role="tblVehiculo" EntitySet="tblVehiculo" />
-      <End Role="tblLavados" EntitySet="tblLavados" />
-    </AssociationSet>
-    <AssociationSet Name="Fk_Vehiculo_Cliente" Association="Self.Fk_Vehiculo_Cliente">
-      <End Role="tblCliente" EntitySet="tblCliente" />
-      <End Role="tblVehiculo" EntitySet="tblVehiculo" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

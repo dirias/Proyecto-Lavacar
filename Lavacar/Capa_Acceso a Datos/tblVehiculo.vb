@@ -11,12 +11,9 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class tblVehiculo
-    Public Property vehPlaca As Integer
+    Public Property vehPlaca As String
     Public Property vehClienteId As Integer
     Public Property vehMarca As String
     Public Property vehSize As String
-
-    Public Overridable Property tblCliente As tblCliente
-    Public Overridable Property tblLavados As ICollection(Of tblLavados) = New HashSet(Of tblLavados)
 
 End Class

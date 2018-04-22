@@ -96,6 +96,9 @@
     <Compile Include="Capa_Acceso a Datos\tblAdmi.vb">
       <DependentUpon>bdLujan21.tt</DependentUpon>
     </Compile>
+    <Compile Include="Capa_Acceso a Datos\tblCitas.vb">
+      <DependentUpon>bdLujan21.tt</DependentUpon>
+    </Compile>
     <Compile Include="Capa_Acceso a Datos\tblCliente.vb">
       <DependentUpon>bdLujan21.tt</DependentUpon>
     </Compile>
@@ -111,6 +114,7 @@
     <Compile Include="Capa_Acceso a Datos\tblVehiculo.vb">
       <DependentUpon>bdLujan21.tt</DependentUpon>
     </Compile>
+    <Compile Include="Capa_BL\Cls_Citas.vb" />
     <Compile Include="Capa_BL\Cls_Lavados.vb" />
     <Compile Include="Capa_BL\Cls_Paquetes.vb" />
     <Compile Include="Capa_BL\Cls_Usuario.vb" />
@@ -148,6 +152,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbLujan21DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbLujan21DataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLujan21DataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -249,6 +258,17 @@
     </None>
     <None Include="dbLujan21DataSet2.xss">
       <DependentUpon>dbLujan21DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbLujan21DataSet3.xsc">
+      <DependentUpon>dbLujan21DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dbLujan21DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLujan21DataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLujan21DataSet3.xss">
+      <DependentUpon>dbLujan21DataSet3.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

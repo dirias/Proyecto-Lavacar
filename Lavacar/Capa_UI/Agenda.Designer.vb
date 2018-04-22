@@ -22,6 +22,7 @@ Partial Class Agenda
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agenda))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -50,6 +51,20 @@ Partial Class Agenda
         Me.btnReservar = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.dtgCitas = New System.Windows.Forms.DataGridView()
+        Me.CitIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitPlacaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitMarcaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitFechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitHoraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitTelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitDescripDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DbLujan21DataSet3 = New Lavacar.dbLujan21DataSet3()
+        Me.DbLujan21DataSet1 = New Lavacar.dbLujan21DataSet1()
+        Me.DbLujan21DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblCitasTableAdapter = New Lavacar.dbLujan21DataSet3TableAdapters.tblCitasTableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +72,10 @@ Partial Class Agenda
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.dtgCitas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblCitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DbLujan21DataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DbLujan21DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DbLujan21DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -343,19 +362,105 @@ Partial Class Agenda
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(587, 373)
+        Me.TabPage2.Size = New System.Drawing.Size(587, 371)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Citas reservadas"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'dtgCitas
         '
+        Me.dtgCitas.AllowUserToAddRows = False
+        Me.dtgCitas.AllowUserToDeleteRows = False
+        Me.dtgCitas.AllowUserToResizeColumns = False
+        Me.dtgCitas.AllowUserToResizeRows = False
+        Me.dtgCitas.AutoGenerateColumns = False
         Me.dtgCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtgCitas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CitIdDataGridViewTextBoxColumn, Me.CitNombreDataGridViewTextBoxColumn, Me.CitApellidosDataGridViewTextBoxColumn, Me.CitPlacaDataGridViewTextBoxColumn, Me.CitMarcaDataGridViewTextBoxColumn, Me.CitFechaDataGridViewTextBoxColumn, Me.CitHoraDataGridViewTextBoxColumn, Me.CitTelefonoDataGridViewTextBoxColumn, Me.CitDescripDataGridViewTextBoxColumn})
+        Me.dtgCitas.DataSource = Me.TblCitasBindingSource
         Me.dtgCitas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgCitas.Location = New System.Drawing.Point(3, 3)
         Me.dtgCitas.Name = "dtgCitas"
-        Me.dtgCitas.Size = New System.Drawing.Size(581, 367)
+        Me.dtgCitas.Size = New System.Drawing.Size(581, 365)
         Me.dtgCitas.TabIndex = 0
+        '
+        'CitIdDataGridViewTextBoxColumn
+        '
+        Me.CitIdDataGridViewTextBoxColumn.DataPropertyName = "citId"
+        Me.CitIdDataGridViewTextBoxColumn.HeaderText = "citId"
+        Me.CitIdDataGridViewTextBoxColumn.Name = "CitIdDataGridViewTextBoxColumn"
+        Me.CitIdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CitNombreDataGridViewTextBoxColumn
+        '
+        Me.CitNombreDataGridViewTextBoxColumn.DataPropertyName = "citNombre"
+        Me.CitNombreDataGridViewTextBoxColumn.HeaderText = "citNombre"
+        Me.CitNombreDataGridViewTextBoxColumn.Name = "CitNombreDataGridViewTextBoxColumn"
+        '
+        'CitApellidosDataGridViewTextBoxColumn
+        '
+        Me.CitApellidosDataGridViewTextBoxColumn.DataPropertyName = "citApellidos"
+        Me.CitApellidosDataGridViewTextBoxColumn.HeaderText = "citApellidos"
+        Me.CitApellidosDataGridViewTextBoxColumn.Name = "CitApellidosDataGridViewTextBoxColumn"
+        '
+        'CitPlacaDataGridViewTextBoxColumn
+        '
+        Me.CitPlacaDataGridViewTextBoxColumn.DataPropertyName = "citPlaca"
+        Me.CitPlacaDataGridViewTextBoxColumn.HeaderText = "citPlaca"
+        Me.CitPlacaDataGridViewTextBoxColumn.Name = "CitPlacaDataGridViewTextBoxColumn"
+        '
+        'CitMarcaDataGridViewTextBoxColumn
+        '
+        Me.CitMarcaDataGridViewTextBoxColumn.DataPropertyName = "citMarca"
+        Me.CitMarcaDataGridViewTextBoxColumn.HeaderText = "citMarca"
+        Me.CitMarcaDataGridViewTextBoxColumn.Name = "CitMarcaDataGridViewTextBoxColumn"
+        '
+        'CitFechaDataGridViewTextBoxColumn
+        '
+        Me.CitFechaDataGridViewTextBoxColumn.DataPropertyName = "citFecha"
+        Me.CitFechaDataGridViewTextBoxColumn.HeaderText = "citFecha"
+        Me.CitFechaDataGridViewTextBoxColumn.Name = "CitFechaDataGridViewTextBoxColumn"
+        '
+        'CitHoraDataGridViewTextBoxColumn
+        '
+        Me.CitHoraDataGridViewTextBoxColumn.DataPropertyName = "citHora"
+        Me.CitHoraDataGridViewTextBoxColumn.HeaderText = "citHora"
+        Me.CitHoraDataGridViewTextBoxColumn.Name = "CitHoraDataGridViewTextBoxColumn"
+        '
+        'CitTelefonoDataGridViewTextBoxColumn
+        '
+        Me.CitTelefonoDataGridViewTextBoxColumn.DataPropertyName = "citTelefono"
+        Me.CitTelefonoDataGridViewTextBoxColumn.HeaderText = "citTelefono"
+        Me.CitTelefonoDataGridViewTextBoxColumn.Name = "CitTelefonoDataGridViewTextBoxColumn"
+        '
+        'CitDescripDataGridViewTextBoxColumn
+        '
+        Me.CitDescripDataGridViewTextBoxColumn.DataPropertyName = "citDescrip"
+        Me.CitDescripDataGridViewTextBoxColumn.HeaderText = "citDescrip"
+        Me.CitDescripDataGridViewTextBoxColumn.Name = "CitDescripDataGridViewTextBoxColumn"
+        '
+        'TblCitasBindingSource
+        '
+        Me.TblCitasBindingSource.DataMember = "tblCitas"
+        Me.TblCitasBindingSource.DataSource = Me.DbLujan21DataSet3
+        '
+        'DbLujan21DataSet3
+        '
+        Me.DbLujan21DataSet3.DataSetName = "dbLujan21DataSet3"
+        Me.DbLujan21DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DbLujan21DataSet1
+        '
+        Me.DbLujan21DataSet1.DataSetName = "dbLujan21DataSet1"
+        Me.DbLujan21DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DbLujan21DataSet1BindingSource
+        '
+        Me.DbLujan21DataSet1BindingSource.DataSource = Me.DbLujan21DataSet1
+        Me.DbLujan21DataSet1BindingSource.Position = 0
+        '
+        'TblCitasTableAdapter
+        '
+        Me.TblCitasTableAdapter.ClearBeforeFill = True
         '
         'Agenda
         '
@@ -376,6 +481,10 @@ Partial Class Agenda
         Me.GroupBox1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         CType(Me.dtgCitas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblCitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DbLujan21DataSet3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DbLujan21DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DbLujan21DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -407,4 +516,18 @@ Partial Class Agenda
     Friend WithEvents btnReservar As Button
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents dtgCitas As DataGridView
+    Friend WithEvents DbLujan21DataSet1BindingSource As BindingSource
+    Friend WithEvents DbLujan21DataSet1 As dbLujan21DataSet1
+    Friend WithEvents DbLujan21DataSet3 As dbLujan21DataSet3
+    Friend WithEvents TblCitasBindingSource As BindingSource
+    Friend WithEvents TblCitasTableAdapter As dbLujan21DataSet3TableAdapters.tblCitasTableAdapter
+    Friend WithEvents CitIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CitNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CitApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CitPlacaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CitMarcaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CitFechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CitHoraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CitTelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CitDescripDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
