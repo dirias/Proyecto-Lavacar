@@ -47,7 +47,9 @@ Partial Class Pantalla
         Me.rbmediano = New System.Windows.Forms.RadioButton()
         Me.rbgrande = New System.Windows.Forms.RadioButton()
         Me.gbSize = New System.Windows.Forms.GroupBox()
-        Me.gbPaquete = New System.Windows.Forms.GroupBox()
+        Me.gbPaqueteE = New System.Windows.Forms.GroupBox()
+        Me.rbChasis = New System.Windows.Forms.RadioButton()
+        Me.rdMotor = New System.Windows.Forms.RadioButton()
         Me.rbmoto = New System.Windows.Forms.RadioButton()
         Me.rbfull = New System.Windows.Forms.RadioButton()
         Me.rbmedio = New System.Windows.Forms.RadioButton()
@@ -68,6 +70,9 @@ Partial Class Pantalla
         Me.txthora = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.gbPaqueteT = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cbTemporada = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -83,12 +88,11 @@ Partial Class Pantalla
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.rbChasis = New System.Windows.Forms.RadioButton()
-        Me.rdMotor = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1.SuspendLayout()
         Me.gbSize.SuspendLayout()
-        Me.gbPaquete.SuspendLayout()
+        Me.gbPaqueteE.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.gbPaqueteT.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -243,6 +247,7 @@ Partial Class Pantalla
         Me.txtdescripcion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtdescripcion.Enabled = False
         Me.txtdescripcion.Location = New System.Drawing.Point(364, 295)
         Me.txtdescripcion.Multiline = True
         Me.txtdescripcion.Name = "txtdescripcion"
@@ -305,21 +310,41 @@ Partial Class Pantalla
         Me.gbSize.TabStop = False
         Me.gbSize.Text = "Tamaño"
         '
-        'gbPaquete
+        'gbPaqueteE
         '
-        Me.gbPaquete.Controls.Add(Me.rbChasis)
-        Me.gbPaquete.Controls.Add(Me.rdMotor)
-        Me.gbPaquete.Controls.Add(Me.rbmoto)
-        Me.gbPaquete.Controls.Add(Me.rbfull)
-        Me.gbPaquete.Controls.Add(Me.rbmedio)
-        Me.gbPaquete.Controls.Add(Me.rbbasico)
-        Me.gbPaquete.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.gbPaquete.Location = New System.Drawing.Point(26, 148)
-        Me.gbPaquete.Name = "gbPaquete"
-        Me.gbPaquete.Size = New System.Drawing.Size(188, 115)
-        Me.gbPaquete.TabIndex = 50
-        Me.gbPaquete.TabStop = False
-        Me.gbPaquete.Text = "Paquete"
+        Me.gbPaqueteE.Controls.Add(Me.rbChasis)
+        Me.gbPaqueteE.Controls.Add(Me.rdMotor)
+        Me.gbPaqueteE.Controls.Add(Me.rbmoto)
+        Me.gbPaqueteE.Controls.Add(Me.rbfull)
+        Me.gbPaqueteE.Controls.Add(Me.rbmedio)
+        Me.gbPaqueteE.Controls.Add(Me.rbbasico)
+        Me.gbPaqueteE.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.gbPaqueteE.Location = New System.Drawing.Point(26, 148)
+        Me.gbPaqueteE.Name = "gbPaqueteE"
+        Me.gbPaqueteE.Size = New System.Drawing.Size(188, 115)
+        Me.gbPaqueteE.TabIndex = 50
+        Me.gbPaqueteE.TabStop = False
+        Me.gbPaqueteE.Text = "Paquete"
+        '
+        'rbChasis
+        '
+        Me.rbChasis.AutoSize = True
+        Me.rbChasis.Location = New System.Drawing.Point(84, 51)
+        Me.rbChasis.Name = "rbChasis"
+        Me.rbChasis.Size = New System.Drawing.Size(72, 22)
+        Me.rbChasis.TabIndex = 5
+        Me.rbChasis.Text = "Chasis"
+        Me.rbChasis.UseVisualStyleBackColor = True
+        '
+        'rdMotor
+        '
+        Me.rdMotor.AutoSize = True
+        Me.rdMotor.Location = New System.Drawing.Point(84, 27)
+        Me.rdMotor.Name = "rdMotor"
+        Me.rdMotor.Size = New System.Drawing.Size(66, 22)
+        Me.rdMotor.TabIndex = 4
+        Me.rdMotor.Text = "Motor"
+        Me.rdMotor.UseVisualStyleBackColor = True
         '
         'rbmoto
         '
@@ -518,6 +543,7 @@ Partial Class Pantalla
         Me.GroupBox4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox4.Controls.Add(Me.gbPaqueteT)
         Me.GroupBox4.Controls.Add(Me.PictureBox1)
         Me.GroupBox4.Controls.Add(Me.Button2)
         Me.GroupBox4.Controls.Add(Me.Button1)
@@ -529,7 +555,7 @@ Partial Class Pantalla
         Me.GroupBox4.Controls.Add(Me.Button3)
         Me.GroupBox4.Controls.Add(Me.txtdescripcion)
         Me.GroupBox4.Controls.Add(Me.gbSize)
-        Me.GroupBox4.Controls.Add(Me.gbPaquete)
+        Me.GroupBox4.Controls.Add(Me.gbPaqueteE)
         Me.GroupBox4.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
         Me.GroupBox4.Location = New System.Drawing.Point(31, 46)
         Me.GroupBox4.Name = "GroupBox4"
@@ -537,6 +563,38 @@ Partial Class Pantalla
         Me.GroupBox4.TabIndex = 70
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Lavados"
+        '
+        'gbPaqueteT
+        '
+        Me.gbPaqueteT.Controls.Add(Me.Label3)
+        Me.gbPaqueteT.Controls.Add(Me.cbTemporada)
+        Me.gbPaqueteT.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.gbPaqueteT.Location = New System.Drawing.Point(26, 148)
+        Me.gbPaqueteT.Name = "gbPaqueteT"
+        Me.gbPaqueteT.Size = New System.Drawing.Size(188, 115)
+        Me.gbPaqueteT.TabIndex = 79
+        Me.gbPaqueteT.TabStop = False
+        Me.gbPaqueteT.Text = "Paquete"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(12, 28)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(166, 21)
+        Me.Label3.TabIndex = 42
+        Me.Label3.Text = "Selecciona un paquete"
+        '
+        'cbTemporada
+        '
+        Me.cbTemporada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTemporada.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.cbTemporada.FormattingEnabled = True
+        Me.cbTemporada.Location = New System.Drawing.Point(16, 60)
+        Me.cbTemporada.Name = "cbTemporada"
+        Me.cbTemporada.Size = New System.Drawing.Size(156, 26)
+        Me.cbTemporada.TabIndex = 1
         '
         'PictureBox1
         '
@@ -733,26 +791,6 @@ Partial Class Pantalla
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'rbChasis
-        '
-        Me.rbChasis.AutoSize = True
-        Me.rbChasis.Location = New System.Drawing.Point(84, 51)
-        Me.rbChasis.Name = "rbChasis"
-        Me.rbChasis.Size = New System.Drawing.Size(72, 22)
-        Me.rbChasis.TabIndex = 5
-        Me.rbChasis.Text = "Chasis"
-        Me.rbChasis.UseVisualStyleBackColor = True
-        '
-        'rdMotor
-        '
-        Me.rdMotor.AutoSize = True
-        Me.rdMotor.Location = New System.Drawing.Point(84, 27)
-        Me.rdMotor.Name = "rdMotor"
-        Me.rdMotor.Size = New System.Drawing.Size(66, 22)
-        Me.rdMotor.TabIndex = 4
-        Me.rdMotor.Text = "Motor"
-        Me.rdMotor.UseVisualStyleBackColor = True
-        '
         'Pantalla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -772,10 +810,12 @@ Partial Class Pantalla
         Me.MenuStrip1.PerformLayout()
         Me.gbSize.ResumeLayout(False)
         Me.gbSize.PerformLayout()
-        Me.gbPaquete.ResumeLayout(False)
-        Me.gbPaquete.PerformLayout()
+        Me.gbPaqueteE.ResumeLayout(False)
+        Me.gbPaqueteE.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.gbPaqueteT.ResumeLayout(False)
+        Me.gbPaqueteT.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
@@ -812,7 +852,7 @@ Partial Class Pantalla
     Friend WithEvents rbmediano As System.Windows.Forms.RadioButton
     Friend WithEvents rbgrande As System.Windows.Forms.RadioButton
     Friend WithEvents gbSize As System.Windows.Forms.GroupBox
-    Friend WithEvents gbPaquete As System.Windows.Forms.GroupBox
+    Friend WithEvents gbPaqueteE As System.Windows.Forms.GroupBox
     Friend WithEvents rbmoto As System.Windows.Forms.RadioButton
     Friend WithEvents rbfull As System.Windows.Forms.RadioButton
     Friend WithEvents rbmedio As System.Windows.Forms.RadioButton
@@ -850,4 +890,7 @@ Partial Class Pantalla
     Private WithEvents dtpFechaPago As DateTimePicker
     Friend WithEvents rbChasis As RadioButton
     Friend WithEvents rdMotor As RadioButton
+    Friend WithEvents gbPaqueteT As GroupBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents cbTemporada As ComboBox
 End Class

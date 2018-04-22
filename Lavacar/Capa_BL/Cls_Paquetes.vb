@@ -81,7 +81,7 @@ Public Class Cls_Paquetes
         End Try
     End Function
 
-    Public Function buscarPaqueteEstandar(pNombre As String)
+    Public Function buscarPaquete(pNombre As String)
         Try
 
             paquete = (From temp In DB.tblPaquetes
@@ -104,6 +104,30 @@ Public Class Cls_Paquetes
             MsgBox("Debe digitar el nombre del paquete que quiere buscar" & vbCrLf & ex.Message)
             Return False
 
+        End Try
+    End Function
+    Public Function extraerPaqueteTemporada()
+        Try
+
+            Dim lista As New Collection
+
+            For Each paq In DB.tblPaquetes
+                If paq.paqTipo = "Temporada" Then
+                    lista.Add(paq.paqNombre)
+                End If
+            Next
+            If lista.Count = 0 Then
+                Dim estado As String
+                estado = "Nada"
+                lista.Add(estado)
+                Return lista
+            Else
+                Return lista
+            End If
+        Catch ex As Exception
+            ''Mensaje de error
+            MsgBox("Error" & vbCrLf & ex.Message)
+            Return "Nada"
         End Try
     End Function
 

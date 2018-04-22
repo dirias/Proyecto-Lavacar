@@ -137,27 +137,27 @@
             btnLimpiar.Enabled = False
             Dim lista As New Collection
             If rbBásicoE.Checked = True Then
-                lista = clsPaquetes.buscarPaqueteEstandar(rbBásicoE.Text)
+                lista = clsPaquetes.buscarPaquete(rbBásicoE.Text)
                 rtbDescripE.Text = lista(2)
                 txtPrecioE.Text = lista(3)
             ElseIf rbMedioE.Checked = True Then
-                lista = clsPaquetes.buscarPaqueteEstandar(rbMedioE.Text)
+                lista = clsPaquetes.buscarPaquete(rbMedioE.Text)
                 rtbDescripE.Text = lista(2)
                 txtPrecioE.Text = lista(3)
             ElseIf rbFullE.Checked = True Then
-                lista = clsPaquetes.buscarPaqueteEstandar(rbFullE.Text)
+                lista = clsPaquetes.buscarPaquete(rbFullE.Text)
                 rtbDescripE.Text = lista(2)
                 txtPrecioE.Text = lista(3)
             ElseIf rbMotor.Checked = True Then
-                lista = clsPaquetes.buscarPaqueteEstandar(rbMotor.Text)
+                lista = clsPaquetes.buscarPaquete(rbMotor.Text)
                 rtbDescripE.Text = lista(2)
                 txtPrecioE.Text = lista(3)
             ElseIf rbChasis.Checked = True Then
-                lista = clsPaquetes.buscarPaqueteEstandar(rbChasis.Text)
+                lista = clsPaquetes.buscarPaquete(rbChasis.Text)
                 rtbDescripE.Text = lista(2)
                 txtPrecioE.Text = lista(3)
             ElseIf rbMotocicleta.Checked = True Then
-                lista = clsPaquetes.buscarPaqueteEstandar(rbMotocicleta.Text)
+                lista = clsPaquetes.buscarPaquete(rbMotocicleta.Text)
                 rtbDescripE.Text = lista(2)
                 txtPrecioE.Text = lista(3)
             Else

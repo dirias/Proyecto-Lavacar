@@ -117,9 +117,27 @@ Public Class Pantalla
 
     Private Sub cbxTipoPaquete_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxTipoPaquete.SelectedIndexChanged
         If cbxTipoPaquete.SelectedIndex = 0 Then
-            gbPaquete.Visible = True
+            gbPaqueteE.Visible = True
+            gbPaqueteT.Visible = False
+            Pantalla_Load(sender, e)
         Else
-            gbPaquete.Visible = False
+            Dim lista = clsPaquetes.extraerPaqueteTemporada()
+            If lista(1) = "Nada" Then
+                MessageBox.Show("No hay paquetes de temporada registrados", "Atención",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information)
+                cbxTipoPaquete.SelectedIndex = 0
+            Else
+                txtdescripcion.Text = ""
+                txtprecio.Text = ""
+                rbpequeno.Checked = False
+                rbmediano.Checked = False
+                rbgrande.Checked = False
+                For Each item In lista
+                    cbTemporada.Items.Add(lista(1))
+                Next
+                gbPaqueteE.Visible = False
+                gbPaqueteT.Visible = True
+            End If
         End If
     End Sub
 
@@ -158,104 +176,124 @@ Public Class Pantalla
     End Sub
     Public Sub rbSize()
         Dim lista As New Collection
-        If rbpequeno.Checked Then
-            rbpequeno.Enabled = True
-            rbmoto.Checked = False
-            rbmoto.Enabled = False
-            If rbbasico.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Básico")
-                monto = lista(3)
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbmedio.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Medio")
-                monto = lista(3)
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbfull.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Full")
-                monto = lista(3)
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rdMotor.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Motor")
-                monto = lista(3)
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbChasis.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Chasis")
-                monto = lista(3)
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
+        If cbxTipoPaquete.SelectedIndex = 0 Then
+            If rbpequeno.Checked Then
+                rbpequeno.Enabled = True
+                rbmoto.Checked = False
+                rbmoto.Enabled = False
+                If rbbasico.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Básico")
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbmedio.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Medio")
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbfull.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Full")
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rdMotor.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Motor")
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbChasis.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Chasis")
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                End If
+            ElseIf rbmediano.Checked Then
+                rbpequeno.Enabled = True
+                rbmoto.Enabled = True
+                If rbbasico.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Básico")
+                    txtprecio.Text = lista(3) + 1000
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbmedio.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Medio")
+                    monto = lista(3) + 1100
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbfull.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Full")
+                    monto = lista(3) + 1000
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbmoto.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Motocicleta")
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rdMotor.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Motor")
+                    monto = lista(3) + 1000
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbChasis.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Chasis")
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                End If
+            ElseIf rbgrande.Checked Then
+                rbpequeno.Enabled = True
+                rbmoto.Enabled = True
+                If rbbasico.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Básico")
+                    monto = lista(3) + 2000
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbmedio.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Medio")
+                    monto = lista(3) + 2400
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbfull.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Full")
+                    monto = lista(3) + 2200
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbmoto.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Motocicleta")
+                    monto = lista(3) + 1500
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                ElseIf rdMotor.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Motor")
+                    monto = lista(3)
+                    txtprecio.Text = monto + 2000
+                    txtdescripcion.Text = lista(2)
+                ElseIf rbChasis.Checked Then
+                    lista = clsPaquetes.buscarPaquete("Chasis")
+                    monto = lista(3) + 1000
+                    txtprecio.Text = monto
+                    txtdescripcion.Text = lista(2)
+                End If
+
             End If
-        ElseIf rbmediano.Checked Then
-            rbpequeno.Enabled = True
-            rbmoto.Enabled = True
-            If rbbasico.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Básico")
-                txtprecio.Text = lista(3) + 1000
-                txtdescripcion.Text = lista(2)
-            ElseIf rbmedio.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Medio")
-                monto = lista(3) + 1100
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbfull.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Full")
-                monto = lista(3) + 1000
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbmoto.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Motocicleta")
+        ElseIf cbxTipoPaquete.SelectedIndex = 1 Then
+            If rbpequeno.Checked Then
+                lista = clsPaquetes.buscarPaquete(cbTemporada.Text)
                 monto = lista(3)
                 txtprecio.Text = monto
                 txtdescripcion.Text = lista(2)
-            ElseIf rdMotor.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Motor")
-                monto = lista(3) + 1000
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbChasis.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Chasis")
+            ElseIf rbmediano.Checked Then
+                lista = clsPaquetes.buscarPaquete(cbTemporada.Text)
                 monto = lista(3)
-                txtprecio.Text = monto
+                txtprecio.Text = monto + 1000
                 txtdescripcion.Text = lista(2)
-            End If
-        ElseIf rbgrande.Checked Then
-            rbpequeno.Enabled = True
-            rbmoto.Enabled = True
-            If rbbasico.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Básico")
-                monto = lista(3) + 2000
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbmedio.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Medio")
-                monto = lista(3) + 2400
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbfull.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Full")
-                monto = lista(3) + 2200
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rbmoto.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Motocicleta")
-                monto = lista(3) + 1500
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            ElseIf rdMotor.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Motor")
+            ElseIf rbgrande.Checked Then
+                lista = clsPaquetes.buscarPaquete(cbTemporada.Text)
                 monto = lista(3)
                 txtprecio.Text = monto + 2000
                 txtdescripcion.Text = lista(2)
-            ElseIf rbChasis.Checked Then
-                lista = clsPaquetes.buscarPaqueteEstandar("Chasis")
-                monto = lista(3) + 1000
-                txtprecio.Text = monto
-                txtdescripcion.Text = lista(2)
-            End If
 
+            End If
         End If
     End Sub
     Private Sub rbpequeno_CheckedChanged(sender As Object, e As EventArgs) Handles rbpequeno.CheckedChanged
@@ -272,88 +310,89 @@ Public Class Pantalla
     Public Sub rbTipo()
         Dim lista As New Collection
         If rbbasico.Checked = True Then
-            lista = clsPaquetes.buscarPaqueteEstandar("Básico")
+            lista = clsPaquetes.buscarPaquete("Básico")
             txtdescripcion.Text = lista(2)
-            rbpequeno.Enabled = True
-            If rbpequeno.Checked Then
-                monto = lista(3)
-                txtprecio.Text = monto
-            ElseIf rbmediano.Checked Then
-                monto = lista(3) + 1000
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = lista(3) + 2000
-                txtprecio.Text = monto
-            End If
-        ElseIf rbmedio.Checked = True Then
-            lista = clsPaquetes.buscarPaqueteEstandar("Medio")
+                rbpequeno.Enabled = True
+                If rbpequeno.Checked Then
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                ElseIf rbmediano.Checked Then
+                    monto = lista(3) + 1000
+                    txtprecio.Text = monto
+                ElseIf rbgrande.Checked Then
+                    monto = lista(3) + 2000
+                    txtprecio.Text = monto
+                End If
+            ElseIf rbmedio.Checked = True Then
+            lista = clsPaquetes.buscarPaquete("Medio")
             txtdescripcion.Text = lista(2)
-            rbpequeno.Enabled = True
-            If rbpequeno.Checked Then
-                monto = lista(3)
-                txtprecio.Text = monto
-            ElseIf rbmediano.Checked Then
-                monto = lista(3) + 1100
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = lista(3) + 2400
-                txtprecio.Text = monto
-            End If
-        ElseIf rbfull.Checked = True Then
-            lista = clsPaquetes.buscarPaqueteEstandar("Full")
+                rbpequeno.Enabled = True
+                If rbpequeno.Checked Then
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                ElseIf rbmediano.Checked Then
+                    monto = lista(3) + 1100
+                    txtprecio.Text = monto
+                ElseIf rbgrande.Checked Then
+                    monto = lista(3) + 2400
+                    txtprecio.Text = monto
+                End If
+            ElseIf rbfull.Checked = True Then
+            lista = clsPaquetes.buscarPaquete("Full")
             txtdescripcion.Text = lista(2)
-            rbpequeno.Enabled = True
-            If rbpequeno.Checked Then
-                monto = lista(3)
-                txtprecio.Text = monto
-            ElseIf rbmediano.Checked Then
-                monto = lista(3) + 1000
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = lista(3) + 2200
-                txtprecio.Text = monto
-            End If
-        ElseIf rdMotor.Checked = True Then
-            lista = clsPaquetes.buscarPaqueteEstandar("Motor")
+                rbpequeno.Enabled = True
+                If rbpequeno.Checked Then
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                ElseIf rbmediano.Checked Then
+                    monto = lista(3) + 1000
+                    txtprecio.Text = monto
+                ElseIf rbgrande.Checked Then
+                    monto = lista(3) + 2200
+                    txtprecio.Text = monto
+                End If
+            ElseIf rdMotor.Checked = True Then
+            lista = clsPaquetes.buscarPaquete("Motor")
             txtdescripcion.Text = lista(2)
-            rbpequeno.Enabled = True
-            If rbpequeno.Checked Then
-                monto = lista(3)
-                txtprecio.Text = monto
-            ElseIf rbmediano.Checked Then
-                monto = lista(3) + 1000
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = lista(3) + 2000
-                txtprecio.Text = monto
-            End If
-        ElseIf rbChasis.Checked = True Then
-            lista = clsPaquetes.buscarPaqueteEstandar("Chasis")
+                rbpequeno.Enabled = True
+                If rbpequeno.Checked Then
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                ElseIf rbmediano.Checked Then
+                    monto = lista(3) + 1000
+                    txtprecio.Text = monto
+                ElseIf rbgrande.Checked Then
+                    monto = lista(3) + 2000
+                    txtprecio.Text = monto
+                End If
+            ElseIf rbChasis.Checked = True Then
+            lista = clsPaquetes.buscarPaquete("Chasis")
             txtdescripcion.Text = lista(2)
-            rbpequeno.Enabled = True
-            If rbpequeno.Checked Then
-                monto = lista(3)
-                txtprecio.Text = monto
-            ElseIf rbmediano.Checked Then
-                monto = lista(3)
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = lista(3) + 1000
-                txtprecio.Text = monto
-            End If
-        ElseIf rbmoto.Checked = True Then
-            lista = clsPaquetes.buscarPaqueteEstandar("Motocicleta")
+                rbpequeno.Enabled = True
+                If rbpequeno.Checked Then
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                ElseIf rbmediano.Checked Then
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                ElseIf rbgrande.Checked Then
+                    monto = lista(3) + 1000
+                    txtprecio.Text = monto
+                End If
+            ElseIf rbmoto.Checked = True Then
+            lista = clsPaquetes.buscarPaquete("Motocicleta")
             txtdescripcion.Text = lista(2)
-            rbpequeno.Enabled = True
-            If rbmediano.Checked Then
-                monto = lista(3)
-                txtprecio.Text = monto
-            ElseIf rbgrande.Checked Then
-                monto = lista(3) + 1500
-                txtprecio.Text = monto
+                rbpequeno.Enabled = True
+                If rbmediano.Checked Then
+                    monto = lista(3)
+                    txtprecio.Text = monto
+                ElseIf rbgrande.Checked Then
+                    monto = lista(3) + 1500
+                    txtprecio.Text = monto
+                End If
+
             End If
 
-        End If
     End Sub
     Private Sub rbbasico_CheckedChanged(sender As Object, e As EventArgs) Handles rbbasico.CheckedChanged
         rbTipo()
@@ -377,5 +416,24 @@ Public Class Pantalla
 
     Private Sub rbChasis_CheckedChanged(sender As Object, e As EventArgs) Handles rbChasis.CheckedChanged
         rbTipo()
+    End Sub
+
+    Private Sub cbTemporada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTemporada.SelectedIndexChanged
+        rbSize()
+    End Sub
+
+    Public Sub limpiarTodo()
+        limpiarPantalla()
+        txtdescripcion.Text = ""
+        txtprecio.Text = ""
+        rbbasico.Checked = False
+        rbmedio.Checked = False
+        rbfull.Checked = False
+        rdMotor.Checked = False
+        rbChasis.Checked = False
+        rbmoto.Checked = False
+        rbpequeno.Checked = False
+        rbmediano.Checked = False
+        rbgrande.Checked = False
     End Sub
 End Class
