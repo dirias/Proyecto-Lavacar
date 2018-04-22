@@ -132,6 +132,7 @@ Public Class Pantalla
                 rbpequeno.Checked = False
                 rbmediano.Checked = False
                 rbgrande.Checked = False
+                cbTemporada.Items.Clear()
                 For Each item In lista
                     cbTemporada.Items.Add(lista(1))
                 Next
@@ -435,5 +436,31 @@ Public Class Pantalla
         rbpequeno.Checked = False
         rbmediano.Checked = False
         rbgrande.Checked = False
+    End Sub
+
+    Private Sub cbxTipoCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxTipoCliente.SelectedIndexChanged
+        If cbxTipoCliente.SelectedIndex = 0 Then
+            txtplaca.Enabled = False
+            txtmarca.Enabled = False
+            btnBuscar.Visible = True
+
+            txtplaca.Clear()
+            txtmarca.Clear()
+            txtcliente.Clear()
+
+        Else
+            txtplaca.Enabled = True
+            txtmarca.Enabled = True
+            btnBuscar.Visible = False
+            txtplaca.Clear()
+            txtmarca.Clear()
+            txtcliente.Clear()
+        End If
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim lista = clsCitas.buscarCita(txtcliente.Text)
+        txtplaca.Text = lista(1)
+        txtmarca.Text = lista(2)
     End Sub
 End Class

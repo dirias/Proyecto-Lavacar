@@ -82,6 +82,11 @@ Lavacar
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Lavacar.My.Resources.Resources.if_magnifyingglass_1055031">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Lavacar.My.Resources.Resources.if_note_edit_66829">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

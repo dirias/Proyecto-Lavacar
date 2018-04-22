@@ -21,6 +21,28 @@
             Return False
         End Try
     End Function
+    Public Function buscarCita(pNombre As String)
+        Try
+
+            citas = (From temp In DB.tblCitas
+                     Where temp.citNombre = pNombre
+                     Select temp).First()
+
+            Dim placa = citas.citPlaca
+            Dim marca = citas.citMarca
+
+            Dim lista As New Collection
+            lista.Add(placa)
+            lista.Add(marca)
+
+            Return lista
+
+        Catch ex As Exception
+            ''Mensaje de error
+            MsgBox("Debe digitar el nombre del cliente que quiere buscar" & vbCrLf & ex.Message)
+
+        End Try
+    End Function
     Public Function modificarCita(pId As String, pNombre As String, pApellidos As String, pPlaca As String, pMarca As String, pFecha As String, pHora As String, pTel As String, pDes As String)
         Try
             citas = (From temp In DB.tblCitas

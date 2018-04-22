@@ -33,14 +33,6 @@ Partial Class Pantalla
         Me.txtcliente = New System.Windows.Forms.TextBox()
         Me.txtplaca = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CombosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PreciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.rbpequeno = New System.Windows.Forms.RadioButton()
@@ -73,9 +65,6 @@ Partial Class Pantalla
         Me.gbPaqueteT = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cbTemporada = New System.Windows.Forms.ComboBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbxTipoCliente = New System.Windows.Forms.ComboBox()
@@ -87,17 +76,34 @@ Partial Class Pantalla
         Me.rbPagaHoy = New System.Windows.Forms.RadioButton()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CombosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosDelProgramaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PaquetesDelLavacarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LavadosRealizadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesDelLavacarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CitasRegistradasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.gbSize.SuspendLayout()
         Me.gbPaqueteE.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.gbPaqueteT.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtprecio
@@ -183,64 +189,6 @@ Partial Class Pantalla
         Me.MenuStrip1.Size = New System.Drawing.Size(835, 24)
         Me.MenuStrip1.TabIndex = 39
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ArchivoToolStripMenuItem
-        '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgendaToolStripMenuItem, Me.SalirToolStripMenuItem})
-        Me.ArchivoToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_file_zip_alt_285690
-        Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
-        Me.ArchivoToolStripMenuItem.Text = "Archivo"
-        '
-        'AgendaToolStripMenuItem
-        '
-        Me.AgendaToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_schedule_3755
-        Me.AgendaToolStripMenuItem.Name = "AgendaToolStripMenuItem"
-        Me.AgendaToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
-        Me.AgendaToolStripMenuItem.Text = "Agenda"
-        '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_door_out_35979
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
-        Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'AdminToolStripMenuItem
-        '
-        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.CombosToolStripMenuItem, Me.PreciosToolStripMenuItem})
-        Me.AdminToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_user_avatar_human_admin_login_2203549
-        Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
-        Me.AdminToolStripMenuItem.Text = "Admin"
-        '
-        'ReportesToolStripMenuItem
-        '
-        Me.ReportesToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_Statistics_67373
-        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.ReportesToolStripMenuItem.Text = "Reportes"
-        '
-        'UsuariosToolStripMenuItem
-        '
-        Me.UsuariosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_onebit_17_12591
-        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
-        '
-        'CombosToolStripMenuItem
-        '
-        Me.CombosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_package_18168
-        Me.CombosToolStripMenuItem.Name = "CombosToolStripMenuItem"
-        Me.CombosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.CombosToolStripMenuItem.Text = "Paquetes"
-        '
-        'PreciosToolStripMenuItem
-        '
-        Me.PreciosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_add_on_3018515
-        Me.PreciosToolStripMenuItem.Name = "PreciosToolStripMenuItem"
-        Me.PreciosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.PreciosToolStripMenuItem.Text = "Extras"
         '
         'txtdescripcion
         '
@@ -596,47 +544,6 @@ Partial Class Pantalla
         Me.cbTemporada.Size = New System.Drawing.Size(156, 26)
         Me.cbTemporada.TabIndex = 1
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Lavacar.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(26, 295)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(188, 134)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 78
-        Me.PictureBox1.TabStop = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.Button2.Image = Global.Lavacar.My.Resources.Resources.if_1_2058800
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(417, 434)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(150, 40)
-        Me.Button2.TabIndex = 77
-        Me.Button2.Text = "Limpiar pantalla"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(78, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Image = Global.Lavacar.My.Resources.Resources.if_ic_local_car_wash_48px_352495
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(599, 434)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 40)
-        Me.Button1.TabIndex = 76
-        Me.Button1.Text = "Ver lavados     "
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'GroupBox7
         '
         Me.GroupBox7.Controls.Add(Me.Label2)
@@ -737,6 +644,7 @@ Partial Class Pantalla
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.btnBuscar)
         Me.GroupBox6.Controls.Add(Me.Label5)
         Me.GroupBox6.Controls.Add(Me.Label9)
         Me.GroupBox6.Controls.Add(Me.txtfecha)
@@ -775,6 +683,63 @@ Partial Class Pantalla
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Extras"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Lavacar.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 295)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(188, 134)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 78
+        Me.PictureBox1.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Button2.Image = Global.Lavacar.My.Resources.Resources.if_1_2058800
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(417, 434)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(150, 40)
+        Me.Button2.TabIndex = 77
+        Me.Button2.Text = "Limpiar pantalla"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Image = Global.Lavacar.My.Resources.Resources.if_ic_local_car_wash_48px_352495
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(599, 434)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(150, 40)
+        Me.Button1.TabIndex = 76
+        Me.Button1.Text = "Ver lavados     "
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.btnBuscar.ForeColor = System.Drawing.Color.Black
+        Me.btnBuscar.Image = Global.Lavacar.My.Resources.Resources.if_magnifyingglass_1055031
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(257, 158)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(104, 32)
+        Me.btnBuscar.TabIndex = 69
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(57, Byte), Integer))
@@ -790,6 +755,100 @@ Partial Class Pantalla
         Me.Button3.Text = "Imprimir tiquete"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button3.UseVisualStyleBackColor = False
+        '
+        'ArchivoToolStripMenuItem
+        '
+        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgendaToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.ArchivoToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_file_zip_alt_285690
+        Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
+        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.ArchivoToolStripMenuItem.Text = "Archivo"
+        '
+        'AgendaToolStripMenuItem
+        '
+        Me.AgendaToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_schedule_3755
+        Me.AgendaToolStripMenuItem.Name = "AgendaToolStripMenuItem"
+        Me.AgendaToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.AgendaToolStripMenuItem.Text = "Agenda"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_door_out_35979
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
+        'AdminToolStripMenuItem
+        '
+        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.CombosToolStripMenuItem, Me.PreciosToolStripMenuItem})
+        Me.AdminToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_user_avatar_human_admin_login_2203549
+        Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
+        Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.AdminToolStripMenuItem.Text = "Admin"
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosDelProgramaToolStripMenuItem, Me.PaquetesDelLavacarToolStripMenuItem, Me.LavadosRealizadosToolStripMenuItem, Me.ClientesDelLavacarToolStripMenuItem, Me.CitasRegistradasToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_Statistics_67373
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
+        'UsuariosToolStripMenuItem
+        '
+        Me.UsuariosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_onebit_17_12591
+        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
+        '
+        'CombosToolStripMenuItem
+        '
+        Me.CombosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_package_18168
+        Me.CombosToolStripMenuItem.Name = "CombosToolStripMenuItem"
+        Me.CombosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CombosToolStripMenuItem.Text = "Paquetes"
+        '
+        'PreciosToolStripMenuItem
+        '
+        Me.PreciosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_add_on_3018515
+        Me.PreciosToolStripMenuItem.Name = "PreciosToolStripMenuItem"
+        Me.PreciosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PreciosToolStripMenuItem.Text = "Extras"
+        '
+        'UsuariosDelProgramaToolStripMenuItem
+        '
+        Me.UsuariosDelProgramaToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_admin_60298
+        Me.UsuariosDelProgramaToolStripMenuItem.Name = "UsuariosDelProgramaToolStripMenuItem"
+        Me.UsuariosDelProgramaToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.UsuariosDelProgramaToolStripMenuItem.Text = "Usuarios del programa"
+        '
+        'PaquetesDelLavacarToolStripMenuItem
+        '
+        Me.PaquetesDelLavacarToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_package_18168
+        Me.PaquetesDelLavacarToolStripMenuItem.Name = "PaquetesDelLavacarToolStripMenuItem"
+        Me.PaquetesDelLavacarToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.PaquetesDelLavacarToolStripMenuItem.Text = "Paquetes del lavacar"
+        '
+        'LavadosRealizadosToolStripMenuItem
+        '
+        Me.LavadosRealizadosToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_ic_local_car_wash_48px_352495
+        Me.LavadosRealizadosToolStripMenuItem.Name = "LavadosRealizadosToolStripMenuItem"
+        Me.LavadosRealizadosToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.LavadosRealizadosToolStripMenuItem.Text = "Lavados realizados"
+        '
+        'ClientesDelLavacarToolStripMenuItem
+        '
+        Me.ClientesDelLavacarToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_onebit_17_12591
+        Me.ClientesDelLavacarToolStripMenuItem.Name = "ClientesDelLavacarToolStripMenuItem"
+        Me.ClientesDelLavacarToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.ClientesDelLavacarToolStripMenuItem.Text = "Clientes del lavacar"
+        '
+        'CitasRegistradasToolStripMenuItem
+        '
+        Me.CitasRegistradasToolStripMenuItem.Image = Global.Lavacar.My.Resources.Resources.if_Statistics_67373
+        Me.CitasRegistradasToolStripMenuItem.Name = "CitasRegistradasToolStripMenuItem"
+        Me.CitasRegistradasToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.CitasRegistradasToolStripMenuItem.Text = "Citas registradas"
         '
         'Pantalla
         '
@@ -816,7 +875,6 @@ Partial Class Pantalla
         Me.GroupBox4.PerformLayout()
         Me.gbPaqueteT.ResumeLayout(False)
         Me.gbPaqueteT.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
@@ -825,6 +883,7 @@ Partial Class Pantalla
         Me.GroupBox6.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -893,4 +952,10 @@ Partial Class Pantalla
     Friend WithEvents gbPaqueteT As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents cbTemporada As ComboBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents UsuariosDelProgramaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PaquetesDelLavacarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LavadosRealizadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientesDelLavacarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CitasRegistradasToolStripMenuItem As ToolStripMenuItem
 End Class
