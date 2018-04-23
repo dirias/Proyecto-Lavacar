@@ -13,4 +13,7 @@
     Public citas As New tblCitas
     Public clsCitas As New Cls_Citas
 
+    Public extra As New tblExtras
+    Public clsExtra As New Cls_Extras
+
 End Module

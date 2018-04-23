@@ -316,6 +316,7 @@ Partial Class Usuarios
         Me.dtgUsuarios.AllowUserToResizeColumns = False
         Me.dtgUsuarios.AllowUserToResizeRows = False
         Me.dtgUsuarios.AutoGenerateColumns = False
+        Me.dtgUsuarios.BackgroundColor = System.Drawing.Color.White
         Me.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.dtgUsuarios.DataSource = Me.TblAdmiBindingSource

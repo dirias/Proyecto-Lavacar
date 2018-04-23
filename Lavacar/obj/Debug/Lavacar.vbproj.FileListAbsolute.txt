@@ -23,7 +23,6 @@ C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\D
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Inicio.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Resources.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Pantalla.resources
-C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Precios.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Usuarios.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.vbproj.GenerateResource.Cache
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.exe
@@ -48,3 +47,8 @@ C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\D
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\stdole.dll
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\FlashControlV71.dll
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.FrmRpUsuario.resources
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Extras.resources
