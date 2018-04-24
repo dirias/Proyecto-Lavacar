@@ -52,3 +52,4 @@ C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\D
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.FrmRpUsuario.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Extras.resources
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.FrmRpTiquete.resources

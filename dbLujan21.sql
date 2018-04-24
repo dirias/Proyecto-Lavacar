@@ -126,8 +126,20 @@ go
 alter table tblCitas add constraint 
 Pk_citaId primary key (citId)
 go
-
-
+--------Tiquetes
+if exists (select name from dbo.sysobjects where name = 'tblTiquete')
+drop table tblTiquete
+go
+create table tblTiquete(
+tiqId int identity,
+tiqPlaca varchar(30) not null,
+tiqCliente varchar(30) not null,
+tiqHoraFecha date not null,
+) on[primary]
+go
+alter table tblTiquete add constraint 
+Pk_tiqId primary key (tiqId)
+go
 
 ----------------------------------Llaves foranias
 ---Llave forania de lavado hacia cliente
@@ -164,4 +176,8 @@ values('Chasis','Estandar','Lavado de chasis.',3500)
 insert into tblPaquetes(paqNombre,paqTipo,paqDescripcion,paqCosto)
 values('Motocicleta','Estandar','Lavado de motocicleta.',3000)
 
+
+insert into tblTiquete(tiqPlaca,tiqCliente,tiqHoraFecha)
+values('231-Z','Juan Méndez',GETDATE())
 select * from tblPaquetes
+select * from tblTiquete

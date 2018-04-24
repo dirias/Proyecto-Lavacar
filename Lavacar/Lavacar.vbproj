@@ -204,11 +204,23 @@
     <Compile Include="Capa_UI\Usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Report\FrmRpTiquete.Designer.vb">
+      <DependentUpon>FrmRpTiquete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmRpTiquete.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Report\FrmRpUsuario.Designer.vb">
       <DependentUpon>FrmRpUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="Report\FrmRpUsuario.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rpTiquete.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpTiquete.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rpUsuarios.vb">
       <AutoGen>True</AutoGen>
@@ -242,8 +254,15 @@
     <EmbeddedResource Include="Capa_UI\Usuarios.resx">
       <DependentUpon>Usuarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmRpTiquete.resx">
+      <DependentUpon>FrmRpTiquete.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\FrmRpUsuario.resx">
       <DependentUpon>FrmRpUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpTiquete.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpTiquete.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rpUsuarios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
