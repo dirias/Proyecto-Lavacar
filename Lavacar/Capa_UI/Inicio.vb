@@ -16,11 +16,15 @@ Public Class Inicio
         Dim resultado = clsUser.inicioSesión(txtUser.Text, txtPW.Text)
 
         If resultado Then
-            ConfigurationSettings.AppSettings("usuarioActual") = txtUser.Text
-            Pantalla.Show()
-            Me.Hide()
-            txtUser.Text = ""
-            txtPW.Text = ""
+            If txtUser.Text = usuarioActual Then
+                MessageBox.Show("Ya ese usuario se encuentra logeado")
+            Else
+                ConfigurationSettings.AppSettings("usuarioActual") = txtUser.Text
+                Pantalla.Show()
+                Me.Hide()
+                txtUser.Text = ""
+                txtPW.Text = ""
+            End If
         Else
             MsgBox("La contraseña o usuario es incorrecto" & vbCrLf & "Escriba nuevamente la contraseña y usuario.", vbCritical, "Error")
         End If

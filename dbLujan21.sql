@@ -33,15 +33,19 @@ drop table tblLavados
 go
 create table tblLavados(
 lavConsecutivo int identity not null,
-lavFecha date not null,
-lavIdCliente int not null,
-lavIdVehiculo varchar(15) not null,
-lavIdPaquete int not null,
-lavExtras varchar(15) not null,
-lavLavador varchar(30) not null,
-lavMonto decimal(5,2) not null,
+lavTipoCliente varchar(30) not null,
+lavTipoPaquete varchar(30) not null,
+lavPaquete varchar(30) not null,
+lavSizeVe varchar(30) not null,
 lavFechaPago date not null,
-lavPagadoA varchar(30) not null
+lavUsuario varchar(30) not null,
+lavLavador varchar(30) not null,
+lavFechaLavado date not null,
+lavCliente varchar(30) not null,
+lavPlaca varchar(30) not null,
+lavMarca varchar(30) not null,
+lavHora varchar(10) not null,
+lavMonto decimal(5,2) not null
 ) on[primary]
 go
 --creo la llave primaria
@@ -178,6 +182,7 @@ values('Motocicleta','Estandar','Lavado de motocicleta.',3000)
 
 
 insert into tblTiquete(tiqPlaca,tiqCliente,tiqHoraFecha)
-values('231-Z','Juan Méndez',GETDATE())
+values('502-M','Juan Vazques',GETDATE())
 select * from tblPaquetes
 select * from tblTiquete
+select * from tblCitas 

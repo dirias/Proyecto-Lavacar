@@ -651,4 +651,8 @@ Public Class Pantalla
     Private Sub CitasRegistradasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CitasRegistradasToolStripMenuItem.Click
         FrmRpCitas.ShowDialog()
     End Sub
+
+    Private Sub CambiarDeUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambiarDeUsuarioToolStripMenuItem.Click
+        Inicio.ShowDialog()
+    End Sub
 End Class

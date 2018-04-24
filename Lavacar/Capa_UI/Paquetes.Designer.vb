@@ -23,6 +23,7 @@ Partial Class Paquetes
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Paquetes))
         Me.tbControlPaquetes = New System.Windows.Forms.TabControl()
         Me.tbPaquetes = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -33,14 +34,10 @@ Partial Class Paquetes
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.CbxTipo = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupTemporada = New System.Windows.Forms.GroupBox()
-        Me.txtNombreT = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtPrecioT = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.rtbDescripT = New System.Windows.Forms.RichTextBox()
         Me.GroupEstandar = New System.Windows.Forms.GroupBox()
+        Me.rbMotor = New System.Windows.Forms.RadioButton()
+        Me.rbMotocicleta = New System.Windows.Forms.RadioButton()
+        Me.rbChasis = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPrecioE = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -48,6 +45,13 @@ Partial Class Paquetes
         Me.rbBásicoE = New System.Windows.Forms.RadioButton()
         Me.rbFullE = New System.Windows.Forms.RadioButton()
         Me.rbMedioE = New System.Windows.Forms.RadioButton()
+        Me.GroupTemporada = New System.Windows.Forms.GroupBox()
+        Me.txtNombreT = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtPrecioT = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.rtbDescripT = New System.Windows.Forms.RichTextBox()
         Me.tbListapaquetes = New System.Windows.Forms.TabPage()
         Me.gbTodos = New System.Windows.Forms.GroupBox()
         Me.dtgPaquetesTodos = New System.Windows.Forms.DataGridView()
@@ -62,14 +66,11 @@ Partial Class Paquetes
         Me.DbLujan21DataSet1 = New Lavacar.dbLujan21DataSet1()
         Me.TblPaquetesTableAdapter = New Lavacar.dbLujan21DataSet1TableAdapters.tblPaquetesTableAdapter()
         Me.TblPaquetesTableAdapter1 = New Lavacar.dbLujan21DataSet2TableAdapters.tblPaquetesTableAdapter()
-        Me.rbMotor = New System.Windows.Forms.RadioButton()
-        Me.rbMotocicleta = New System.Windows.Forms.RadioButton()
-        Me.rbChasis = New System.Windows.Forms.RadioButton()
         Me.tbControlPaquetes.SuspendLayout()
         Me.tbPaquetes.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.GroupTemporada.SuspendLayout()
         Me.GroupEstandar.SuspendLayout()
+        Me.GroupTemporada.SuspendLayout()
         Me.tbListapaquetes.SuspendLayout()
         Me.gbTodos.SuspendLayout()
         CType(Me.dtgPaquetesTodos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,6 +212,124 @@ Partial Class Paquetes
         Me.Label1.TabIndex = 67
         Me.Label1.Text = "Tipo de paquete:"
         '
+        'GroupEstandar
+        '
+        Me.GroupEstandar.Controls.Add(Me.rbMotor)
+        Me.GroupEstandar.Controls.Add(Me.rbMotocicleta)
+        Me.GroupEstandar.Controls.Add(Me.rbChasis)
+        Me.GroupEstandar.Controls.Add(Me.Label2)
+        Me.GroupEstandar.Controls.Add(Me.txtPrecioE)
+        Me.GroupEstandar.Controls.Add(Me.Label4)
+        Me.GroupEstandar.Controls.Add(Me.rtbDescripE)
+        Me.GroupEstandar.Controls.Add(Me.rbBásicoE)
+        Me.GroupEstandar.Controls.Add(Me.rbFullE)
+        Me.GroupEstandar.Controls.Add(Me.rbMedioE)
+        Me.GroupEstandar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupEstandar.Location = New System.Drawing.Point(8, 57)
+        Me.GroupEstandar.Name = "GroupEstandar"
+        Me.GroupEstandar.Size = New System.Drawing.Size(514, 221)
+        Me.GroupEstandar.TabIndex = 69
+        Me.GroupEstandar.TabStop = False
+        Me.GroupEstandar.Text = "Estandar"
+        '
+        'rbMotor
+        '
+        Me.rbMotor.AutoSize = True
+        Me.rbMotor.Location = New System.Drawing.Point(22, 61)
+        Me.rbMotor.Name = "rbMotor"
+        Me.rbMotor.Size = New System.Drawing.Size(66, 22)
+        Me.rbMotor.TabIndex = 57
+        Me.rbMotor.Text = "Motor"
+        Me.rbMotor.UseVisualStyleBackColor = True
+        '
+        'rbMotocicleta
+        '
+        Me.rbMotocicleta.AutoSize = True
+        Me.rbMotocicleta.Location = New System.Drawing.Point(202, 61)
+        Me.rbMotocicleta.Name = "rbMotocicleta"
+        Me.rbMotocicleta.Size = New System.Drawing.Size(103, 22)
+        Me.rbMotocicleta.TabIndex = 59
+        Me.rbMotocicleta.Text = "Motocicleta"
+        Me.rbMotocicleta.UseVisualStyleBackColor = True
+        '
+        'rbChasis
+        '
+        Me.rbChasis.AutoSize = True
+        Me.rbChasis.Location = New System.Drawing.Point(113, 61)
+        Me.rbChasis.Name = "rbChasis"
+        Me.rbChasis.Size = New System.Drawing.Size(72, 22)
+        Me.rbChasis.TabIndex = 58
+        Me.rbChasis.Text = "Chasis"
+        Me.rbChasis.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(18, 87)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(94, 21)
+        Me.Label2.TabIndex = 56
+        Me.Label2.Text = "Descripción"
+        '
+        'txtPrecioE
+        '
+        Me.txtPrecioE.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.txtPrecioE.Location = New System.Drawing.Point(359, 61)
+        Me.txtPrecioE.Name = "txtPrecioE"
+        Me.txtPrecioE.Size = New System.Drawing.Size(126, 24)
+        Me.txtPrecioE.TabIndex = 55
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(394, 31)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 21)
+        Me.Label4.TabIndex = 54
+        Me.Label4.Text = "Precio"
+        '
+        'rtbDescripE
+        '
+        Me.rtbDescripE.Location = New System.Drawing.Point(20, 113)
+        Me.rtbDescripE.Name = "rtbDescripE"
+        Me.rtbDescripE.Size = New System.Drawing.Size(465, 90)
+        Me.rtbDescripE.TabIndex = 53
+        Me.rtbDescripE.Text = ""
+        '
+        'rbBásicoE
+        '
+        Me.rbBásicoE.AutoSize = True
+        Me.rbBásicoE.Checked = True
+        Me.rbBásicoE.Location = New System.Drawing.Point(22, 31)
+        Me.rbBásicoE.Name = "rbBásicoE"
+        Me.rbBásicoE.Size = New System.Drawing.Size(72, 22)
+        Me.rbBásicoE.TabIndex = 50
+        Me.rbBásicoE.TabStop = True
+        Me.rbBásicoE.Text = "Básico"
+        Me.rbBásicoE.UseVisualStyleBackColor = True
+        '
+        'rbFullE
+        '
+        Me.rbFullE.AutoSize = True
+        Me.rbFullE.Location = New System.Drawing.Point(202, 31)
+        Me.rbFullE.Name = "rbFullE"
+        Me.rbFullE.Size = New System.Drawing.Size(49, 22)
+        Me.rbFullE.TabIndex = 52
+        Me.rbFullE.Text = "Full"
+        Me.rbFullE.UseVisualStyleBackColor = True
+        '
+        'rbMedioE
+        '
+        Me.rbMedioE.AutoSize = True
+        Me.rbMedioE.Location = New System.Drawing.Point(113, 31)
+        Me.rbMedioE.Name = "rbMedioE"
+        Me.rbMedioE.Size = New System.Drawing.Size(67, 22)
+        Me.rbMedioE.TabIndex = 51
+        Me.rbMedioE.Text = "Medio"
+        Me.rbMedioE.UseVisualStyleBackColor = True
+        '
         'GroupTemporada
         '
         Me.GroupTemporada.Controls.Add(Me.txtNombreT)
@@ -280,93 +399,6 @@ Partial Class Paquetes
         Me.rtbDescripT.Size = New System.Drawing.Size(465, 110)
         Me.rtbDescripT.TabIndex = 53
         Me.rtbDescripT.Text = ""
-        '
-        'GroupEstandar
-        '
-        Me.GroupEstandar.Controls.Add(Me.rbMotor)
-        Me.GroupEstandar.Controls.Add(Me.rbMotocicleta)
-        Me.GroupEstandar.Controls.Add(Me.rbChasis)
-        Me.GroupEstandar.Controls.Add(Me.Label2)
-        Me.GroupEstandar.Controls.Add(Me.txtPrecioE)
-        Me.GroupEstandar.Controls.Add(Me.Label4)
-        Me.GroupEstandar.Controls.Add(Me.rtbDescripE)
-        Me.GroupEstandar.Controls.Add(Me.rbBásicoE)
-        Me.GroupEstandar.Controls.Add(Me.rbFullE)
-        Me.GroupEstandar.Controls.Add(Me.rbMedioE)
-        Me.GroupEstandar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupEstandar.Location = New System.Drawing.Point(8, 57)
-        Me.GroupEstandar.Name = "GroupEstandar"
-        Me.GroupEstandar.Size = New System.Drawing.Size(514, 221)
-        Me.GroupEstandar.TabIndex = 69
-        Me.GroupEstandar.TabStop = False
-        Me.GroupEstandar.Text = "Estandar"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 87)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 21)
-        Me.Label2.TabIndex = 56
-        Me.Label2.Text = "Descripción"
-        '
-        'txtPrecioE
-        '
-        Me.txtPrecioE.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.txtPrecioE.Location = New System.Drawing.Point(359, 61)
-        Me.txtPrecioE.Name = "txtPrecioE"
-        Me.txtPrecioE.Size = New System.Drawing.Size(126, 24)
-        Me.txtPrecioE.TabIndex = 55
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(394, 31)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 21)
-        Me.Label4.TabIndex = 54
-        Me.Label4.Text = "Precio"
-        '
-        'rtbDescripE
-        '
-        Me.rtbDescripE.Location = New System.Drawing.Point(20, 113)
-        Me.rtbDescripE.Name = "rtbDescripE"
-        Me.rtbDescripE.Size = New System.Drawing.Size(465, 90)
-        Me.rtbDescripE.TabIndex = 53
-        Me.rtbDescripE.Text = ""
-        '
-        'rbBásicoE
-        '
-        Me.rbBásicoE.AutoSize = True
-        Me.rbBásicoE.Checked = True
-        Me.rbBásicoE.Location = New System.Drawing.Point(22, 31)
-        Me.rbBásicoE.Name = "rbBásicoE"
-        Me.rbBásicoE.Size = New System.Drawing.Size(72, 22)
-        Me.rbBásicoE.TabIndex = 50
-        Me.rbBásicoE.Text = "Básico"
-        Me.rbBásicoE.UseVisualStyleBackColor = True
-        '
-        'rbFullE
-        '
-        Me.rbFullE.AutoSize = True
-        Me.rbFullE.Location = New System.Drawing.Point(202, 31)
-        Me.rbFullE.Name = "rbFullE"
-        Me.rbFullE.Size = New System.Drawing.Size(49, 22)
-        Me.rbFullE.TabIndex = 52
-        Me.rbFullE.Text = "Full"
-        Me.rbFullE.UseVisualStyleBackColor = True
-        '
-        'rbMedioE
-        '
-        Me.rbMedioE.AutoSize = True
-        Me.rbMedioE.Location = New System.Drawing.Point(113, 31)
-        Me.rbMedioE.Name = "rbMedioE"
-        Me.rbMedioE.Size = New System.Drawing.Size(67, 22)
-        Me.rbMedioE.TabIndex = 51
-        Me.rbMedioE.Text = "Medio"
-        Me.rbMedioE.UseVisualStyleBackColor = True
         '
         'tbListapaquetes
         '
@@ -465,36 +497,6 @@ Partial Class Paquetes
         '
         Me.TblPaquetesTableAdapter1.ClearBeforeFill = True
         '
-        'rbMotor
-        '
-        Me.rbMotor.AutoSize = True
-        Me.rbMotor.Location = New System.Drawing.Point(22, 61)
-        Me.rbMotor.Name = "rbMotor"
-        Me.rbMotor.Size = New System.Drawing.Size(66, 22)
-        Me.rbMotor.TabIndex = 57
-        Me.rbMotor.Text = "Motor"
-        Me.rbMotor.UseVisualStyleBackColor = True
-        '
-        'rbMotocicleta
-        '
-        Me.rbMotocicleta.AutoSize = True
-        Me.rbMotocicleta.Location = New System.Drawing.Point(202, 61)
-        Me.rbMotocicleta.Name = "rbMotocicleta"
-        Me.rbMotocicleta.Size = New System.Drawing.Size(103, 22)
-        Me.rbMotocicleta.TabIndex = 59
-        Me.rbMotocicleta.Text = "Motocicleta"
-        Me.rbMotocicleta.UseVisualStyleBackColor = True
-        '
-        'rbChasis
-        '
-        Me.rbChasis.AutoSize = True
-        Me.rbChasis.Location = New System.Drawing.Point(113, 61)
-        Me.rbChasis.Name = "rbChasis"
-        Me.rbChasis.Size = New System.Drawing.Size(72, 22)
-        Me.rbChasis.TabIndex = 58
-        Me.rbChasis.Text = "Chasis"
-        Me.rbChasis.UseVisualStyleBackColor = True
-        '
         'Paquetes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -502,6 +504,7 @@ Partial Class Paquetes
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(538, 392)
         Me.Controls.Add(Me.tbControlPaquetes)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Paquetes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -510,10 +513,10 @@ Partial Class Paquetes
         Me.tbPaquetes.ResumeLayout(False)
         Me.tbPaquetes.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        Me.GroupTemporada.ResumeLayout(False)
-        Me.GroupTemporada.PerformLayout()
         Me.GroupEstandar.ResumeLayout(False)
         Me.GroupEstandar.PerformLayout()
+        Me.GroupTemporada.ResumeLayout(False)
+        Me.GroupTemporada.PerformLayout()
         Me.tbListapaquetes.ResumeLayout(False)
         Me.gbTodos.ResumeLayout(False)
         CType(Me.dtgPaquetesTodos, System.ComponentModel.ISupportInitialize).EndInit()

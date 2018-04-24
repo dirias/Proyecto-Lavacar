@@ -5,15 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0b95ac1a89d6441ab7174ff5dfcdb3f3" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="dbLujan21Model.tblAdmi" Width="1.5" PointX="5.625" PointY="0.75" />
-        <EntityTypeShape EntityType="dbLujan21Model.tblCitas" Width="1.5" PointX="7.75" PointY="3.875" />
-        <EntityTypeShape EntityType="dbLujan21Model.tblCliente" Width="1.5" PointX="3.375" PointY="4.5" />
-        <EntityTypeShape EntityType="dbLujan21Model.tblExtras" Width="1.5" PointX="7.875" PointY="1.5" />
-        <EntityTypeShape EntityType="dbLujan21Model.tblLavados" Width="1.5" PointX="5.625" PointY="3.875" />
-        <EntityTypeShape EntityType="dbLujan21Model.tblPaquetes" Width="1.5" PointX="3" PointY="1.5" />
+        <EntityTypeShape EntityType="dbLujan21Model.tblAdmi" PointX="6.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="dbLujan21Model.tblCitas" PointX="0.75" PointY="6.75" Width="1.5" />
+        <EntityTypeShape EntityType="dbLujan21Model.tblCliente" PointX="0.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="dbLujan21Model.tblExtras" PointX="5.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="dbLujan21Model.tblLavados" PointX="8" PointY="3.625" Width="1.5" />
+        <EntityTypeShape EntityType="dbLujan21Model.tblPaquetes" PointX="3.75" PointY="0.75" Width="1.5" />
         <AssociationConnector Association="dbLujan21Model.Fk_Lavado_Cliente" />
         <AssociationConnector Association="dbLujan21Model.Fk_Lavado_Paquete" />
-        <EntityTypeShape EntityType="dbLujan21Model.tblVehiculo" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="dbLujan21Model.tblVehiculo" PointX="0.75" PointY="0.75" Width="1.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
