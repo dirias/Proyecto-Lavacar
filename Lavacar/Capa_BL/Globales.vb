@@ -16,4 +16,7 @@
     Public extra As New tblExtras
     Public clsExtra As New Cls_Extras
 
+    Public extraAgregado As New Collection
+    Public descrip As String
+
 End Module

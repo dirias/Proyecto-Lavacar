@@ -13,6 +13,12 @@ Public Class Pantalla
         rbPagaHoy.Checked = True
         dtpFechaPago.Enabled = False
         txtUser.Text = ConfigurationSettings.AppSettings("usuarioActual")
+
+        Dim lista = clsExtra.extraerExtras()
+        cbxExtras.Items.Clear()
+        For Each item In lista
+            cbxExtras.Items.Add(item)
+        Next
     End Sub
 
     Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles txtdescripcion.TextChanged
@@ -41,14 +47,14 @@ Public Class Pantalla
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ChBoxChasis.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
         rbbasico.Checked = False
         rbmedio.Checked = False
         rbfull.Checked = False
         rbmoto.Checked = False
     End Sub
 
-    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles ChBoxMotor.CheckedChanged
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs)
         rbbasico.Checked = False
         rbmedio.Checked = False
         rbfull.Checked = False
@@ -116,19 +122,28 @@ Public Class Pantalla
     End Sub
 
     Private Sub cbxTipoPaquete_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxTipoPaquete.SelectedIndexChanged
+
+
         If cbxTipoPaquete.SelectedIndex = 0 Then
+            gbExtras.Enabled = False
+            limpiarExtras()
+            txtdescripcion.Clear()
+            txtprecio.Clear()
+            gbSize.Enabled = False
             gbPaqueteE.Visible = True
             gbPaqueteT.Visible = False
-            Pantalla_Load(sender, e)
-        Else
+        ElseIf cbxTipoPaquete.SelectedIndex = 1 Then
+            gbExtras.Enabled = False
+            limpiarExtras()
+            txtdescripcion.Clear()
+            txtprecio.Clear()
+            gbSize.Enabled = False
             Dim lista = clsPaquetes.extraerPaqueteTemporada()
             If lista(1) = "Nada" Then
                 MessageBox.Show("No hay paquetes de temporada registrados", "Atención",
                                MessageBoxButtons.OK, MessageBoxIcon.Information)
                 cbxTipoPaquete.SelectedIndex = 0
             Else
-                txtdescripcion.Text = ""
-                txtprecio.Text = ""
                 rbpequeno.Checked = False
                 rbmediano.Checked = False
                 rbgrande.Checked = False
@@ -150,15 +165,8 @@ Public Class Pantalla
         cbxTipoCliente.SelectedIndex = 1
         cbxTipoPaquete.SelectedIndex = 0
         rbPagaHoy.Checked = True
-        rbpequeno.Checked = True
-        rbbasico.Checked = True
         'Limpio extras'
-        ChBoxChasis.Checked = False
-        ChBoxMotor.Checked = False
-        ChBox3.Checked = False
-        ChBox4.Checked = False
-        ChBox5.Checked = False
-        ChBox6.Checked = False
+
         'Limpio txt'
         txtlavador.Text = ""
         txtcliente.Text = ""
@@ -176,6 +184,9 @@ Public Class Pantalla
         End Try
     End Sub
     Public Sub rbSize()
+        limpiarExtras()
+        gbExtras.Enabled = True
+        gbSize.Enabled = True
         Dim lista As New Collection
         If cbxTipoPaquete.SelectedIndex = 0 Then
             If rbpequeno.Checked Then
@@ -309,6 +320,9 @@ Public Class Pantalla
         rbSize()
     End Sub
     Public Sub rbTipo()
+        gbExtras.Enabled = False
+        limpiarSize()
+        gbSize.Enabled = True
         Dim lista As New Collection
         If rbbasico.Checked = True Then
             lista = clsPaquetes.buscarPaquete("Básico")
@@ -468,5 +482,86 @@ Public Class Pantalla
 
     Private Sub UsuariosDelProgramaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosDelProgramaToolStripMenuItem.Click
         FrmRpUsuario.ShowDialog()
+    End Sub
+
+    Private Sub GroupBox6_Enter(sender As Object, e As EventArgs) Handles GroupBox6.Enter
+
+    End Sub
+
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        If cbxExtras.SelectedIndex = -1 Then
+            MessageBox.Show("Debe seleccionar una extra", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Dim resultado = clsExtra.buscarExtra(cbxExtras.Text)
+            Dim validar = False
+            If extraAgregado.Count = 0 Then
+                descrip = txtdescripcion.Text
+                txtprecio.Text = Int(txtprecio.Text) + Int(resultado(1))
+                extraAgregado.Add(cbxExtras.Text)
+                txtdescripcion.Text += " + " + cbxExtras.Text
+            Else
+                For Each item In extraAgregado
+                    If item = cbxExtras.Text Then
+                        MessageBox.Show("Esa extra ya fue agregada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        validar = False
+                        Exit For
+                    Else
+                        validar = True
+                    End If
+                Next
+                If validar Then
+                    txtprecio.Text = Int(txtprecio.Text) + Int(resultado(1))
+                    extraAgregado.Add(cbxExtras.Text)
+                    txtdescripcion.Text += " + " + cbxExtras.Text
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        If cbxExtras.SelectedIndex = -1 Then
+            MessageBox.Show("Debe seleccionar una extra", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Dim resultado = clsExtra.buscarExtra(cbxExtras.Text)
+            Dim validar = False
+            If extraAgregado.Count = 0 Then
+                MessageBox.Show("No hay ninguna extra agregada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                For index = 1 To extraAgregado.Count
+                    If extraAgregado(index) = cbxExtras.Text Then
+                        validar = True
+                        extraAgregado.Remove(index)
+                        Exit For
+                    Else
+                        validar = False
+                    End If
+                Next
+                If validar Then
+                    txtprecio.Text = Int(txtprecio.Text) - Int(resultado(1))
+                    txtdescripcion.Clear()
+                    txtdescripcion.Text = descrip
+                    For Each item In extraAgregado
+                        txtdescripcion.Text += " + " + item
+                    Next
+                    Dim i = 0
+                    While i < extraAgregado.Count
+                        txtprecio.Text = Int(txtprecio.Text) + Int(resultado(1))
+                        i = i + 1
+                    End While
+                Else
+                    MessageBox.Show("Esa extra no se encuentra agregada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            End If
+        End If
+    End Sub
+    Public Sub limpiarSize()
+        rbpequeno.Checked = False
+        rbmediano.Checked = False
+        rbgrande.Checked = False
+    End Sub
+
+    Public Sub limpiarExtras()
+        extraAgregado.Clear()
+        cbxExtras.SelectedIndex = -1
     End Sub
 End Class

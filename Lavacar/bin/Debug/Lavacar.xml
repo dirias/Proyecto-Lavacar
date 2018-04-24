@@ -32,6 +32,11 @@ Lavacar
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Lavacar.My.Resources.Resources.if_7_330410">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Lavacar.My.Resources.Resources.if_add_on_3018515">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -103,6 +108,11 @@ Lavacar
 </summary>
 </member>
 <member name="P:Lavacar.My.Resources.Resources.if_print_54346">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Lavacar.My.Resources.Resources.if_remove_sign_173082">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

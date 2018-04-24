@@ -340,6 +340,8 @@
       <DependentUpon>bdLujan21.edmx</DependentUpon>
       <LastGenOutput>bdLujan21.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\if_remove-sign_173082.png" />
+    <None Include="Resources\if_7_330410.png" />
     <None Include="Resources\if_magnifyingglass_1055031.png" />
     <None Include="Resources\if_Gnome-Edit-Clear-64_55586.png" />
     <None Include="Resources\if_trashcan-delete2_44451.png" />
