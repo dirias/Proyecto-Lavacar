@@ -643,4 +643,12 @@ Public Class Pantalla
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         FrmRpTiquete.ShowDialog()
     End Sub
+
+    Private Sub PaquetesDelLavacarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PaquetesDelLavacarToolStripMenuItem.Click
+        FrmRpPaqutes.ShowDialog()
+    End Sub
+
+    Private Sub CitasRegistradasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CitasRegistradasToolStripMenuItem.Click
+        FrmRpCitas.ShowDialog()
+    End Sub
 End Class

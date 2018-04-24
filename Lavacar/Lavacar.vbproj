@@ -204,6 +204,18 @@
     <Compile Include="Capa_UI\Usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Report\FrmRpCitas.Designer.vb">
+      <DependentUpon>FrmRpCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmRpCitas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmRpPaqutes.Designer.vb">
+      <DependentUpon>FrmRpPaqutes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmRpPaqutes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Report\FrmRpTiquete.Designer.vb">
       <DependentUpon>FrmRpTiquete.vb</DependentUpon>
     </Compile>
@@ -215,6 +227,18 @@
     </Compile>
     <Compile Include="Report\FrmRpUsuario.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rpCitas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpCitas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpPaquetes.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpPaquetes.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rpTiquete.vb">
       <AutoGen>True</AutoGen>
@@ -254,11 +278,25 @@
     <EmbeddedResource Include="Capa_UI\Usuarios.resx">
       <DependentUpon>Usuarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmRpCitas.resx">
+      <DependentUpon>FrmRpCitas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmRpPaqutes.resx">
+      <DependentUpon>FrmRpPaqutes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\FrmRpTiquete.resx">
       <DependentUpon>FrmRpTiquete.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\FrmRpUsuario.resx">
       <DependentUpon>FrmRpUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpCitas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpCitas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpPaquetes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpPaquetes.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rpTiquete.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

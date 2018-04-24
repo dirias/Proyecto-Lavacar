@@ -53,3 +53,5 @@ C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\bin\D
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.FrmRpUsuario.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.Extras.resources
 C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.FrmRpTiquete.resources
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.FrmRpPaqutes.resources
+C:\Users\didie\Desktop\Cuatri A\Desarrollo de aplicaciones\Lavacar\Lavacar\obj\Debug\Lavacar.FrmRpCitas.resources
